@@ -1,37 +1,29 @@
 <?php
-include ('log4php/Logger.php');
-//require_once 'vendor/twig/twig/lib/Twig/Autoloader.php';
 require __DIR__.'/vendor/autoload.php';
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Formatter\LineFormatter;
 
-// Logger::configure ( 'config.xml' );
 
 Twig_Autoloader::register ();
 
 // create a log channel
 $dateFormat = "Y-m-d H:i:s";
-$output = "[%datetime%] [%channel%] [%level_name%] %message% %context% %extra%\n";
+$output = "[%datetime%] [%channel%] [%level_name%] %message% \n";
 $formatter = new LineFormatter($output, $dateFormat);
 
-$streamHandler = new StreamHandler('../log/convertJSONToXML.log', Logger::DEBUG);
+$streamHandler = new StreamHandler('../log/convertJSONToXML.log', Logger::INFO);
 $streamHandler->setFormatter($formatter);
 
+global $logger;
 $logger = new Logger('defaultLogger');
 $logger->pushHandler($streamHandler);
-
-// add records to the log
-// $log->addWarning('Foo');
-// $log->addError('Bar');
 
 
 /**
  * PARAMS to configure *
  */
-
-// $logger = Logger::getLogger ( 'myLogger' );
 
 // The JSON source file to parse
 $JSONFile = "../input/entities.json";
@@ -49,6 +41,7 @@ $StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-
  */
 function extractIdPFromJSON($JSONfileName) {
 // 	$logger = Logger::getLogger ( 'myLogger' );
+	global $logger;
 	$logger->info ( "Extracting IdPs information from JSON source file..." );
 	
 	$JSONentities = file_get_contents ( $JSONfileName );
@@ -80,7 +73,7 @@ function extractIdPFromJSON($JSONfileName) {
  * RETURN a "cleaned" IdP Array
  */
 function cleanIdPInfos($IdPsArray) {
-	$logger = Logger::getLogger ( 'myLogger' );
+	global $logger;
 	
 	$logger->info ( "Getting rid of useless IdPs informations" );
 	
@@ -110,11 +103,10 @@ function cleanIdPInfos($IdPsArray) {
 /**
  * replace all SSO locations by Suuas own SSO location
  * Add the md5 hash value at the tailing end of the SSO location URL
- * e.g.
- * Location="https://engine.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a"
+ * e.g. Location="SSO_BASE_URL+key:default/+EntityIDHash"
  */
 function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
-	$logger = Logger::getLogger ( 'myLogger' );
+	global $logger;	
 	
 	$logger->info ( "Preparing the IdPs SSO URL for transparent metadata..." );
 	
@@ -151,7 +143,7 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
  * Uses TWIG templates engine with SURFconext IdP EntityDescriptor template
  */
 function outputEntityDescriptors($IdPsArray) {
-	$logger = Logger::getLogger ( 'myLogger' );
+	global $logger;
 	$logger->info ( "Preparing EntityDescriptors files..." );
 	
 	// Init Twig
