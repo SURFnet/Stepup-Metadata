@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://login.stc-r.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">De STC-Group verzamelt, ontwikkelt, innoveert, beheert en distribueert  kennis.</mdui:Description>
+				<mdui:Description xml:lang="en">De STC-Group verzamelt, ontwikkelt, innoveert, beheert en distribueert  kennis.</mdui:Description>
+								<mdui:Logo height="83" width="158">https://static.surfconext.nl/media/idp/stc-r.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">STC Opleiding Scheepvaart</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">STC Opleiding Scheepvaart</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2DCCAcCgAwIBAgIQXhTKZqOpepVIM6ySITedtDANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBsb2dpbi5zdGMtci5ubDAeFw0xMzEyMDYwOTQ4NDVaFw0xODEyMDUwOTQ4NDVaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmluZyAtIGxvZ2luLnN0Yy1yLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2jHCJti3bGyQXOKoPeqbItS1J4NSGl97h1uC4s730VSQi4aMyY/NsltiyhTz7XNvKoGwtT2oc8aVgSu7+r79BE4zaQBQ1OT5vE3Q9oRdp6OmQc3FS67uAaEok7N2mFA3+0nsP7RQYjnjI7AWSCFmhfKd4IwBsDhNvgb/H3IybnZ3U76cVWtpOsLATmI02FUcwWJ58imIAtwVP80xZONA05DT9CoIXGAUy/hMri63qFCFkzQRYNwoQKa0FofnO38Q6+c17I/HpfZ95PzyRGqkiWJPc56nTe9fy3qeOOanpE7fJ0WhUCVlCfWWfThgf4WsPAvbMr1gtOVr4kXLlmOdAwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBZ2rGuH4uHL5C+Rcn8M0v07f+4UA1PoGPRWneQnfZMHixqQWQaNMnb5gxkvXzjXz1g7NMC1d2NIlfZNQEcFnFBSR6anOuD98Nqtpev1rMh38c5+6hSh/WbPa6Qe0psw8aNm1vflkf10GmPDLljFn40N7/WjWSX8rz2r0y4h6GvzFl9pMPHMZzSb8MkrBkybPQLLPXrPyPoMeYt0LJWMmMPR+5pkGTwCnSVe6P7gltcMYCr+d1YREFV/M3HmmleZMJuqjOFcCGWCiF3ETaD/WRbpbiInXYo/JfdHAHWX9qQVgGJygUtgpb0xHsawSdgtvzlW4TwaEINQFYIPROixC8T</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/3caa826945e32ad89aeb9d5b5da16721" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">STC-Group</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.stc-group.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>T.A. Hoppner</md:GivenName>
+		<md:EmailAddress>hoppener@stc-r.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>T.A. Hoppner</md:GivenName>
+		<md:EmailAddress>hoppener@stc-r.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>T.A. Hoppner</md:GivenName>
+		<md:EmailAddress>hoppener@stc-r.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

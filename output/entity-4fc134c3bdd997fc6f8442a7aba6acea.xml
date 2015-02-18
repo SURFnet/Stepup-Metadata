@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://idp-test.nordu.net/idp/shibboleth"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">NORDUnet TEST IdP</mdui:Description>
+				<mdui:Description xml:lang="en">NORDUnet TEST IdP</mdui:Description>
+								<mdui:Logo height="46" width="203">https://static.surfconext.nl/media/idp/nordunet.jpg</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">xxx</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">xxx</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDMzCCAhugAwIBAgIUK/CJDYciXdKCAM5YX+fbleBjTtwwDQYJKoZIhvcNAQEFBQAwHTEbMBkGA1UEAxMSaWRwLXRlc3Qubm9yZHUubmV0MB4XDTExMDExNzA5NDYxM1oXDTMxMDExNzA5NDYxM1owHTEbMBkGA1UEAxMSaWRwLXRlc3Qubm9yZHUubmV0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwuj833/oKEw/VDNC6c416ul6sopfx1+TS1B+3vOdgJ/HzudPYiDYvglz5lvgOd0+92QOS6LnCbdyAoEvWiKfkEViH0XC2LkvhFu8BYmh7Rh9DssKZ7AbrXcJo5+urIKGMWYFfqzGdp7GKv3U+ITdfhrhZS/SjsvGdQ1yVKoUm9AFT9z3r6+niZNkeFQAMRvC+FwnZvK/tdcNLZV5F45FY49oZwYMyxEGXc6cFP/d2KR541lzgTZdBmC45BFUkJCJveY4eLMPjvEW7qVR12KvuZ4UnbeCrtx3tgWZ0FAxcDQVf3T6k1zZZ9kT3nv5PhUfU76KGyMvYUd+lj7b0hHZ2wIDAQABo2swaTBIBgNVHREEQTA/ghJpZHAtdGVzdC5ub3JkdS5uZXSGKWh0dHBzOi8vaWRwLXRlc3Qubm9yZHUubmV0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSoDnKUiN8jojDRtVlU41cQ0oBgQjANBgkqhkiG9w0BAQUFAAOCAQEAavxQqlYcjCJ85thupV6Uxs/drD6HGAskxdhivQESF0y2LlVxiItFnuxjEnzse7QQTQJJFw3xKfFPVEoxPMv+eBAU5ltYvLx6072BMdeqld9m0oE+k0lKrVkBQ2zgKv9kM7lwIk1psstC1C+2dthPu4r6KWB3DIjUJPL8LCA/3r98mCribA1RNI+al/c3sFp6y8gSyVZZ94daQUs8BBhDxIV4HEXDi8YroXhXIbBzoXik7UKvirNdLe7GF9b7e5MXHgcdgt/11LoQtmPh/GpdDRh3fVZzUAP+ffiuAV/Oth1idIikf3zQUBfFiILu2EFUdE2pYlTr7cVGX627IsSkKg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/4fc134c3bdd997fc6f8442a7aba6acea" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">NORDUnet Test IdP (eduGAIN)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.nordu.net</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Leif Johansson</md:GivenName>
+		<md:EmailAddress>leifj@sunet.se</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Leif Johansson</md:GivenName>
+		<md:EmailAddress>leifj@sunet.se</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>   </md:GivenName>
+		<md:EmailAddress>argrgrgrgrggr@example.com</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

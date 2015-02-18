@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://federatie.driestar-educatief.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Driestar Educatief</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Driestar Educatief</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Driestar Educatief</mdui:Description>
+				<mdui:Description xml:lang="en">Driestar Educatief</mdui:Description>
+								<mdui:Logo height="108" width="120">https://static.surfconext.nl/media/idp/driestar.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Driestar Educatief HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Driestar Educatief HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC+jCCAeKgAwIBAgIQGVoCelt/DqJDDhyS/L8n/TANBgkqhkiG9w0BAQsFADA5MTcwNQYDVQQDEy5BREZTIFNpZ25pbmcgLSBmZWRlcmF0aWUuZHJpZXN0YXItZWR1Y2F0aWVmLm5sMB4XDTEzMDUwNjA1NTI1OFoXDTE4MDUwNTA1NTI1OFowOTE3MDUGA1UEAxMuQURGUyBTaWduaW5nIC0gZmVkZXJhdGllLmRyaWVzdGFyLWVkdWNhdGllZi5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALW9G8TRPZh21ZtcuOj+IqNvdhrFyDeisXjyw/dPq0eGx6S6zLk6NA40IpvgwtuLfuq7ymfRynIWv/MZhtAzZ7oa1/IBoAziOEr6aqLc7xaPtfNnSu8hPcknUZxTsC4P0or5hLUBSaYnXK+Fij4tnttFluSf6UQuFFl2kXx+XubeNeMCDMMA69DvyFoEFT7oiQJqvf/GVsE5tRwfmWFtccfRQXlZVAEjq6MhF3tquBPx+vSlh9cFgStju950BWi7JCt5FsrqGx4u7NZaB4OAMC+tDOpkuSPMvh9miVBUJpX3zT9HdBoPp2UiENMHTtrG5uIlXXl7tVRKAw970cmNlucCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAWLlbgfGM5ki+tSscat3S3liy4AP7FrP2oPj1/ppI5QCqDKDZsp+AQnoIvbvwZsmq5FWybhIsg9LjalwHprcsNn+opkjHKsC4j+qqPuJ/EnoAEtJyp0CSW734ZSiOii6k/h/XHP09zYrLyCvdZSh5kPF5OCNoz58lMblO7d16rGIJP1nIIxow/JNrttgqVmBBSnrx1DPBD+4S8UipdsEcRnDVqHTi6ub+tKUCPO76960DpwN8soVWJltSr7e6jy1awvJQZ2pZh/mPcrsrzxzGHi9+Vq3QrUJq9sTn5YStQfvlAAT83v+TLSpT5Q1JDP4hUEG2oLVE84pFkZ7hE0FiOw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/ebc22074669e3e895bbb22bdf6d5c6da" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Driestar Educatief</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Driestar Educatief</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.driestar-educatief.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Aart Groenendijk</md:GivenName>
+		<md:EmailAddress>beheer@driestar-educatief.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Aart Groenendijk</md:GivenName>
+		<md:EmailAddress>beheer@driestar-educatief.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

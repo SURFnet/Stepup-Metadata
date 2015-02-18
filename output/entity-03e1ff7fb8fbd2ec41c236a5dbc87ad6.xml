@@ -1,0 +1,61 @@
+<md:EntityDescriptor entityID="https://idp.mpi.nl/idp-conext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<shibmd:Scope regexp="false">mpi.nl</shibmd:Scope>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Max Planck Institute for Psycholinguistics</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Max Planck Instituut voor Psycholinguistiek</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Max Planck Instituut voor Psycholinguistiek</mdui:Description>
+				<mdui:Description xml:lang="en">Max Planck Institute for Psycholinguistics</mdui:Description>
+								<mdui:Logo height="48" width="48">https://static.surfconext.nl/media/idp/mpi.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Max Planck Institute for Psycholinguistics Max Planck Instituut voor Psycholinguïstiek MPI Research</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Max Planck Institute for Psycholinguistics Max Planck Instituut voor Psycholinguïstiek MPI Research</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIFrzCCBJegAwIBAgIHF0e+HDZnmTANBgkqhkiG9w0BAQUFADBeMQswCQYDVQQGEwJERTEgMB4GA1UEChMXTWF4LVBsYW5jay1HZXNlbGxzY2hhZnQxDzANBgNVBAMTBk1QRyBDQTEcMBoGCSqGSIb3DQEJARYNbXBnLWNhQG1wZy5kZTAeFw0xNDAzMTgxMjQ4MTJaFw0xOTAzMTcxMjQ4MTJaMIGgMQswCQYDVQQGEwJOTDETMBEGA1UECBMKR2VsZGVybGFuZDERMA8GA1UEBxMITmlqbWVnZW4xIDAeBgNVBAoTF01heC1QbGFuY2stR2VzZWxsc2NoYWZ0MTIwMAYDVQQLEylNYXgtUGxhbmNrLUluc3RpdHV0IGZ1ZXIgUHN5Y2hvbGluZ3Vpc3RpazETMBEGA1UEAxMKaWRwLm1waS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOgBCkHbB6U8GXf8SMurddwJo7boVE4IziFaNtPJjRvP8NbVDHsq0uP9/F4+vQ0NyvH3q+7wBsINfNFj5hZYQnbfvZopvLddn0SMrm0TwTrrx++c+6DNpiQCBRzwVgA2TCL1wyWFHpWRYAJEJ1MNRQyznqz06wA45z1yqfH+Te74nRVj2sDVDwRJNGoUFCSYgwvtPQhJxrXb51Lb2xV3QIdqhJfHPcqUp+NqINEVlkmyVIGZ6t2JLt0wv4VwQJHD58/Jx4umSQe7StAi/gi4vxXWOTew6bdzLwaU0gUqZMZVeU5V1TaBJq9M9lTpfVq/dD3oPyPxGoMfCFfL9v+kuoMCAwEAAaOCAi0wggIpMDkGA1UdIAQyMDAwEQYPKwYBBAGBrSGCLAEBBAMBMBEGDysGAQQBga0hgiwCAQQDATAIBgZngQwBAgIwCQYDVR0TBAIwADALBgNVHQ8EBAMCBeAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMB0GA1UdDgQWBBTzg+WqK1blp2YAleoR5o4aq8PGIDAfBgNVHSMEGDAWgBQC1h5uCau/WGWnCjxIM2HRzn3DWzAyBgNVHREEKzApggppZHAubXBpLm5sgRt0b2JpYXMudmFudmFsa2VuaG9lZkBtcGkubmwwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NkcDEucGNhLmRmbi5kZS9tcGctY2EvcHViL2NybC9jYWNybC5jcmwwNaAzoDGGL2h0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvbXBnLWNhL3B1Yi9jcmwvY2FjcmwuY3JsMIHHBggrBgEFBQcBAQSBujCBtzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMD8GCCsGAQUFBzAChjNodHRwOi8vY2RwMS5wY2EuZGZuLmRlL21wZy1jYS9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwPwYIKwYBBQUHMAKGM2h0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvbXBnLWNhL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDANBgkqhkiG9w0BAQUFAAOCAQEArcB+0wr3Gr3Qta9TmWW7+jI3/WTV/Liq66j/m37prOKm8vUGuca6HQi35e1qRt3YMb7aoeQQBRXwNX1uXy1Giv/e0v5uECWAu7LSyb1OqTP9arUOuu60929XmELROlA57Wqy26l618s75cylRipWQWf8AX01AZVkpfqHgomEBbN241wwgj7Cn6k3yRucCyx1Gl6/45L5sVdRpozTY8XS8aaFma06bMDXPYcnAZS/A9xCaIp6P/mAPEztjKdTerFiuaZylIGX64aXbVp6VpuplS6Es8URr4Cw3r+4or4ybbUlxlovukrys2HQFzRnOqmDeMJVUe3dOF3i/A1J23fnEg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/03e1ff7fb8fbd2ec41c236a5dbc87ad6" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Max Planck Institute for Psycholinguistics</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Max Planck Institute for Psycholinguistics</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.mpi.nl</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Reiner Dirksmeyer</md:GivenName>
+		<md:EmailAddress>Reiner.Dirksmeyer@mpi.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Tobias van Valkenhoef</md:GivenName>
+		<md:EmailAddress>Tobias.vanValkenhoef@mpi.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Tobias van Valkenhoef</md:GivenName>
+		<md:EmailAddress>Tobias.vanValkenhoef@mpi.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

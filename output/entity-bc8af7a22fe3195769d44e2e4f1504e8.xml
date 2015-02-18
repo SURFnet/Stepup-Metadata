@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.cibap.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Cibap</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Cibap</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Cibap, vakschool voor verbeelding</mdui:Description>
+				<mdui:Description xml:lang="en">Cibap, vakschool voor verbeelding</mdui:Description>
+								<mdui:Logo height="300" width="300">https://static.surfconext.nl/media/idp/cibap.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Cibap vakschool verbeelding</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Cibap International</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC3DCCAcSgAwIBAgIQN9p3nX1TpbVL3EIwWrZxcDANBgkqhkiG9w0BAQsFADAqMSgwJgYDVQQDEx9BREZTIEVuY3J5cHRpb24gLSBhZGZzLmNpYmFwLm5sMB4XDTEzMTExMTEzNDkyNFoXDTE0MTExMTEzNDkyNFowKjEoMCYGA1UEAxMfQURGUyBFbmNyeXB0aW9uIC0gYWRmcy5jaWJhcC5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN4pP/+USVd9srnQE/MgUWyieYVc7iUi31AOjredcxsd6vuwh7h/rwjsOYShcnJ1KJmE/sZq8qlbtykAx+aHM0w0fBVMHUatt9feSRs4V15PT9Zkx3JH0DPQ52yzZPnFuMrLeWii29JUloR8OirBXq8YH5gecplCcOilBmJ7L++0nfmaLzs2fjPx+aAb2uhcdTQh22ODv+gk8ZIk/BVe1o/U6u1lt+Hg3ef7MXsrsHyebh6+SHi38dvAKBCqFjcmWDasXl3gEmRWB3nGItBahSb500ztt6HtMFbOpCi60pNp/Ro6U0aXeqyDaBpMb+nnuQrhVucy+hpICFOzg5zJh/UCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAiXlXJVasfvMa926soNAoEese0NH3+lXsCwj9twZ3QnNGp/aKmamqDpjrzLDbQmkaWETIatcuwkmxOMADjnCLZlV5lx8bxihv+lABIn09ly5Lc7mzmki7HPySGdtrICj7O+ZICDJSjVcxAHf8SZdh4jbF0rccuIkGZWY2Y/j23hxYWtFyDWYgiNR97tlrjLnplDDqDqcIwmKngnE2BWYfscsknrucsZ5szHTy6YHb6r04aycfJqZ+g5AxgCRrDWRQ/GB/QXcPuTj0fZS+KAOQ2MMRaEoAkkiDz3uCmeCjJvs3zZfcTT7ccw9S6piqe4RqZnKx/U86WVX/zfuHNC+2ig==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/bc8af7a22fe3195769d44e2e4f1504e8" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Cibap</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Cibap</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.cibap.nl/page/cibap_international</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Dennis de Ruiter</md:GivenName>
+		<md:EmailAddress>d.deruiter@cibap.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Dennis de Ruiter</md:GivenName>
+		<md:EmailAddress>d.deruiter@cibap.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>servicedesk Cibap</md:GivenName>
+		<md:EmailAddress>servicedesk@cibap.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

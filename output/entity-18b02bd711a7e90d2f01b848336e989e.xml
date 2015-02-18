@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.thomasmorehs.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Thomas More Hogeschool</mdui:Description>
+				<mdui:Description xml:lang="en">Thomas More Hogeschool</mdui:Description>
+								<mdui:Logo height="107" width="400">https://static.surfconext.nl/media/idp/TMH_logo_SC.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Thomas More Hogeschool TMH</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Thomas More Hogeschool TMH</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5DCCAcygAwIBAgIQOQ/vgmJjmZRDG1bqYeBqkzANBgkqhkiG9w0BAQsFADAuMSwwKgYDVQQDEyNBREZTIFNpZ25pbmcgLSBhZGZzLnRob21hc21vcmVocy5ubDAeFw0xNDA1MTMxMDM1MDdaFw0xNTA1MTMxMDM1MDdaMC4xLDAqBgNVBAMTI0FERlMgU2lnbmluZyAtIGFkZnMudGhvbWFzbW9yZWhzLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtNyCFe9/PXlgTz8RrTfdumM1YDl8wQDeUzxrXb31XVG9S4HgLsUzBHx+WP+Wg+WSntNa6idhlAdTQytUDo0meDgeIdufQZwE7m0SsO9hkncMsxkvwQ9/bZ3lsOiriXvddTAFKBmGukBW99/of10GCadAfLcA/I/GTnLkxBP8CjFXPZk6E8jU/GTh5R4Rbot3t1/AGrcfYCW9eqKT2hQoxhorcl9erNG0mQlerFBngQHip8a8l9IzkfTw/3uRk75tGagvpogzoO0FroarnMapN/5dKWMynR8imWJqVKBXuXJS5M36kizuLJBEnDx4r3Pj9WaZgwHu1TJ9373RskmnAQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBVNF4R6ME3BRHdsI3lCgkJzi7QRU5CbwA8ar5snCfFIesG3a1J4+n+nbzozHfNq9L8iymJzMugkMYa1DrAnw/Ea0d4PEX77Gg6W7CAH4uYMiC7pZhO1Nm29PE6+AkZT4Kin8dN68B2e3dg8JK9EsH9fEKFmdO2kX2o0VPNL+TrcGxB1wrIveoTtn8nJ/MqjblOi2TvRi4W6dqsJwRpIkdUQZHarE7bGqc7/0XtWI3wfx4o/vyZaVYgmUKBCbpoZryTfVGpYZ3E5o7e49buAlKv4nNLUJpfeWfUlCeTD0pnstieepOEbP5/+Ub5Q9Ea35Qqpv1+7y/hNlpGppIpgFpR</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/18b02bd711a7e90d2f01b848336e989e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Thomas More Hogeschool</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.thomasmorehs.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Lennert Sieverding</md:GivenName>
+		<md:EmailAddress>l.sieverding@thomasmorehs.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Lennert Sieverding</md:GivenName>
+		<md:EmailAddress>l.sieverding@thomasmorehs.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Lennert Sieverding</md:GivenName>
+		<md:EmailAddress>l.sieverding@thomasmorehs.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://sts.wur.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Wageningen UR</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Wageningen UR</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Wageningen UR</mdui:Description>
+				<mdui:Description xml:lang="en">Wageningen UR</mdui:Description>
+								<mdui:Logo height="17" width="108">https://static.surfconext.nl/media/idp/wur.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Wageningen Universiteit WUR UR</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Wageningen Universiteit university WUR UR</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1jCCAb6gAwIBAgIQQR86raf4XIpPYkmCoSmw7DANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDExxBREZTIEVuY3J5cHRpb24gLSBzdHMud3VyLm5sMB4XDTEyMDgwOTA4NTQwNFoXDTIyMDgwNzA4NTQwNFowJzElMCMGA1UEAxMcQURGUyBFbmNyeXB0aW9uIC0gc3RzLnd1ci5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDjmw2UJW37DIxU9ywJ8hlJ+PXPCTYEc9/t9uAmfHBLLBiVoyG/G6CJSDIjhGdTd6j1npFdd3ANryVCvTLpQZf0ZZnA1TgtHVI7W7CmEKNDkvDXVhBb3abt1/qJboWxOn/PfCRTW5VVDODlJM5Y7W5DHB9ORVGB9AVsTR/3hlOzyjGfWUuLaqc0XOvGc+4NxHpCrj+7bLeCfvjPP1IxyWYt2EbAIi8hO1/yWHXFjZBYUkBtW74CJQeGSIF4ZYArrggu0FFGnMz/sdLRlbURXfL1sRcsVKi0XdXLtA6+tw653Fg+8LPmMzkPAgNJlZ5y70w6ZLTwviMq5poE6sDZqeUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAXDE4LGOzG0A0+U4vo20Pdo9n0S26LLGJZBL04tN6Z9pqOVF5hBpOpg9bGbN1yp9SE1XEezAyc3UolcaR7aqWXAQDrN9+pGMLEqtjF4WdS2jAgor60WcLJHQ0IkTp4XHg0PvCUrobRkVtSkFdluj61ho/k97WMpFqGk4azWO1ZKkL2AmaQy7TST+8J840JNxzVsFqKjerWVd5/lyMm+0FNWAsCztaz/L4g5n5DxU1CKfLK8YjlgJF4VCTSYDg469/Nv04VMRAuMDG8dMKkYf5ivQYs9pEeKrK1a51WbGSVuzaJvP/CQByZICfWZjVTaKc2Mrqw3bNm4jqTYXZnFNA0w==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/4ff1ecb290680df5b2ee5c631c2fc102" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Wageningen UR</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Wageningen UR</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.wageningenur.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Michiel Buil</md:GivenName>
+		<md:EmailAddress>Michiel.Buil@wur.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Guido Hoenderboom</md:GivenName>
+		<md:EmailAddress>guido.hoenderboom@wur.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Victoria Peterson</md:GivenName>
+		<md:EmailAddress>victoria.peterson@wur.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

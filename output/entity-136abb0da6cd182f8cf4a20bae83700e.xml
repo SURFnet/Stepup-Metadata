@@ -1,0 +1,62 @@
+<md:EntityDescriptor entityID="http://wayf.onderwijsgroeptilburg.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<shibmd:Scope regexp="false">onderwijsgroeptilburg.nl</shibmd:Scope>
+							<shibmd:Scope regexp="false">ogt013.nl</shibmd:Scope>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Onderwijsgroep Tilburg</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Onderwijsgroep Tilburg</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Onderwijsgroep Tilburg</mdui:Description>
+				<mdui:Description xml:lang="en">Onderwijsgroep Tilburg</mdui:Description>
+								<mdui:Logo height="23" width="108">https://static.surfconext.nl/media/idp/onderwijsgroep-tilburg.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Onderwijsgroep Tilburg, ROC Tilburg</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Onderwijsgroep Tilburg, ROC Tilburg</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC9jCCAd6gAwIBAgIQP9aLHdcb65lDAzH4r6C86zANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDEyxBREZTIFNpZ25pbmcgLSB3YXlmLm9uZGVyd2lqc2dyb2VwdGlsYnVyZy5ubDAeFw0xNDA2MDQwOTE0MzNaFw0xOTA2MDMwOTE0MzNaMDcxNTAzBgNVBAMTLEFERlMgU2lnbmluZyAtIHdheWYub25kZXJ3aWpzZ3JvZXB0aWxidXJnLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjI/ePx/tFlu4Jcj6pUFoc79oSSRkOafMS2BUKZ1Eadok+vAxHtLkTX/giitG2NZR+qWjgX05KGk6uzA4A/EqyZxeOE9kWja45F28xCHii9a7ebt0vAvWf6IhecmqjDhYRL0M1+jocIXwtxwds13kksrLi/bslVBMASvPPt2JGPPAEgSH2LBBTfFbx8ZnsWNspL5fT6zfmtimi/hqt2dHqiQmFDnQG4sJuMhV2AeF9Igx/AIhI0cPyyas8vHlvs1yKvXo1N6tpkVnB1f31J66dzdCJUnucCDA6hvor1+ArJxq2ue768o3hIW5qc8XGLK4XvkPdByL1EnkTrzr0QsekQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQABhwt0R/9WeMeVIaoPPMDSBZ0q3pcXLeuZIkRHDMNUAUIRzL/MjwO3cp80bdCas0hbaLlmJDieatzz6uRf3Qiev9aWh56ZXyFjGe75dW0Aim4K3T6xgoW2hKIi+52kc4LLsBHPW8Ln3AaMMO7AFLunHnl+wVcFhEOxB/vHvGZv+P21qBCD5+MCCal7TMRmsBsW35RyX9TJkhdf946jJbJCzDrwhYnvLNNCcW+kz3G8KD1L77k0zXnz23kakM2tlVpF03VqD3x+0RAz11D2GyFK05GXSGivZKzFKavnyd+UyC+9t8k2pUI1UfJI5SnC5DYPlNwoRc68O38Vn16tp7i7</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/136abb0da6cd182f8cf4a20bae83700e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Onderwijsgroep Tilburg</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Onderwijsgroep Tilburg</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.onderwijsgroeptilburg.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Sjannie de Rooij</md:GivenName>
+		<md:EmailAddress>sdrooij@onderwijsgroeptilburg.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Merijn van de Schoot</md:GivenName>
+		<md:EmailAddress>mvdschoot@onderwijsgroeptilburg.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Sjannie de Rooij</md:GivenName>
+		<md:EmailAddress>sdrooij@onderwijsgroeptilburg.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

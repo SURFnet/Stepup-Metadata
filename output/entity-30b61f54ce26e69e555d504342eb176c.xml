@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://surfguest.nl"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">SURFguest</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">SURFguest</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">SURFguest</mdui:Description>
+				<mdui:Description xml:lang="en">SURFguest</mdui:Description>
+								<mdui:Logo height="51" width="107">https://static.surfconext.nl/media/idp/surfguest.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">SURFguest Guest </mdui:Keywords>
+				<mdui:Keywords xml:lang="en">SURFguest Guest </mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEHjCCAwagAwIBAgILAQAAAAABFg7hy6swDQYJKoZIhvcNAQEFBQAwXzELMAkGA1UEBhMCQkUxEzARBgNVBAoTCkN5YmVydHJ1c3QxFzAVBgNVBAsTDkVkdWNhdGlvbmFsIENBMSIwIAYDVQQDExlDeWJlcnRydXN0IEVkdWNhdGlvbmFsIENBMB4XDTA3MTEwNTA4MTYyN1oXDTEwMTEwNTA4MTYyN1owTTELMAkGA1UEBhMCTkwxEDAOBgNVBAoTB1NVUkZuZXQxETAPBgNVBAsTCFNlcnZpY2VzMRkwFwYDVQQDExBlc3BlZS5zdXJmbmV0Lm5sMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIcRvAXwUWlE12NCkgPR9V6G90tu9C4gQ3cMGzF3b8fGg5A01/F7TcIMNohFFEee4GiYWmU5+xRZByQw5BXpSlqbDn/G3QSJqOcXzxcelWY8jlJUHx91ved6aSvDXZx5Jkv9wP1ZVOKWRfKOGENqwNQZeUEiKUhrYu5wEBsBpDMwIDAQABo4IBbzCCAWswUAYDVR0gBEkwRzBFBgcqhkixPgEAMDowOAYIKwYBBQUHAgEWLGh0dHA6Ly93d3cuZ2xvYmFsc2lnbi5uZXQvcmVwb3NpdG9yeS9jcHMuY2ZtMA4GA1UdDwEB/wQEAwIFoDAfBgNVHSMEGDAWgBRlZaM91zsRowoHJTfJQkpbdndQ4TAdBgNVHQ4EFgQUHZSyxc2114FHO3aPxNUz0xKzfDgwOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC5nbG9iYWxzaWduLm5ldC9lZHVjYXRpb25hbC5jcmwwTwYIKwYBBQUHAQEEQzBBMD8GCCsGAQUFBzAChjNodHRwOi8vc2VjdXJlLmdsb2JhbHNpZ24ubmV0L2NhY2VydC9lZHVjYXRpb25hbC5jcnQwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBsGA1UdEQQUMBKCEGVzcGVlLnN1cmZuZXQubmwwDQYJKoZIhvcNAQEFBQADggEBAAojubZKLWWymxYMTmYUxpxm1Me1FPvd8HlmPg5gWdmbw8piO92thM9KROLpG/zK5GKC4ZvrsEPpvToCQpPVyEVf3DpCOJKOOIv3//a5BKuhWLTtzqJsAvIp2BS7e4p1GuKnYhOvlxf3pueAmJAd3Z2/V0VIpHhzCKehI1pvZr/P7auQplTWnbPplAcwvaLxvovpzhXRDXWPVqfjGBKlXvJQEIR8mXvOI/ZzU/5sZH7CAZstly5TVqn1MGodCZEdIMv2I9tj5k+dv3/Z/x2lm9QAmvvqVzzXlAXVg2kJZ5zWzr6qKeyUJsnOwtE2lGjexPGy2H0ezUpfFImKgOl4dWE=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/30b61f54ce26e69e555d504342eb176c" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">SURFguest</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">SURFguest</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">https://www.surfguest.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Joost van Dijk</md:GivenName>
+		<md:EmailAddress>espee-beheer@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>federatie beheer</md:GivenName>
+		<md:EmailAddress>federatie-beheer@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>federatie beheer</md:GivenName>
+		<md:EmailAddress>federatie-beheer@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

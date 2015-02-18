@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.kpz.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Katholieke Pabo Zwolle</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Katholieke Pabo Zwolle</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Katholieke Pabo Zwolle</mdui:Description>
+				<mdui:Description xml:lang="en">Katholieke Pabo Zwolle</mdui:Description>
+								<mdui:Logo height="39" width="108">https://static.surfconext.nl/media/idp/kpz_logo.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">katholiek pabo zwolle KPZ</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Katholieke Pabo Zwolle University of Applied Science Teacher Training Institute Primary Education KPZ</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC0jCCAbqgAwIBAgIQLyiLClnpAaVMecx77mqhdzANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDExpBREZTIFNpZ25pbmcgLSBhZGZzLmtwei5ubDAeFw0xMzA2MTEwOTQ2MThaFw0xNDA2MTEwOTQ2MThaMCUxIzAhBgNVBAMTGkFERlMgU2lnbmluZyAtIGFkZnMua3B6Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyvQyJYMTdWH4D2ulk1xQUgx5Ct+0BTVErvWVMO7DmFXZcJqTdb4HWC5Phy9VdCZvDKW/JL/sO5Puoe9xpXiLFCV4Y1xC2MP4ojagnHJy/ysVWhElCJ8oBH+ofGgyYTAJDJHs7m49qZc22NiR2t9sMtOGKDsBP6YBvj4ZYszZ7c6ob8NJGQ0W7ohkdAqGEuEOaUrB7yy/1X4iMQmqIvxeVgJRuO8/eUx83tnTvbpgnAVCc8p8X5z+Yyf7nPySeXRnQ+hZJVA8ZYJ39GBNknRkc+pYm5m5w8gO2Qr5GgiJ1J08Gf12sZsfaMjQ3kBKveiF0op9gqk+CXoVnEVeoLOQ0wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBYK9mdlrQwAQnAwgh8DGk661YDuVnihJvsr3oxFHpbqlA1ybhZQ3kwwctkrkxJVQFKG973tA+C5WaDT/BPT0z8swJTAk2524qoR9E/J1YloH4DeqTyNKCEo0/1dJPjzdNpQ47ioqjbVTfu3ZFaiwJ7ZyEyCiutkZV4/n2HsuzUe29V3LJmxypBkK7mbtUlWYxl2YMzo0S8Tjgk5ksyb8tdDUoMO4JxGethRNEdeUApN7u/QywMR5GXx3TzN7N0dsgD/uoX6bkspC2/LmiyCbERdZAzHcLin8yGbOiZ8MUy4RnPDiwfLXjK9i++XA7y9vc6W8Hdy9C785hIrcHLjn3Q</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/58408a5a741d7f454b4e3db0c29e8073" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Katholieke Pabo Zwolle</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Katholieke Pabo Zwolle</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.kpz.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Martin Savelkoekl</md:GivenName>
+		<md:EmailAddress>m.savelkoel@kpz.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Eindgebruikers Support</md:GivenName>
+		<md:EmailAddress>ict@kpz.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Marc Nieuwhof</md:GivenName>
+		<md:EmailAddress>m.nieuwhof@kpz.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://fides.rivm.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Rijksinstituut voor Volksgezondheid en Milieu</mdui:Description>
+				<mdui:Description xml:lang="en">National Institute for Public Health and the Environment</mdui:Description>
+								<mdui:Logo height="101" width="500">https://static.surfconext.nl/media/idp/RIVM_Logo.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">RIVM volk gezondheid milieu rijk</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">RIVM health environment rijk</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1jCCAb6gAwIBAgIQK4OAqxkoGpFI+8OrPnKExjANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBmaWRlcy5yaXZtLm5sMB4XDTEzMTIwOTEwNTYyOFoXDTE4MTIwODEwNTYyOFowJzElMCMGA1UEAxMcQURGUyBTaWduaW5nIC0gZmlkZXMucml2bS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIvRGHSUhtGKhwKsfxmdiwe5lWvI13mjOjT9EY14UVDBKzKrEWaoO+qWNFQeuqWB6P04XEhfsHAF6jTI2P4vK+mDQ9kCsydtgX1RQ1ZwBaCvk7sxYAL5F/NTiXYfTy9kx1MaZdQA/130cYzhWdmp4AdfAwozAT2XhnZgnCjLOQCNt74oKerUkCHSeMaQnl2mektSYF5MKPXM1/ZXPdQedqxhBXGoLEa0iksFTpqP/etkT4IWRCdpc41XEtiEHlCGVC/Kw/gZBtLODyjzyGe92HakWptWWvaQfkzVJcUP/hq1mp7EQS+XMad2t2BcT9z/+boPBtqk60ja6mZk1iw3rIECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAWhBtjsSpzGES8Gji8qS9D31mX5D3ngxlCJvr05Cmi81KJ6x8zA5MEXKKbxmzTldWYqJsHLjrTypoDDcK4t4nduHwgqi5UdC8zBPYwtXwvjtBi4yIwum7ltbpZR8e8UKOAn0RjpS88ujtHZikImYbpP408KF81UD02jVbXZCzKiF/GkUW4KzRw1UAJ/fxyDhINp9WQJRLhJn1VciL2V2I2Ie0C/pYt2hLr0sPOjzgXv1CiVKFMNg+MWzQsES1d3YMM56DYsl33E3dkwwiqfWTICfuZu0RHm6QY3IUiTLA1pAzu8NaQOTUo68OBqwvX/5aeFSnOfBsazDsuFhzh/FzYw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/e880c6bc54e8854478e8739122e342b6" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">National Institute for Public Health and the Environment</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://rivm.nl/English</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gerrit Schouten</md:GivenName>
+		<md:EmailAddress>gerrit.schouten@rivm.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Jan van der Valk</md:GivenName>
+		<md:EmailAddress>jan.van.der.valk@rivm.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Peter Berndsen</md:GivenName>
+		<md:EmailAddress>Peter.Berndsen@rivm.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

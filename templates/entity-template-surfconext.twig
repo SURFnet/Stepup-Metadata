@@ -1,0 +1,70 @@
+<md:EntityDescriptor entityID="{{name}}"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+			{% for item in metadata.shibmd.scope %}
+				<shibmd:Scope regexp="false">{{ item.allowed }}</shibmd:Scope>
+			{% endfor %}
+				<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">{{ metadata.displayName.en }}</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">{{ metadata.displayName.nl }}</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">{{ metadata.description.nl }}</mdui:Description>
+				<mdui:Description xml:lang="en">{{ metadata.description.en }}</mdui:Description>
+				{% for logoItem in metadata.logo %}
+				<mdui:Logo height="{{ logoItem.height }}" width="{{ logoItem.width }}">{{ logoItem.url }}</mdui:Logo>
+				{% endfor %}
+				<mdui:Keywords xml:lang="nl">{{ metadata.keywords.nl }}</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">{{ metadata.keywords.en }}</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>{{ metadata.certData }}</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="{{ metadata.SingleSignOnService.Location }}" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">{{ metadata.name.en }}</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">{{ metadata.displayName.en }}</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">{{ metadata.OrganizationURL.en }}</md:OrganizationURL>
+	</md:Organization>
+		{% for contact in metadata.contacts %}		
+		{% if contact.contactType == "administrative" and contact.emailAddress != null %}
+		<md:ContactPerson contactType="administrative">
+		<md:GivenName>{{ contact.givenName }} {{ contact.surName }}</md:GivenName>
+		<md:EmailAddress>{{ contact.emailAddress }}</md:EmailAddress>
+	</md:ContactPerson>
+		{% endif %}
+		{% if contact.contactType == "technical" and contact.emailAddress != null %}
+		<md:ContactPerson contactType="technical">
+		<md:GivenName>{{ contact.givenName }} {{ contact.surName }}</md:GivenName>
+		<md:EmailAddress>{{contact.emailAddress }}</md:EmailAddress>
+	</md:ContactPerson>
+		{% endif %}
+		{% if contact.contactType == "support" and contact.emailAddress != null %}
+		<md:ContactPerson contactType="support">
+		<md:GivenName>{{ contact.givenName }} {{ contact.surName }}</md:GivenName>
+		<md:EmailAddress>{{ contact.emailAddress }}</md:EmailAddress>
+	</md:ContactPerson>
+		{% endif %}
+		{% endfor %}
+	</md:EntityDescriptor>

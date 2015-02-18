@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://federation.alfa-college.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ROC Alfa-college</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ROC Alfa-college</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Alfa-college</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Alfa-college</mdui:Description>
+								<mdui:Logo height="124" width="500">https://static.surfconext.nl/media/idp/alfa-college.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ROC Alfa-college</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ROC Alfa-college</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC8DCCAdigAwIBAgIQczJIPF2BkZNOh+6X+IOC5zANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylBREZTIFNpZ25pbmcgLSBmZWRlcmF0aW9uLmFsZmEtY29sbGVnZS5ubDAeFw0xNDA0MTAxMjM2NTBaFw0xOTA0MDkxMjM2NTBaMDQxMjAwBgNVBAMTKUFERlMgU2lnbmluZyAtIGZlZGVyYXRpb24uYWxmYS1jb2xsZWdlLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnNub+LeEfnx8GZgG2hKiCu9cCl2joL2+d4lKd6AnzBn6NS1wwuN1zKZsAZuKEhffpeEFywm2qu+u6eFUtklF5Slgspd1ILwbvwStUe7YA7TBQToA0acP4aXf9YKNz9T+DAOO1ecj4ok1OGB+yQsfnC058jG+B+2UoFZDg8O44eyq6gwtB7ETVJsGI/+IUrys95RkbVwCNrasL+qwlMSYl6bbQatVdUq/aa7pGUg+KS8MTFGbJsCvlGKShCLyLRnnkTsnDeXnEKJPcH3YUi4fUqlX88/2azGCuxfvMHgVlngAJG+bPL1y0BQmn4VFuOC8t0tQmGT2Sk9u+9Ao9BVNqwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmchFoZ3vZEuvKvs5A0quYr5YMRYFKR+yn+1wrm9xkGkjwi5UjdwgqvRYo5VR2EgySIIAhacZQjwOMRTeGJNpOGhjR6w2f6Qj7by/IbgkgLpVbvWFN6/QiLkaEbVZeTQ+dfnMze4/x4EhTGpXnAdprYsNZLftDujfAOoTg40q/PRHH8VaeSBDucRQcKFVindcUWu/H+/9svsbqfvOcdmJ9lG4So5SIWFMhbfHeuPa/thP2//3XwJf3hf+721BTx59nvu7cU+ak0kuSsFSjPmSkIQYRb5LFBGc7top/DWQlf4wVY1X9CBYn2Y86/PEyHMSECb3qIW4VBcV0nwgzXuAa</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/f3f1fef2fc7429c968d0b055a808856e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Alfa-college</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ROC Alfa-college</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.alfacollege.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Erik van den Berg</md:GivenName>
+		<md:EmailAddress>servicedeskalfa-college.bnl@capgemini.com</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Helpdesk Alfa-college</md:GivenName>
+		<md:EmailAddress>servicedeskalfa-college.bnl@capgemini.com</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Daniël Spreeuwers</md:GivenName>
+		<md:EmailAddress>d.spreeuwers@alfa-college.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

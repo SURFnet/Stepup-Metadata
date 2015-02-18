@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://sso.saxion.nl/opensso"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Saxion University of Applied Sciences</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Saxion</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Saxion</mdui:Description>
+				<mdui:Description xml:lang="en">Saxion University of Applied Sciences</mdui:Description>
+								<mdui:Logo height="46" width="108">https://static.surfconext.nl/media/idp/saxion.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Saxion University of Applied Sciences</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Saxion University of Applied Sciences</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDfjCCAmagAwIBAgIEUW6aLDANBgkqhkiG9w0BAQUFADCBgDELMAkGA1UEBhMCTkwxEzARBgNVBAgTCk92ZXJpanNzZWwxETAPBgNVBAcTCEVuc2NoZWRlMQ8wDQYDVQQKEwZTYXhpb24xIDAeBgNVBAsTF0luZm9ybWF0aXNlcmluZ3NDZW50cnVtMRYwFAYDVQQDEw1zc28uc2F4aW9uLm5sMB4XDTEzMDQxNzEyNDg0NFoXDTIzMDQxNTEyNDg0NFowgYAxCzAJBgNVBAYTAk5MMRMwEQYDVQQIEwpPdmVyaWpzc2VsMREwDwYDVQQHEwhFbnNjaGVkZTEPMA0GA1UEChMGU2F4aW9uMSAwHgYDVQQLExdJbmZvcm1hdGlzZXJpbmdzQ2VudHJ1bTEWMBQGA1UEAxMNc3NvLnNheGlvbi5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIj1xrxdVPFHU3oVMsiNBQA8O6Kx2WgHjqYhOD/YNXYSYBcTdEWoSxkrlv3LdyFDrg8LeYmXT22Udiz7vW+k8oyKO1YBDbt/BJxIjbqRewfZKRTPolU+5/CEQNGAVTDfSs4NXaw5ytj9beDhsrJZP74mfsp9fz5h3/x9UQLBhqeHoGAR++NHflVGx3e8EVZg23VSDuv7se00i0LldXs7blTTG17kpiOHQuAcknjVIeMS9L0+0xMgMvatQkAjvlpLq/GlM2BL7gvU4LVdC0+Bb8jXUUp/lEd4jP5AVZVMIRoNXmMsfw8pEDRHyq8lHW73hQnE9Ef7nfcHg8Zi1+ZP8zkCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAIzVHhg82gXgmSb9wG+QlnjqeHhD6FZl6n4e5dE6lfHtMb8EoIts6vo7TwLQd7clt+ZQQOoNRb5jPxpwqk0Lg+jDv4aO9oypyEz5xS1r3AMquTB9eSIfiBsqBNyLXdAXsEXncKXqHqGm6zRlkLmdsFUR8fzD8hf1UTihOGIVkKJd99g7q15qrk3+yqPzjwAYu2TUxRYyZeWAs4KotqEaH9JMjdedWJlKY59Y4RmbfLn9MRTJTssX0PhEbfscl4m5clW9op6kAPvge0ThcpKQxYfSctrrmLK9zT+AxKGgMhVxhFx7kRnHzygRo4KgcA5/V3BzwH+uXywzkP8DAO9TSqg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/2b2c18e5b3bde6129f0e388ab85541c4" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Saxion University of Applied Sciences</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Saxion University of Applied Sciences</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://saxion.edu</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>InformatiseringsCentrum ServiceDesk</md:GivenName>
+		<md:EmailAddress>servicedesk.ic@saxion.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Kick Molenveld</md:GivenName>
+		<md:EmailAddress>k.molenveld@saxion.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Kick Molenveld</md:GivenName>
+		<md:EmailAddress>k.molenveld@saxion.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

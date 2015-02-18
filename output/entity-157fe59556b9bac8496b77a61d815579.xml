@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://niod.idp.knaw.nl/simplesaml/saml2/idp/metadata.php"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</mdui:Description>
+				<mdui:Description xml:lang="en">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</mdui:Description>
+								<mdui:Logo height="50" width="108">https://static.surfconext.nl/media/idp/knaw-niod.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIFTDCCBDSgAwIBAgIRANF1HAfm9uGO9jceubL/61owDQYJKoZIhvcNAQEFBQAwNjELMAkGA1UEBhMCTkwxDzANBgNVBAoTBlRFUkVOQTEWMBQGA1UEAxMNVEVSRU5BIFNTTCBDQTAeFw0xMjExMjIwMDAwMDBaFw0xNTExMjIyMzU5NTlaMEgxCzAJBgNVBAYTAk5MMQ0wCwYDVQQKEwRLTkFXMQ0wCwYDVQQLEwRJZW5BMRswGQYDVQQDExJidXJlYXUuaWRwLmtuYXcubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+RRZMJ1Ck317OG7ujFsOHbPY/Wy7LAp275GJz9CDV+e8Wf76gKjQ1gY1m/Ndz9FmVROoEKrjUNCxrmskBN+CMDW/PbgdzcM7+xsqX0ve+xEcbptSKc5Pe7rNhsqMIXyrMZQDvit4prO7JUeil45p15vWlo7Wp/Lv/r/v52yAGetJZj7073OtlN74gziQe8E1TP5/uPml7r4KCPuYCQyfTbkPLNpfK0+B7hDH/l75TtMMMPK+whHIxbgJhWXWcabicZDldYPYQcs/bd6YOFeoTDT/tpyu/6t6igewskAb7l7k08ls/ckZ++SYZJdZQTdJavYVjGYhwMpoOFyaufKQnAgMBAAGjggJBMIICPTAfBgNVHSMEGDAWgBQMvZNoDPPeq6NJays3V0fqkOO57TAdBgNVHQ4EFgQUNQkbitIuOLhPT93q1CFPY/p2kWowDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBgGA1UdIAQRMA8wDQYLKwYBBAGyMQECAh0wOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8vY3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYaaHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwgfgGA1UdEQSB8DCB7YISYnVyZWF1LmlkcC5rbmF3Lm5sghBkYW5zLmlkcC5rbmF3Lm5sghdlaHVtYW5pdGllcy5pZHAua25hdy5ubIITaHV5Z2Vucy5pZHAua25hdy5ubIIQaWNpbi5pZHAua25hdy5ubIIQaWlzZy5pZHAua25hdy5ubIIRa2l0bHYuaWRwLmtuYXcubmyCFG1lZXJ0ZW5zLmlkcC5rbmF3Lm5sghBuaWFzLmlkcC5rbmF3Lm5sghBuaWRpLmlkcC5rbmF3Lm5sghBuaW9kLmlkcC5rbmF3Lm5sghRyYXRoZW5hdS5pZHAua25hdy5ubDANBgkqhkiG9w0BAQUFAAOCAQEApdcS7sFUUJymY+kIx7p0ISEvA14ZA6/G67hBgfFHmqJxdY9SHxCXupVU02JS1GeUI3LUc9agNnVSBNyr73iPmTcSLfNsiZ9B/R7piQfzLXQyUY6mxKVNqqJzrIvsozn3XOPyXAuuOM137EOceXVZgw9Ef8bRfeOCyxOV3eUQ/v+2FsL80uRdNDKN+jzTMGCVudIjyagH1le4xUUw5yGx5fmvZKTPEGbbyeTxW8dYg4cQ4M/+sMmgGL63KSqNhmqZwVVCtrKtUI7GFdqqykeBIUxh+2hGBIT0R7D3vZBFmgXI8hkKK7A+51NfbEVtxK5GX0c9sjk6/l4iM9QBeQR5xQ==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/157fe59556b9bac8496b77a61d815579" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">NIOD instituut voor oorlogs-,holocaust- en genocidestudies (KNAW)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.niod.knaw.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>KNAW Systeembeheer</md:GivenName>
+		<md:EmailAddress>knawnet@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Huib te Pas</md:GivenName>
+		<md:EmailAddress>huib.te.pas@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Tine Sierink</md:GivenName>
+		<md:EmailAddress>tine.sierink@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

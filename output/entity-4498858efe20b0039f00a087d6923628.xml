@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://fs.multrix.com/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">SURF</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">SURF</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">SURF</mdui:Description>
+				<mdui:Description xml:lang="en">SURF</mdui:Description>
+								<mdui:Logo height="86" width="44">https://static.surfconext.nl/media/idp/surf.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">SURF</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">SURF</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC3jCCAcagAwIBAgIQZro67GB935dNdz227NV1VTANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDEyBBREZTIEVuY3J5cHRpb24gLSBmcy5tdWx0cml4LmNvbTAeFw0xMzA1MjQwOTExMDJaFw0xNDA1MjQwOTExMDJaMCsxKTAnBgNVBAMTIEFERlMgRW5jcnlwdGlvbiAtIGZzLm11bHRyaXguY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA15CRG9Dr1eDJSVvMyk9Wloc1L1BY+9jAWAlGmgVQSTjHzsmSuxJ4dPMQEUlMhXvpC2LKW3EPipbesh7UNUSTAlX+NR8NOPb6Pt3YSa4hH//PP7WC45JN8ZwgWVSdXXwhgx0a7Bo+4309CNmntNbllbrZarSL1HbhqTGbLXqpqG7GbDBP3RnAKtzUeHN+6O2Z0QDIzvdwrGraFEml1yK4KMGNT3bJUSscgjvQdtUJbAmR4XLJdPimiqZWqOeRS9vSh/bogz9U0k7Ij0fR0mmS1T7H3VysehyZKNNIHYg/Jq90pxOdL0ZsEzsOiYOgsb2hawU7pTrd7Zw37LENfCN27QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQDAyFfqaORl8aidiHiUegGgr/787S9i66rZi7SmnFIgO7F6yDbH45G6thaQAEc+8vo0AYFicPtGzWK9+csYDT52/4w+/635QhgiPSHj/ir/rALe+8lNB/LbHEGMsMNxSiEjDT/EJqB38vwUCZa0CaAJHhofspUTCYOH2VzBEyNZ74edeM2mhoJNr1cztqoGaO3+8TItMkNUMA2P/kaTO6cxUabu7ty0ScL+J6MIubgD9uPxninyaX08P+PUEIHC90Xcpd4R1cZCUO3l3o0xER8AQhSlIP+5Ww3XBB3OGOCo+XQO1urd/pcNONhuzs3UCWjWzpDfS95371AXHbKljiBP</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/4498858efe20b0039f00a087d6923628" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">SURF</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">SURF</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surf.nl</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Edwin van der Zalm</md:GivenName>
+		<md:EmailAddress>Zalm@surf.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Ron van Schaik</md:GivenName>
+		<md:EmailAddress>Ron.Schaikvan@Multrix.com</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Beat Nideröst</md:GivenName>
+		<md:EmailAddress>beat@2at.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

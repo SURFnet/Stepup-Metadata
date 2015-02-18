@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs2.noorderpoort.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Noorderpoort</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Noorderpoort</mdui:Description>
+								<mdui:Logo height="64" width="292">https://static.surfconext.nl/media/idp/Noorderpoort.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Noorderpoort, Noorderpoort College, ROC Noorderpoort</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Noorderpoort, Noorderpoort College, ROC Noorderpoort</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5jCCAc6gAwIBAgIQF+znLYt4crdNkhDyJL2rXDANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDEyRBREZTIFNpZ25pbmcgLSBhZGZzMi5ub29yZGVycG9vcnQubmwwHhcNMTQwNjA0MTEwOTM1WhcNMTUwNjA0MTEwOTM1WjAvMS0wKwYDVQQDEyRBREZTIFNpZ25pbmcgLSBhZGZzMi5ub29yZGVycG9vcnQubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZBH0IGUgvQdCF7ET3MKGaJR7a3EbHCXp35MYEPdXpiI05qxuFxMtuAxlslc7H8ZmtL0gc7izCASf9fp+sj/0jYZWD83DruuvGrN5EvAidmUIZse2gnpO/48t9eKHpuvpOKSrW3xNfPk/DsctoKKqW656tdw34BkXsG2TJ/hIRNCCz2PVddvWrkN/SUsawiUEqnJn7fAr67PFE8V9vv2ybiRbJd77kX6fHTuhowWVuAF8JMfypONcxBeVZwAOoET4pQo9lYWdiE5rmLSxpmPsC4/hA92e6chylzemQ0gDNTSoZtlLKP69Msx44wTleEiiIL/BNXcqOzuAV0mCCT94zAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFB5yYUPZAbToeO/n3SXAifUFZ2RYxUzq8ARdCWL8yISA4m/vP/lZHCioLFSCrTTMofYeUt1OoYfsf4lgrtGzUqQzYthYqXoqf4pSu1QSexNFiNbOIXYuA2Qc9qTcigWmls+liMKb7jT5FgqJCMO1ke1seRHFBrOt+3NPChhA16+rtjbjwj+OEZ6KcQEpc+Umf1yYjEAw78tox6Tczh5cDxakSwpnTbo8pBmYM3hhOrLldI8knRtgWI91WDtxko64LT5W+w4G8uuGLlwY+WSlo4/Zq4tTMMOVKswhzwrKOobk7G19X2o7eQydkaoWbaf8wLwElkCCLh9bvyAj6GJww4=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/51a8c0d4757f9fa55365c961a7bcea76" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Noorderpoort</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.noorderpoort.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Gert Fokkema</md:GivenName>
+		<md:EmailAddress>hg.fokkema@noorderpoort.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Guido Van Beek</md:GivenName>
+		<md:EmailAddress>gw.vanbeek@noorderpoort.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Fred Bulthuis</md:GivenName>
+		<md:EmailAddress>fh.bulthuis@noorderpoort.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

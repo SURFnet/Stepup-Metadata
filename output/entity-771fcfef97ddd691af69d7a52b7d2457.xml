@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://utwente.nl/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">University of Twente</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Universiteit Twente</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Universiteit Twente</mdui:Description>
+				<mdui:Description xml:lang="en">Universiteit Twente</mdui:Description>
+								<mdui:Logo height="9" width="108">https://static.surfconext.nl/media/idp/utwente.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">University of Twente Universiteit Twente ut utwente</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">University of Twente Universiteit Twente ut utwente</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIID/DCCAuSgAwIBAgIQBWB7JERxjfoPMVYfouBjTDANBgkqhkiG9w0BAQUFADA2MQswCQYDVQQGEwJOTDEPMA0GA1UEChMGVEVSRU5BMRYwFAYDVQQDEw1URVJFTkEgU1NMIENBMB4XDTEwMDIwOTAwMDAwMFoXDTEzMDIwODIzNTk1OVowWDELMAkGA1UEBhMCTkwxHDAaBgNVBAoTE1VuaXZlcnNpdGVpdCBUd2VudGUxDTALBgNVBAsTBElDVFMxHDAaBgNVBAMTE2ZlZGxvZ2luLnV0d2VudGUubmwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMyfgirLvyAxzTB+XNIxFleEImO6MAeAXdZfwyQCkBgJhZLyqROFcKuGWLkJ5nvX/Py1/Gq0Vv5b6jYdgVya2XKVYBw+AvzL4+BUnap5ggtgLycaDdtgyGoxxJ5kvWtGz9HFKnBn7OGxMFZsS8H+caaq7HxXTjvUXXY69/JuJeiLAgMBAAGjggFmMIIBYjAfBgNVHSMEGDAWgBQMvZNoDPPeq6NJays3V0fqkOO57TAdBgNVHQ4EFgQUB0aymOcEO+/oJXlNUQ7M+EaPHn8wDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBgGA1UdIAQRMA8wDQYLKwYBBAGyMQECAh0wOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8vY3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYaaHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwHgYDVR0RBBcwFYITZmVkbG9naW4udXR3ZW50ZS5ubDANBgkqhkiG9w0BAQUFAAOCAQEASDzhY/KJgSyUrN0AljNa6gnegv2Xet4IoDKcGFg5IyelrqTjgrZVIv3yRWMsPMPCnSHMhDO4hxwgk8741xRm7HIftsTSq+H8C1eRibN+GheO4XwsDMS53AXPVSWAj40hKnPuIB7XfEqYyQ1MZsLxOmOdraOFZaHhHrvfyp3wWEKXHUgRMiq0Ri8ocGxHI9JDDkLCZjzrg4nZ6Rppg4fBs9ROuGhbJoDt9bkqWwjzvlupydgOBq4q1ZctSDG6ULDPmlk4ZNHYhi/LrxT5RelQ3BcLGe9eKHTYEefudS+iwFcjWaXXs6Q5Y8g80ZLHh0dXm8j0esnzYDKKcNhz2rF9eQ==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/771fcfef97ddd691af69d7a52b7d2457" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Universiteit Twente</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">University of Twente</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.utwente.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Ferdy du Chatenier</md:GivenName>
+		<md:EmailAddress>f.du.chatenier@utwente.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Arjen Grinwis</md:GivenName>
+		<md:EmailAddress>a.grinwis@utwente.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

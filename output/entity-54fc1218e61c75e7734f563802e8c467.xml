@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://federatie.trimbos.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Trimbos Instituut</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Trimbos Instituut</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Trimbos Instituut</mdui:Description>
+				<mdui:Description xml:lang="en">Trimbos Instituut</mdui:Description>
+								<mdui:Logo height="34" width="108">https://static.surfconext.nl/media/idp/trimbos.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Trimbos Instituut</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Trimbos Instituut</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5DCCAcygAwIBAgIQYV0sVNt+i4hKGfRVEROVLDANBgkqhkiG9w0BAQsFADAuMSwwKgYDVQQDEyNBREZTIFNpZ25pbmcgLSBmZWRlcmF0aWUudHJpbWJvcy5ubDAeFw0xMzA1MjQwODQwMzFaFw0xODA1MjMwODQwMzFaMC4xLDAqBgNVBAMTI0FERlMgU2lnbmluZyAtIGZlZGVyYXRpZS50cmltYm9zLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtFigqKvz78zxNJMQ+9T9NefOhPHtil6WYchC6cVDf4m6H1kdPjYl0Lgq297QcbsTIxTk74SCQLA+1OMAc9FatdPF5PGuifrLEFedKjeDHB+IKJWCi/bC9KEu42aNjaJENTFb4SuDPZL6Jz3pjZyp+ab/ixYhzgr9SrtNr4K7NScT/ZbY1A++el+cfrfsnb4L2nh5+bfDQOZlGusUmnKVRg7w6Y2lL+fDrSw8LL9ohOqv0nHVQNTadIwJ7XtYZF5L7NFihsLvFm8KTdHEYaa1t+63zaR/fwpMvezJgTMwyOoCuZGHbgc/752M9g4JCNCtrNElSvw4vDX2Kr1rmjCf5wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCu0HTrIGkQ5vF18tq8GhZ1OWvuM8L+5SNkbRE4iMQUbvcW2ycRAeYWlKy9N6B9+UhjioiQLIv0ageFBRAJwkEVevXKzO+YYcnXaqY1pN4U7y7PtJ7juSvFjRXRwm5f0ps/MjRIDL3AuPNoGG/2LWHNzEkQp3815oU2dGHWvX+L9Zpcl5w50NLXQKr2A8WFnRae5XQ6n11FjC2y0ixVg7L7y7VTl33FazHESA4fOS/CCXckOAaLFbSC9A/HPGuoPfe81Vx+K5ie+Xk9E7F9RpFc9rRd7GqyMgTU3Z/Bq5l2m85PXV0BOAZurU2dIMC9kd/EADd0Tx+VzsKjGIlXrivg</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/54fc1218e61c75e7734f563802e8c467" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Trimbos Instituut</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Trimbos Instituut</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.trimbos.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Maarten Miner</md:GivenName>
+		<md:EmailAddress>MMiner@trimbos.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Maarten Miner</md:GivenName>
+		<md:EmailAddress>MMiner@trimbos.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

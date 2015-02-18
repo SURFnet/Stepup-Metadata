@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://federation.novay.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">NOVAY</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">NOVAY</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">NOVAY</mdui:Description>
+				<mdui:Description xml:lang="en">NOVAY</mdui:Description>
+								<mdui:Logo height="48" width="70">https://static.surfconext.nl/media/idp/novay.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">NOVAY</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">NOVAY</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC6DCCAdCgAwIBAgIQPGh2aGYogbpCdepWjTIn8TANBgkqhkiG9w0BAQsFADAwMS4wLAYDVQQDEyVBREZTIEVuY3J5cHRpb24gLSBmZWRlcmF0aW9uLm5vdmF5Lm5sMB4XDTEzMDcxODEyMDg0OFoXDTE0MDcxODEyMDg0OFowMDEuMCwGA1UEAxMlQURGUyBFbmNyeXB0aW9uIC0gZmVkZXJhdGlvbi5ub3ZheS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL2k1qMYKFpM7EAhGHgtDBQvol9jS2m96ByrTmJU0cmqgXoinavQ8zMIscz4oFLxQRTpaTSr9GNXseG3rVjKt1BbJxuyxWCQ/jwZXdC2jbQpIaANA0Ukf5RpAHVM9tsy0oJTADgTdnVYnmJpv0j54l8vBxkA1UkqvSjb1mxnI2MtJuTlwqItIDEMfYaSsiaipZZ3/q+Hy5H2t9vXPxKc2jyl9jCJ8EUG/KX1AObnLB2+r1ZLutL4FDnisdOiquCnzPcWkXr74JJODKH+7C2k5fF1eRk29MgkP4PeJyWnXVuGtXzQ5Xg67kksxi/XgysC/3/rpQZ+dGbYQ9T+Kp3q6YcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAOuPK9213Ohs119FJA44XLaGJyqSO1DVOej7QlYQBOkxPYfKqZX7FU29GE9w6BuCEvMB1AlmUoW5vQ6t13g9M9JHrh9pBJk2+JvkdPjyl8PiLn85Flip6VuyIzhnkxTOGE9GQ8eHu1bf/dkAJB0Y0LT/IrLtYh8XphFvaPaXCBrGXRtjMu4uzWKeBmR6ce7GpyXOeYDO+BZRsreK00zzMI7nDMaz6+pgChuPm1V1Y+wn9ATLt5JLH3xtlnx6n2kJvr01GvybTWzLMKCfU3nWcMl4ET8BIYrl9GKtdbI44FY5p8o15pMeW2DQhmzLvPaGXsJlZ6SLyVECG5JRpczAdcA==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/677891779c4094765c01d175dbdef61b" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">NOVAY</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">NOVAY</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.novay.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Wendy Haasewinkel</md:GivenName>
+		<md:EmailAddress>Wendy.Haasewinkel@novay.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Wendy Haasewinkel</md:GivenName>
+		<md:EmailAddress>Wendy.Haasewinkel@novay.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+									</md:EntityDescriptor>

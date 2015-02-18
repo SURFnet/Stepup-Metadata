@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://fed.rijnijssel.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Rijn IJssel</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Rijn IJssel</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Rijn IJssel</mdui:Description>
+				<mdui:Description xml:lang="en">Rijn IJssel</mdui:Description>
+								<mdui:Logo height="25" width="108">https://static.surfconext.nl/media/idp/rijnijssel.gif</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Rijn IJssel ROC MBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Rijn IJssel ROC MBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5DCCAcygAwIBAgIQFQcRZx8xOqxBXv7H7ae9nzANBgkqhkiG9w0BAQsFADAuMSwwKgYDVQQDEyNBREZTIEVuY3J5cHRpb24gLSBmZWQucmlqbmlqc3NlbC5ubDAeFw0xMjEwMDQyMzUwMTJaFw0xNzEwMDMyMzUwMTJaMC4xLDAqBgNVBAMTI0FERlMgRW5jcnlwdGlvbiAtIGZlZC5yaWpuaWpzc2VsLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsDRKDLS/SoKRw5zmVU+4jKJ0/pOtZUOGoCSGMgIP6Wv5YKZAVFu8rTDjeypm4Pkk/BEBksq+nKoubsecu9OyDzimDXJISHay+JlMHLOE1ewzrEiI6/WaQ8TiYS9OS7aNVXs/jQFbXyYgeCeWdyWIcRRJlhW6pQ7/zIsAsl9IV+TNnA0WJy4GGm8gL9pgQbTmBFGXIUERwRDgO8LIEddgvamtJviaEnqr9hjIPxktenRlFi4vU8C5SqQS0/hdyOEQpe6MK+xix1BoMt8EAsSlKA18E4s0PzfhMpcNAqBYLbuETSPE1JBSU/azTwIokfCGIcQdoek5TDGhx7+Lvh7ZmwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmh2Dh/Ln95caVNIcCMuYFez6tjpd1+vJidBvBVUroMGWtU8zGkppHtTy5HBj18xj1keNbj9LODsZYZC5wC0GFdneEN5t/RbTuhLZFb70V7EPrlC96vv0cds424c/UIct2jp/rfiI+OwaNKttbcap9GB69d30FUAyfC4WSdYvd4axIY1UE3TOIt86g/WjqV8foZ9kNQ7CX6PAvEYM+pkrK/ndJudwyDCWsyNx4jPwsWM+uK8BQ+LdNwyTHj7E/TgdOhsatwmhZ1FilgmTCOBtLqgtyHR9rLOAw+rM+hivK94NnK0NepKheY5uQyiKYLp++cLWyPKZrl1sW6q/Sjt1Q</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/cf5f5b0f5deb378bf7901265160ff62f" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Rijn IJssel</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Rijn IJssel</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surffederatie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Danny Nugteren</md:GivenName>
+		<md:EmailAddress>d.nugteren@rijnijssel.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Maarten Veldhuis</md:GivenName>
+		<md:EmailAddress>fedm.veldhuis@rijnijssel.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

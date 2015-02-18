@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://stsfed.login.vu.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">VU University Amsterdam (login)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Vrije Universiteit (login)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Vrije Universiteit (login)</mdui:Description>
+				<mdui:Description xml:lang="en">VU University Amsterdam (login)</mdui:Description>
+								<mdui:Logo height="51" width="107">https://static.surfconext.nl/media/idp/vu.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">VU Vrije Universiteit Amsterdam</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">VU University Amsterdam</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIE8zCCA9ugAwIBAgIKEPTV8AAAAAAAFzANBgkqhkiG9w0BAQUFADBGMRUwEwYKCZImiZPyLGQBGRYFbG9jYWwxEjAQBgoJkiaJk/IsZAEZFgJ2dTEZMBcGA1UEAxMQVlUgU3RhbmRhbG9uZSBDQTAeFw0xMzA4MDIxMDU2MjlaFw0xODA4MDIxMTA2MjlaMCwxKjAoBgNVBAMTIUFERlMgU2lnbmluZyAtIHN0c2ZlZC5sb2dpbi52dS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANdf9L51Stk9WpH8BkIp83EqSVEDFdu5VViUo5yZpdLvGSEWRSiLBL4RURIlpaL1AHh4YcJyM/T53UKHrpt0n+h1GUNEdKv/HdGiFeXfQj6iHu+MU/wAh4CJLQFYQ6H0iwhN20VehuBm5FJca6TYQx0V1AMcArWyaXPNRtsnUtsaEzwnKFulyENe1X2QpUp0L8mtljFl7muiXza3s9Vcd79ekpX1fdQ2ZOhOCQkuJM1AnSaTQ4XEKSc9u0/sQTGnKlFkavdtYm0K27vyDAEwJ0eBQ8WTCBsCuwtlbA69+gIEFl08wUDkSI4vGXDatptImxI/79QZKF17IOIN0IY7FIcCAwEAAaOCAfswggH3MA4GA1UdDwEB/wQEAwIFoDAdBgNVHQ4EFgQUMnqBZMkL4pRkUgXIA7vlGKw7bYIwHwYDVR0jBBgwFoAUrjZvm+acXenndjwHCa0oAmpDkf4wgdAGA1UdHwSByDCBxTCBwqCBv6CBvIaBuWxkYXA6Ly8vQ049VlUlMjBTdGFuZGFsb25lJTIwQ0EsQ049UElTQ0EwMDEsQ049Q0RQLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9YWQsREM9bG9jYWw/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIHDBggrBgEFBQcBAQSBtjCBszCBsAYIKwYBBQUHMAKGgaNsZGFwOi8vL0NOPVZVJTIwU3RhbmRhbG9uZSUyMENBLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPWFkLERDPWxvY2FsP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQEFBQADggEBADcUEeSm3Yj6RH+TuBU+jptemjv6TC+KFfFLf9xkdNo1PHJMm8JIGtVq+gD1yEMtwLmqXvu6H5ABKr/tiOQKNIpRMuZBx2v3o8roXDK3FkBAQrcM+F2jDfkCewjkaFrsFOXhKXwoX6oQemepgy1vyGS8WJ1fZgX97UQz18A9VwTatcgH7r9k9bFmz6cWS8faxcSN+KZVMJZxmpG94CaKHy+0wXBR+u3yxrvLJR05WlBwPaHkOC2LJNK8pMUbbZ91jg4xD04m2beULeSpn6/pYoGVruxpT/pMboSP3v0ZAEKUb1VeqCglbk4mQbtnIYrDU2IjiWa9yYoVqJnEPch0Pak=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/f5fc4ac4149942d16a3ad9e1d2c82065" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Vrije Universiteit (login)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">VU University Amsterdam (login)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.vu.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>IT Servicedesk Vliegen</md:GivenName>
+		<md:EmailAddress>servicedesk.it@vu.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Remi Mol</md:GivenName>
+		<md:EmailAddress>r.g.j.mol@vu.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Machiel van Bokhoven</md:GivenName>
+		<md:EmailAddress>m.van.bokhoven@vu.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

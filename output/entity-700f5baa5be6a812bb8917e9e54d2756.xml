@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://sts.talnet.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC van Amsterdam</mdui:Description>
+				<mdui:Description xml:lang="en">ROC van Amsterdam</mdui:Description>
+								<mdui:Logo height="288" width="263">https://static.surfconext.nl/media/idp/ROCvA_logo2.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ROC ROCvA Flevoland VOvA Amsterdam</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ROC ROCvA Flevoland VOvA Amsterdam</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1jCCAb6gAwIBAgIQS3f+56a1Q6RLpadKNsY+iTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBzdHMudGFsbmV0Lm5sMB4XDTE0MDIyNTE1NTgzMloXDTE1MDQwMTE1NTgzMlowJzElMCMGA1UEAxMcQURGUyBTaWduaW5nIC0gc3RzLnRhbG5ldC5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJGEHobtIrd1YsqyGF1T9vOe01YimZmS4beNRnHf4QTRHIZc8quDa8f/wM/zipsfY9zBU/DqKL1YRgqFs+HSDyxSdFkj9JlgI970gfxBUj5WnMPV/l5wRkDebgA6wEhdx/Cu4vPBJ+YezVle70B8+JS0HHhQBa2To7aSuxoxGhCp2mrNOgojdnlRiXvyfssC6ctg2K0J1xSkRGf1yw+SAE6WFyp7cLHeB0zjKgIpVNltOLpU6hDdAPP+QRYJhPuSt2tJgQm5wYBMRhxsqxRYeqok4dgAHQ0sYiyTU1f70TFivGhZYgyrGswaePBhK6QIE+hRnk/tQ8KgqkOgNYFQOAECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAh4sbeuPW40cfqKkF1aPUMJemuSX2EMOvQ0BhqpveCsVwghQ+Moj05iPsSN761IpDw6Ltm6HKUzgT5mAWHxDJCEf1W1Yw2TmdnyZ1XX+hFW1/xnN62GLH1Aet0NmTp12bA5iXXY1o7yhUt0q62Q5Dw9gw0qEj/I7gwcslo2E1kR+JRBqNTXCrLdnVwURhTCdEpAtWmAZ0QlcIvp0PXd7CbHRiqieBB50F+HnQGY5tNyagrtotBK1WBl9pMiFJnAXuQMOVxrbKkKl0kuI9W6P9UlTu/40+nPRAetkYKV/engErYB0y69fUjQwptzdryDWqItciLkvxni7bfmCvCmiD7g==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/700f5baa5be6a812bb8917e9e54d2756" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC van Amsterdam Flevoland en VOvA</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.rocva.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Paul Tolen</md:GivenName>
+		<md:EmailAddress>ptolen@rocva.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Rob Keemink</md:GivenName>
+		<md:EmailAddress>keeminkr@talnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Paul Tolen</md:GivenName>
+		<md:EmailAddress>ptolen@rocva.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

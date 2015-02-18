@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://saml.uvt.nl/saml2/idp/metadata.php"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Tilburg University</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Universiteit van Tilburg</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Universiteit van Tilburg</mdui:Description>
+				<mdui:Description xml:lang="en">Tilburg University</mdui:Description>
+								<mdui:Logo height="44" width="108">https://static.surfconext.nl/media/idp/uvt.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">universiteit tilburg van university uvt tiu kub kht tias nimbas tiasnimbas</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">universiteit tilburg van university uvt tiu kub kht tias nimbas tiasnimbas</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC0DCCAbgCCQDV2eOhHpPRxzANBgkqhkiG9w0BAQUFADAqMRswGQYDVQQKExJUaWxidXJnIFVuaXZlcnNpdHkxCzAJBgNVBAYTAk5MMB4XDTExMDQwODE0MTQ0N1oXDTEyMDQwNzE0MTQ0N1owKjEbMBkGA1UEChMSVGlsYnVyZyBVbml2ZXJzaXR5MQswCQYDVQQGEwJOTDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALNc9HMF7i499kUYh4q2CziJmUyTCqVHN1E6P0aj6/15TVD6JgzL3xddxFauahrbtXnK9P6HxkfCbouUnRelYQVGUo3E0SYcUCJozS9r4ld0TgN0+k55xyLp/cP9X59QqGTQmJH3uk1Ur+2XpeudZ30VeQVwJ+Quhf5l0N2zLEDXFPvksDqwUXHUxOoRsJdGqIe2u0TgPVAR9+2EPv2dIRpk+MalAobfTPQzQbcItkECOTx/aO4D0xATe1X1voPKXMtxQpxwgVb+4iQkdIXqT4Kfxpr/TdY5unx30tRG5YN4CyvwK/shIScB+TN+Iqym3hgoaP+FyzZ6rh1mX9iFTWUCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAFnbl8D4fsw50iNTel/kGNKdNhVs11ucA6vGWcCYqiS9H057ymDxqxxY/rZ+KSOXVCbT9C5sBzzAwtCEYoNk2qPz2tlx6lUolhG/IIYcYOgWEbANjOb21Ke+Z9XN8EnM6abTA4Ebi2UuMdoR3ppXH+4sEmsfq6Y22AmeJrLJQu+R1wXSbmVy5b46oaTubWrH8iEaGr4NXEXip/fRErfQ1N3xtwnRy/l6Zm4eTAHepCz/fKUrDmgObSJIUuGxhCYR4G5m7JVddmKx5WLsSBi11ccZdzHzWQWz8AdG8ZWRW0TZUeVdM89v3wLGP2kp0g3se+qSOuKvuCYhcRa8UJv5HBg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/59b5bae75a0f1404d48d70dbde8a130e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Tilburg University</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Tilburg University</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.tilburguniversity.edu/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>LIS Unix</md:GivenName>
+		<md:EmailAddress>lis-unix@uvt.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Teun Nijssen</md:GivenName>
+		<md:EmailAddress>teun.nijssen@uvt.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>LIS Unix</md:GivenName>
+		<md:EmailAddress>lis-unix@uvt.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

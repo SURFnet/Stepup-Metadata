@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://sts.roc-nijmegen.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ROC Nijmegen</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ROC Nijmegen</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Nijmegen</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Nijmegen</mdui:Description>
+								<mdui:Logo height="15" width="108">https://static.surfconext.nl/media/idp/roc-nijmegen.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">MBO ROC Nijmegen</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">MBO ROC Nijmegen</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEijCCA3KgAwIBAgIQNOmXkOklT10X0sPQKdkBrjANBgkqhkiG9w0BAQUFADA2MQswCQYDVQQGEwJOTDEPMA0GA1UEChMGVEVSRU5BMRYwFAYDVQQDEw1URVJFTkEgU1NMIENBMB4XDTEyMDMyODAwMDAwMFoXDTE1MDMyODIzNTk1OVowWzELMAkGA1UEBhMCTkwxJzAlBgNVBAoTHlN0aWNodGluZyBSLk8uQy4gTmlqbWVnZW4gZS5vLjEjMCEGA1UEAxMadG9rZW5jcnlwdC5yb2MtbmlqbWVnZW4ubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDbLq+mB1CHNeoddMjzFO+42fHROTWuRUtDXBMvIrtYeNXcRbYjxWCjrqKuPuEj/f40WgLIvHxDq6fpJXlQQYjJiX2R/Y9RjYaNk0SrwH/rMuBLMH6c1B67Hi8VaFkZe2fOV/NlJCaoXHV4EIdoi+/CpJG7TI9f3OOukEBbzV6Wsp+E9UVs94W6uGHD2V3nhQ3+YURFLQj/WyrMUC8+SS7+hA0HEOMsre1hmn+UTcUhTs/RDiH6I3qSEdGdOZ4UN1Z/QNKd8Ig5T8lDaDwi1e8YCRTgdwUQqWNZVqS3/7qftq+OAhp5u1UngwQJRAn75YRAj7vkBGT34iCXCMLGzTLPAgMBAAGjggFtMIIBaTAfBgNVHSMEGDAWgBQMvZNoDPPeq6NJays3V0fqkOO57TAdBgNVHQ4EFgQUTAJ250jjnRJUAPNCU+5iUVx1m0EwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBgGA1UdIAQRMA8wDQYLKwYBBAGyMQECAh0wOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8vY3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYaaHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwJQYDVR0RBB4wHIIadG9rZW5jcnlwdC5yb2MtbmlqbWVnZW4ubmwwDQYJKoZIhvcNAQEFBQADggEBAB7WNWOHgLLwJ4FTgOAIslffKQKxSce86vp+kGWlB2Fz75wgMAx4h7DkNBDy/oYSc8PwCf2qcMKzuAS9eNu4XpRehkmLrBVf0AXCGMwlhy2EiHkwD9UkWgi7NdVPTWwTKSOavTn+HacVERr6xP0/OLJr0lJamEjqIrvgiEVGRY0x4xl6+FOCwEssthv87ME7YPJ18HCySNjH+4tgFAyzueevLIY3f7P+GNSuDtQo+jxIfw3QETe0jcjn8TmuoaNfH1Cj7Dlu8Ip3UsOLZTDiw6JRBu5rYBC3oTRfpro9UlKwqYEa3ikXidY0qUeP1jr9rVBLCp0oFUm/IzgEg45n054=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/d8ea069ad0633af0a11fe741f3ceb585" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Nijmegen</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ROC Nijmegen</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">https://www.roc-nijmegen.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Sebastiaan van Tright</md:GivenName>
+		<md:EmailAddress>s.vantright@roc-nijmegen.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Sebastiaan van Tright</md:GivenName>
+		<md:EmailAddress>s.vantright@roc-nijmegen.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

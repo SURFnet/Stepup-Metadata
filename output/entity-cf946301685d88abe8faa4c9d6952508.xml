@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.ncoi.com/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">NCOI Opleidingsgroep</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">NCOI Opleidingsgroep</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">NCOI Opleidingsgroep</mdui:Description>
+				<mdui:Description xml:lang="en">NCOI Opleidingsgroep</mdui:Description>
+								<mdui:Logo height="36" width="108">https://static.surfconext.nl/media/idp/ncoi.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">NCOI Opleidingsgroep</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">NCOI Opleidingsgroep</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1jCCAb6gAwIBAgIQH6wH+c3vdK5CG8vCkgiaJTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBhZGZzLm5jb2kuY29tMB4XDTEzMDcyNjAyNDQwM1oXDTE0MDcyNjAyNDQwM1owJzElMCMGA1UEAxMcQURGUyBTaWduaW5nIC0gYWRmcy5uY29pLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALT2hksrqeL9s3UGQApEehwst3BojDmPUM6qWf5qLrsnnqTs6F5coeRDy+LE8c3MTPp3y/QUrrw0Uib9XkGsv1Jo4Ib5GwoI2rau9F/xoq+iq4bBBFlatKfxWZ1H2e/ifZL5H2YokzVb9Gy96vX97xEUPRl48CpBQjvl3TJKcT8oMGj87F9AYock8rQtSR7bte9JjkT4eYy6vCnxuQLVuC057iJLxzBRBmfGhP9dVqpCazvfRu/IQN6hOPQp7bLOvm7/X2KMNxQZoMHsA+i7s19r0fcnS7t4KKVnpIxZkOZMt4JYpWLqi6K8/ep5BSW3yOtJVMvtYEBUjphKD3VFinsCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEArLARjImK2/YOQjmrkgOmI/kpkEGFemGKDYCinO2zS5Z1wMcciMSKKgB15Xszy330YitWXhVyj1ee22qJtXiUnaUPcQMJjJ8N9H+D54eLUYXHGVP3eIhangAf5C7j/VYjSBjWCDCYT9J0tjFW3JRC/XBv5F07TNO5uDUBP5yhV+BDkPdVaBTFiXnXYeDGNpipCfYAnllONx/1Lh06nMzFkj5JpuzYheFgY4UyTe47Y6slpwDvJMSF+S4bBRID1/fBALaYqlRPpGMlrQI5m3o9ZARIXWCIJZwEcX8FeVlAj18wZ6RA2KkCiq0TWkAVAl/1SYZxjVmllstRPBB7TIYXhQ==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/cf946301685d88abe8faa4c9d6952508" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">NCOI Opleidingsgroep</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">NCOI Opleidingsgroep</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.ncoi.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gert Jan van der Burg</md:GivenName>
+		<md:EmailAddress>vanderburg@ncoi.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Vera van der Linden</md:GivenName>
+		<md:EmailAddress>vlinden@ncoi.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>ICT  Helpdesk</md:GivenName>
+		<md:EmailAddress>helpdesk@ncoi.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

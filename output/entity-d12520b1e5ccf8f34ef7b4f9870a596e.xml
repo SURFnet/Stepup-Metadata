@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.designacademy.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Design Academy Eindhoven specialises in design.  It offers a four-year Bachelor?s course and a two-year Master?s course.  It has an impressive, international team of tutors at its disposal and the quality of the designers they educate is very high.  The DNA of Design Academy Eindhoven can be described as conceptual, authentic, creative, flexible, free, passionate and curious.    Design Academy Eindhoven is always looking for excellence and intends to be the most authentic, creative, and innovative academy in the world; a professional organisation and educational institution that produces top design talent.</mdui:Description>
+				<mdui:Description xml:lang="en">Design Academy Eindhoven specialises in design.  It offers a four-year Bachelor?s course and a two-year Master?s course.  It has an impressive, international team of tutors at its disposal and the quality of the designers they educate is very high.  The DNA of Design Academy Eindhoven can be described as conceptual, authentic, creative, flexible, free, passionate and curious.    Design Academy Eindhoven is always looking for excellence and intends to be the most authentic, creative, and innovative academy in the world; a professional organisation and educational institution that produces top design talent.</mdui:Description>
+								<mdui:Logo height="300" width="500">https://static.surfconext.nl/media/idp/DAE_Logo.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Design Academy Eindhoven international Bachelor Master</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Design Academy Eindhoven international Bachelor Master</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDAjCCAeqgAwIBAgIQU/vQCYfQba5BTVohF/3CKTANBgkqhkiG9w0BAQsFADA9MTswOQYDVQQDEzJBREZTIFNpZ25pbmcgLSBNRURFV0VSS0VSUy1TQzEuZGVzaWduYWNhZGVteS5sb2NhbDAeFw0xNDA1MDkxNDMyMzRaFw0xOTA1MDgxNDMyMzRaMD0xOzA5BgNVBAMTMkFERlMgU2lnbmluZyAtIE1FREVXRVJLRVJTLVNDMS5kZXNpZ25hY2FkZW15LmxvY2FsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzPA6DNLL6U7FNHZdEWHHhRF3Y297qYxnJuPJodZQcGjdlcvU5ODmMI53g4SqPPrYsRdJxByWVHD4sfoRbhgRrWyayHzdioEmeC9WP1xtoQwE3/j+rqEudrCmXRILTo/lVOkalTaCLfSOHFJBFsLv2age5F58o0qftsywbXnoMWJXTwsTacEHrgUv9qXQaSKsaA8CBKOMJQUHprt9hO24PSrQyq5dG2va1H8vwkPVYHilbEN9OEjrYbnskXobeAT/15kG/BDebl+cv49GYsmDXZL83+mGpQqu+FzaFsCL0dXSQKM0+4v/iWts9jRNK1nMOKCtj06CCsCxyysKuUdjjwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBdXftQW0u4/wRf0idMTmw2j5ZMEJEgf0lkwcVOZV2JJ85dnkuiiQuZo0NW1DjOBJg0Bq3yO3sP4WS2hPcyuf/bzd4NznhxkCI6OLnQ1DdwEavzj6aglvIPj0Qoh1HOYMJ/X0LPZLqI4h3C/hzi3vd/HlBr6XhgcoTPtXU3U/0aSo4nr6crdKnyL+3Xfm6WHg5r81cqLqso0tIK+d0nFjHGgll23uvmmJZ9jX/vr1BqKzsIGRo1AtpdP/zCyH5sc3dL3Ajq4Jzw4lw1cIaMO7FAu27Aipkfl0rvUDID4rI3gH6Vx+1GyhJ4T13MBFskWT9tm/StqJNYrSbfVMePjyR4</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/d12520b1e5ccf8f34ef7b4f9870a596e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Design Academy Eindhoven</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.designacademy.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Toine Luiken</md:GivenName>
+		<md:EmailAddress>helpdesk@designacademy.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Toine Luiken</md:GivenName>
+		<md:EmailAddress>toine.luiken@designacademy.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Toine Luiken</md:GivenName>
+		<md:EmailAddress>toine.luiken@designacademy.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

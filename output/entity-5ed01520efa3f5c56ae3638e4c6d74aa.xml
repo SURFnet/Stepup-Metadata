@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs01.kempel.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Hogeschool de Kempel</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool de Kempel</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool de Kempel</mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool de Kempel</mdui:Description>
+								<mdui:Logo height="79" width="108">https://static.surfconext.nl/media/idp/kempel.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hogeschool de Kempel</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hogeschool de Kempel</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC3DCCAcSgAwIBAgIQQvSpmr3KibVD+cTsSkKjSzANBgkqhkiG9w0BAQsFADAqMSgwJgYDVQQDEx9BREZTIFNpZ25pbmcgLSBhZGZzMDEua2VtcGVsLm5sMB4XDTEyMTIwNTA5MDM0NloXDTE3MTIwNDA5MDM0NlowKjEoMCYGA1UEAxMfQURGUyBTaWduaW5nIC0gYWRmczAxLmtlbXBlbC5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALFkUqUWCUIu5n0Iy7gk8tFQpwvzmTppaegDaryspfUlCaHOlpf1O4dbx+dcwZ/c7PtTSD/D7EeP+EVK9Nz4qUXHZi5ppPzt3uCYCk0NLVIsyH7WhOhfKpUgYRWcxkxpI71CvIZA8MZhdC3jyEW+KQo5gV1FfNRQk187oaZIpifT5eyJtOicB+HMoKQiSTtzhhVXjoW1LefSO3bJqMLeyldNtPvHvQgV4OV3NLeD5+On9ub2MIasegKsa9LTAcrsrvohKxBfpkLIJTevfkdqaCfECWXnSzeFMn9TRI1oIS8KrQg2DSSLZWMbK0OVxyc8IeiBCJzgPN2ytzwd1YuvU6cCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEANmZEHLuVcOeOsgbi6jojg3NsQnA836hBzf9f20s69WT6sBbd+De+Oj/2CsuO+kxM0rlkCU3OTmXavVs3/0ytMw98FCNjz2e1c2ycCYI5d+hrxWDHFgZgf8d4gA1qZG+5Xb6IKVOjDhMEtHfSKtn4HJSLA/2h1jNkKdYjpARXYGpHu2IEfzSOhX5f65JruD6w3QwKtPGw7ubkyx0ptkhWsrzWUl7oHy8GdWxUqT2VpHvCWBuedXz9LRzLUnpf523ArMYWqi7D2vyvxt/96dqynV/nnVoq5NUpxxxT/kEgm3L6zLdT9VcloGUZRl+uqkleH3vn15QlFD1ByaSCh2HmlQ==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/5ed01520efa3f5c56ae3638e4c6d74aa" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool de Kempel</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Hogeschool de Kempel</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.kempel.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Jan-Willem Akkermans</md:GivenName>
+		<md:EmailAddress>j.akkermans@kempel.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Giel van Santvoort</md:GivenName>
+		<md:EmailAddress>g.santvoort@kempel.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Helpdesk De Kempel</md:GivenName>
+		<md:EmailAddress>Helpdesk@kempel.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://login.avans.nl/nidp/saml2/metadata"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Avans University of Applied Sciences</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Avans Hogeschool</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Avans Hogeschool</mdui:Description>
+				<mdui:Description xml:lang="en">Avans</mdui:Description>
+								<mdui:Logo height="49" width="108">https://static.surfconext.nl/media/idp/avans.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Avans Hogeschool Avans University of Applied Sciences</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Avans University of Applied Sciences Avans Hogeschool</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIElDCCA3ygAwIBAgIRAOzyJnjX7SoHWQ+Av4I0ZH0wDQYJKoZIhvcNAQEFBQAwNjELMAkGA1UEBhMCTkwxDzANBgNVBAoTBlRFUkVOQTEWMBQGA1UEAxMNVEVSRU5BIFNTTCBDQTAeFw0xMjAzMjgwMDAwMDBaFw0xNTAzMjgyMzU5NTlaMEgxCzAJBgNVBAYTAk5MMQ4wDAYDVQQKEwVBdmFuczEQMA4GA1UECxMHRGlmLUlDVDEXMBUGA1UEAxMObG9naW4uYXZhbnMubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPof3s5XW2Xqtptmc1urtZMKkT7jbflDROvmMAp4J10mXvBGilWISfH4bQ/dRyFAASwgj8Xj+aaVtCBI4XiUJ2QLll++WJVBoGs4mgtjGcftVPB2oKBGF+5Co6CKixyVj1aPR/wayIXbmgyTdEiREEEWuYWwqeCL4gP4zcEdfIzlk9AkuYMenvQ0NaEaPSJl50Q6NF4Yco7itaCbgOqsEiS2Vt2t9rFkiJP5NH3bYTtTHzeO/tuMry6MvjnTovk6wOQbDZMrVikYbchoFX6NTy8Z5+94jPrHYblUC8QzOk9aqUWPBVIlRgpccxI7Z2dvoYICmB+AWl/1D62qz+rtUtAgMBAAGjggGJMIIBhTAfBgNVHSMEGDAWgBQMvZNoDPPeq6NJays3V0fqkOO57TAdBgNVHQ4EFgQUBshlNQRxZuz5yX18pOWukUepbDYwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBgGA1UdIAQRMA8wDQYLKwYBBAGyMQECAh0wOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8vY3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYaaHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwQQYDVR0RBDowOIIObG9naW4uYXZhbnMubmyCEmFzaHNsYWwxNi5hdmFucy5ubIISYXNoc2xhbDE5LmF2YW5zLm5sMA0GCSqGSIb3DQEBBQUAA4IBAQAGqBE2xd08u7FctJ8ujNri422F53y7PDV2rHhNdeVuXJhJcYnYtgJHGmGKPsNbVvTQ7Td9Hie7pqWV2uWCnG1jmaoUmfbOTzc0gRHdBITVSxgadXoBcQBE6KESrzYwhHAxhNG19vjiAaOR4FXKET1YdM3FLrn53/PmlsC/w0qlw+Bc4jZuFoR4Ngxuk5gn9478OyLUj+odSw2x/HibKXdtgDys8qAB6utWZFnROeuUp5FTqKV0gjAO6domAgkh33+0R9kqBhkc2mEvY5eOb0PprjzCKHduzkelQZ06kDrA+aLcfuOGgNgzcxNb8m+lFmS8HShM0cClMGgNdfDgyJBS</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/d67f6b2a3375ecdb6c53f27b210d3d0e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Avans Hogeschool</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Avans University of Applied Sciences</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">https://login.avans.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>David van der Maas</md:GivenName>
+		<md:EmailAddress>d.vandermaas@nsnl.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Peter Havekes</md:GivenName>
+		<md:EmailAddress>p.havekes@avans.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Ad van Dreumel</md:GivenName>
+		<md:EmailAddress>awm.vandreumel@avans.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

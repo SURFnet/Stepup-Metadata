@@ -1,0 +1,447 @@
+2015-02-12T15:00:38+01:00 [INFO] *************START****************
+2015-02-12T15:00:38+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-12T15:00:38+01:00 [INFO] The JSON file contains 20 entries
+2015-02-12T15:00:38+01:00 [INFO] Number of entities left: 3
+2015-02-12T15:00:38+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-12T15:00:38+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-12T15:00:38+01:00 [INFO] 3 IdPs SSO endpoints were replaced.
+2015-02-12T15:00:38+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-12T15:00:38+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-12T15:00:38+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-12T15:00:38+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-12T15:00:38+01:00 [INFO] 3 IdPs metadata XML files were created
+2015-02-12T15:00:38+01:00 [INFO] *************END****************
+2015-02-12T15:06:22+01:00 [INFO] *************START****************
+2015-02-12T15:06:22+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-12T15:06:22+01:00 [INFO] The JSON file contains 0 entries
+2015-02-12T15:06:22+01:00 [INFO] Number of entities left: 0
+2015-02-12T15:06:22+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-12T15:06:22+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-12T15:06:22+01:00 [INFO] 0 IdPs SSO endpoints were replaced.
+2015-02-12T15:06:22+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-12T15:06:22+01:00 [INFO] 0 IdPs metadata XML files were created
+2015-02-12T15:06:22+01:00 [INFO] *************END****************
+2015-02-12T15:06:45+01:00 [INFO] *************START****************
+2015-02-12T15:06:45+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-12T15:06:45+01:00 [INFO] The JSON file contains 20 entries
+2015-02-12T15:06:45+01:00 [INFO] Number of entities left: 3
+2015-02-12T15:06:45+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-12T15:06:45+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-12T15:06:45+01:00 [INFO] 3 IdPs SSO endpoints were replaced.
+2015-02-12T15:06:45+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-12T15:06:45+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-12T15:06:45+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-12T15:06:45+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-12T15:06:45+01:00 [INFO] 3 IdPs metadata XML files were created
+2015-02-12T15:06:45+01:00 [INFO] *************END****************
+2015-02-12T15:07:40+01:00 [INFO] *************START****************
+2015-02-12T15:07:40+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-12T15:07:40+01:00 [INFO] The JSON file contains 20 entries
+2015-02-12T15:07:40+01:00 [INFO] Number of entities left: 3
+2015-02-12T15:07:40+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-12T15:07:40+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-12T15:07:40+01:00 [INFO] 3 IdPs SSO endpoints were replaced.
+2015-02-12T15:07:40+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-12T15:07:40+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-12T15:07:40+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-12T15:07:40+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-12T15:07:40+01:00 [INFO] 3 IdPs metadata XML files were created
+2015-02-12T15:07:40+01:00 [INFO] *************END****************
+2015-02-12T15:08:06+01:00 [INFO] *************START****************
+2015-02-12T15:08:06+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-12T15:08:06+01:00 [INFO] The JSON file contains 20 entries
+2015-02-12T15:08:06+01:00 [INFO] Number of entities left: 3
+2015-02-12T15:08:06+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-12T15:08:06+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-12T15:08:06+01:00 [INFO] 3 IdPs SSO endpoints were replaced.
+2015-02-12T15:08:06+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-12T15:08:06+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-12T15:08:06+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-12T15:08:06+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-12T15:08:06+01:00 [INFO] 3 IdPs metadata XML files were created
+2015-02-12T15:08:06+01:00 [INFO] *************END****************
+2015-02-12T15:13:32+01:00 [INFO] *************START****************
+2015-02-12T15:13:32+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-12T15:13:32+01:00 [INFO] The JSON file contains 1128 entries
+2015-02-12T15:13:32+01:00 [INFO] Number of entities left: 168
+2015-02-12T15:13:32+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-12T15:13:33+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-12T15:13:33+01:00 [INFO] 168 IdPs SSO endpoints were replaced.
+2015-02-12T15:13:33+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://wayf.wayf.dk
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.wur.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://teamwerk.fed.vumc.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://stsfed.login.vu.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://surf-sso.ubvu.vu.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://engine.surfconext.nl/authentication/idp/metadata/vo:nmc-dsp
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.viaa.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://federatie.hku.nl
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://aai.rz.uni-leipzig.de/idp/shibboleth
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.uvh.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://shibboleth.unifi.it/idp/shibboleth
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://secure.uva.nl/cas
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.services.uu.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://utwente.nl/
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.uaccess.leidenuniv.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fshub.umcutrecht.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.unitedid.org/idp/shibboleth
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://idp.ihe.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.umcg.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.umcg.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.trimbos.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federaasje.tresoar.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://saml.uvt.nl/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.thomasmorehs.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.terena.org/idp/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.tue.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://gatekeeper2.tudelft.nl/openaselect/profiles/saml2/
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://sso.surfsara.nl/saml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sso.sara.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.surfnet.nl
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.surfmarket.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://surfguest.nl
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://monitoring-idp
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://engine.surfconext.nl/authentication/idp/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fs.multrix.com/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.summacollege.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.studielink.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://demeter.wp.swov.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.somt.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.stenden.com/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://login.stc-r.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.springer-sbm.com/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://www.onegini.me
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://login.scp.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfsproxy.sintlucas.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://fedlogin.schakelzone.nl/fed/idp
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://sso.saxion.nl/opensso
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://signon.rug.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://kitlv.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://namidp.rocvantwente.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.talnet.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2.noorderpoort.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.roc-nijmegen.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fs.rocmondriaan.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs3host.proxy.rocmn.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fs.rocleiden.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.gildeopleidingen.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2prod.aventus.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.alfa-college.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fed.rijnijssel.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.rijksmuseum.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://tcs02.pbl.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://rathenau.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.umcn.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://conext.authenticatie.ru.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2.politieacademie.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://tcs01.pbl.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://openidp.feide.no
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs1.oba.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://fedlogin.studienet.ou.nl
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://fedlogin.ojh.nl/fed/idp
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://wayf.onderwijsgroeptilburg.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.nyenrode.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.nwo.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://login.nrg.eu/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.novay.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp-test.nordu.net/idp/shibboleth
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://niod.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://sso.nikhef.nl/sso/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fed.nhtv.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.nhl.nl/
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://fedlogin.noh-i.nl/fed/idp
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://nidi.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.nioo.knaw.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://nias.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://saml.esciencecenter.nl/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://NSAB4050.NLDA.NL/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.nivel.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://saml.nin.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.ncoi.com/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://ADFS.volkenkunde.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://fides.rivm.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.meteogroup.net/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://meertens.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.mpi.nl/idp-conext
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.hsmarnix.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.maastrichtuniversity.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.loi.nl/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.lumc.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://imogen.surfnet.nl/proxy/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.kb.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.nioz.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.knmi.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.kpz.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.hebis.de/uni-frankfurt
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://icin.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://iisg.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.iknl.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.myhz.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://huygens.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.netwerkopleidingartsen.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2.hubrecht.eu/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.hdh.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.windesheim.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://sso.han.nl/ssp
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs20.hva.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://inloggen.hogeschoolutrecht.nl/openaselect/profiles/saml2/
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.tio.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://access.hro.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.hsleiden.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.ipabo.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfsv2.inholland.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs01.kempel.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.mijnhelicon.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.has.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federation.hanze.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://saml.hhs.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.glu.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.graafschapcollege.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://ADFS.GRAC.NL/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.dir.garr.it/idp/shibboleth
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.fryske-akademy.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2.fontys.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.rijnhuizen.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.fom.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://sso.eur.nl/opensso
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://logon.erasmusmc.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.nuffic.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://login.ecn.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://shibboleth.ens-lyon.fr/idp/shibboleth
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://ehumanities.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.driestar-educatief.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.student.drenthecollege.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.designacademy.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.deltion.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://dans.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.clusius.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2.cito.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.cibap.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.che.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://idp.cwi.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs2.cbs.knaw.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://federatie.cbg.nl/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://bureau.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://remote.bplusc.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://surfspot.biblionetwerken.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.avans.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://nam-id.astron.nl/nidp/saml2/metadata
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.artez.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting https://login.ahk.nl/simplesaml/saml2/idp/metadata.php
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://student.asre.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.ahm.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://adfs.amolf.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://sts.mumc.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] Outputting http://federatie.amc.nl/adfs/services/trust
+2015-02-12T15:13:33+01:00 [INFO] 168 IdPs metadata XML files were created
+2015-02-12T15:13:33+01:00 [INFO] *************END****************
+2015-02-17T13:18:58+01:00 [INFO] *************START****************
+2015-02-17T13:18:58+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-17T13:18:58+01:00 [INFO] The JSON file contains 20 entries
+2015-02-17T13:18:58+01:00 [INFO] Number of entities left: 3
+2015-02-17T13:18:58+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-17T13:18:58+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-17T13:18:58+01:00 [INFO] 3 IdPs SSO endpoints were replaced.
+2015-02-17T13:18:58+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-17T13:18:59+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-17T13:18:59+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-17T13:18:59+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-17T13:18:59+01:00 [INFO] 3 IdPs metadata XML files were created
+2015-02-17T13:18:59+01:00 [INFO] **************END*****************
+2015-02-17T13:21:23+01:00 [INFO] *************START****************
+2015-02-17T13:21:23+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-17T13:21:23+01:00 [INFO] The JSON file contains 20 entries
+2015-02-17T13:21:23+01:00 [INFO] Number of entities left: 3
+2015-02-17T13:21:23+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-17T13:21:23+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-17T13:21:23+01:00 [INFO] 3 IdPs SSO endpoints were replaced.
+2015-02-17T13:21:23+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-17T13:21:23+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-17T13:21:23+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-17T13:21:23+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-17T13:21:23+01:00 [INFO] 3 IdPs metadata XML files were created
+2015-02-17T13:21:23+01:00 [INFO] **************END*****************
+2015-02-17T13:58:47+01:00 [INFO] *************START****************
+2015-02-17T13:58:47+01:00 [INFO] Extracting IdPs information from JSON source file...
+2015-02-17T13:58:47+01:00 [INFO] The JSON file contains 1128 entries
+2015-02-17T13:58:47+01:00 [INFO] Number of entities left: 168
+2015-02-17T13:58:47+01:00 [INFO] Getting rid of useless IdPs informations
+2015-02-17T13:58:47+01:00 [INFO] Preparing the IdPs SSO URL for transparent metadata...
+2015-02-17T13:58:47+01:00 [INFO] 168 IdPs SSO endpoints were replaced.
+2015-02-17T13:58:47+01:00 [INFO] Preparing EntityDescriptors files...
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idservice.zuyd.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://mdb-vw-adfs.zebi.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.zadkine.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://wayf.wayf.dk
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.wur.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://teamwerk.fed.vumc.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://stsfed.login.vu.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://surf-sso.ubvu.vu.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://engine.surfconext.nl/authentication/idp/metadata/vo:nmc-dsp
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.viaa.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://federatie.hku.nl
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://aai.rz.uni-leipzig.de/idp/shibboleth
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.uvh.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://shibboleth.unifi.it/idp/shibboleth
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://secure.uva.nl/cas
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.services.uu.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://utwente.nl/
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.uaccess.leidenuniv.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fshub.umcutrecht.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.unitedid.org/idp/shibboleth
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://idp.ihe.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.umcg.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.umcg.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.trimbos.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federaasje.tresoar.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://saml.uvt.nl/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.thomasmorehs.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.terena.org/idp/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.tue.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://gatekeeper2.tudelft.nl/openaselect/profiles/saml2/
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://sso.surfsara.nl/saml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sso.sara.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.surfnet.nl
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.surfmarket.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://surfguest.nl
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://monitoring-idp
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://engine.surfconext.nl/authentication/idp/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fs.multrix.com/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.summacollege.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.studielink.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://demeter.wp.swov.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.somt.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.stenden.com/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://login.stc-r.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.springer-sbm.com/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://www.onegini.me
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://login.scp.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfsproxy.sintlucas.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://fedlogin.schakelzone.nl/fed/idp
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://sso.saxion.nl/opensso
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://signon.rug.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://kitlv.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://namidp.rocvantwente.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.talnet.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2.noorderpoort.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.roc-nijmegen.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fs.rocmondriaan.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs3host.proxy.rocmn.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fs.rocleiden.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.gildeopleidingen.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2prod.aventus.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.alfa-college.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fed.rijnijssel.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.rijksmuseum.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://tcs02.pbl.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://rathenau.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.umcn.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://conext.authenticatie.ru.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2.politieacademie.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://tcs01.pbl.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://openidp.feide.no
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs1.oba.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://fedlogin.studienet.ou.nl
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://fedlogin.ojh.nl/fed/idp
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://wayf.onderwijsgroeptilburg.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.nyenrode.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.nwo.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://login.nrg.eu/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.novay.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp-test.nordu.net/idp/shibboleth
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://niod.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://sso.nikhef.nl/sso/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fed.nhtv.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.nhl.nl/
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://fedlogin.noh-i.nl/fed/idp
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://nidi.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.nioo.knaw.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://nias.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://saml.esciencecenter.nl/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://NSAB4050.NLDA.NL/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.nivel.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://saml.nin.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.ncoi.com/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://ADFS.volkenkunde.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://fides.rivm.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.meteogroup.net/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://meertens.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.mpi.nl/idp-conext
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.hsmarnix.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.maastrichtuniversity.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.loi.nl/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.lumc.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://imogen.surfnet.nl/proxy/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.kb.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.nioz.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.knmi.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.kpz.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.hebis.de/uni-frankfurt
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://icin.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://iisg.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.iknl.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.myhz.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://huygens.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.netwerkopleidingartsen.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2.hubrecht.eu/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.hdh.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.windesheim.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://sso.han.nl/ssp
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs20.hva.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://inloggen.hogeschoolutrecht.nl/openaselect/profiles/saml2/
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.tio.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://access.hro.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.hsleiden.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.ipabo.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfsv2.inholland.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs01.kempel.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.mijnhelicon.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.has.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federation.hanze.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://saml.hhs.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.glu.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.graafschapcollege.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://ADFS.GRAC.NL/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.dir.garr.it/idp/shibboleth
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.fryske-akademy.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2.fontys.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.rijnhuizen.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.fom.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://sso.eur.nl/opensso
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://logon.erasmusmc.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.nuffic.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://login.ecn.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://shibboleth.ens-lyon.fr/idp/shibboleth
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://ehumanities.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.driestar-educatief.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.student.drenthecollege.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.designacademy.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.deltion.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://dans.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.clusius.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2.cito.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.cibap.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.che.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://idp.cwi.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs2.cbs.knaw.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://federatie.cbg.nl/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://bureau.idp.knaw.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://remote.bplusc.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://surfspot.biblionetwerken.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.avans.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://nam-id.astron.nl/nidp/saml2/metadata
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.artez.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting https://login.ahk.nl/simplesaml/saml2/idp/metadata.php
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://student.asre.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.ahm.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://adfs.amolf.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://sts.mumc.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] Outputting http://federatie.amc.nl/adfs/services/trust
+2015-02-17T13:58:47+01:00 [INFO] 168 IdPs metadata XML files were created
+2015-02-17T13:58:47+01:00 [INFO] **************END*****************
+[2015-02-17 17:09:14] [defaultLogger] [INFO] *************START**************** [] []
+[2015-02-17 17:09:38] [defaultLogger] [INFO] *************START**************** [] []
+[2015-02-18 09:18:17] [defaultLogger] [INFO] *************START**************** [] []

@@ -1,0 +1,61 @@
+<md:EntityDescriptor entityID="http://federation.umcg.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<shibmd:Scope regexp="false">umcg.nl</shibmd:Scope>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">UMC Groningen</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">UMC Groningen</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">UMCG</mdui:Description>
+				<mdui:Description xml:lang="en">UMCG</mdui:Description>
+								<mdui:Logo height="264" width="500">https://static.surfconext.nl/media/sp/UMCGkort_fc.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">UMC Groningen UMCG</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">UMCG UMC Groningen</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC4DCCAcigAwIBAgIQeA7Ldu0/UrNA2REb+iQMRzANBgkqhkiG9w0BAQsFADAsMSowKAYDVQQDEyFBREZTIFNpZ25pbmcgLSBmZWRlcmF0aW9uLnVtY2cubmwwHhcNMTQxMDE0MDcwMDUyWhcNMTkxMDEzMDcwMDUyWjAsMSowKAYDVQQDEyFBREZTIFNpZ25pbmcgLSBmZWRlcmF0aW9uLnVtY2cubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZXzDhcvGPYYxlq65WrFvfdw1tCs4HAWFLwxhcKf80kImuXzoXEiF5FZIK6t1N9y5ewR3eu58CkikqNDIdlybnKpMxlV4c91gPpT63ZKuQt/eudYnhX6POf+iq3UruKV+60qJ+p7jFUJ8xAhSixKlbuK/XpzxAGc9TiK+y/9XSEblOwtzLWC5BuW+M6p4gEfCOqhj/Dd+bQ5cXDu9zXpcZ22zhWZHX3Fecl8/cdpDN0aMpRjLzV1nJFIIek0pT1I3DjWj0JBAH2GX5q9vLL6J6KzDb88PtngCrtgBedgkyojSgoD2CeIS9PmThCG1mFOt2VEI9yW/WU7bKJR9e0Q5pAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFIg2fYHoj3M+J6zs6eK1+9hZn0Yys/0QUTb8ULBHL3EIhIApad44bjg2DPHfuzb+tH3pUqOHudsYcm/gH3pD/okaKXSseaTxu7a93qwaDThye3BDZV+u99zafED4Za0rsSdzW5tGBYRSg2SBnC+CyNqIBQS55bhHxfN9njOgEkKYZlirziDzMrxfgkH4xowqCLSyQ+0hQQz2vWr5MowX0zYOqt9pnx5VU/lHAEszFvGR64SPvXelcAGNx5LxnT4xeNF9NG+dimiT6y9IWe77j5ChEVBg5WUkf09XYeyZXzb8Kee4xUOaU9Pcw1AqVwWG6QX09gAl1dKhilgymeV8xc=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/32171f5a7a012631cb41c6824947cf99" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">UMC Groningen</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">UMC Groningen</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.umcg.nl</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Frank Beckers</md:GivenName>
+		<md:EmailAddress>f.a.beckers@umcg.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Duco Fennema</md:GivenName>
+		<md:EmailAddress>d.r.fennema@umcg.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Helplijn ICT</md:GivenName>
+		<md:EmailAddress>helplijn.ict@umcg.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

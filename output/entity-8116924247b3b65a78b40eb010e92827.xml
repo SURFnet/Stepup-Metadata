@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://student.asre.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Amsterdam School of Real Estate</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Amsterdam School of Real Estate</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Amsterdam School of Real Estate</mdui:Description>
+				<mdui:Description xml:lang="en">Amsterdam School of Real Estate</mdui:Description>
+								<mdui:Logo height="37" width="108">https://static.surfconext.nl/media/idp/asre.gif</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Amsterdam School of Real Estate</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Amsterdam School of Real Estate</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC4DCCAcigAwIBAgIQPXIFKGOG+JtLERn0soin6DANBgkqhkiG9w0BAQsFADAsMSowKAYDVQQDEyFBREZTIEVuY3J5cHRpb24gLSBzdHVkZW50LmFzcmUubmwwHhcNMTMwNzExMTAxMjAyWhcNMTgwNzEwMTAxMjAyWjAsMSowKAYDVQQDEyFBREZTIEVuY3J5cHRpb24gLSBzdHVkZW50LmFzcmUubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCwbyIbR5B+JehukWmKItrIVnC+d9e/1E/BPt0ETLAcPD77PwGVoRD+Va6gnQxn0pEjopqe6SQpNgmAWIGFSBXd4L3KpnG5Mj4WxFZuKKSehah/QvfgzX1HrJiiNkdXdSP/nCgWqwJjjBkAUPM2zDd4AnuXwbF6Zio5sD7G4WGWC4As150vXr7koPZVB7j0gHFpv3vysAS+HC2tw3fFTmeyFyS9/LSQmnErUPs1HrGe7Z9osaWUjGaUhK0xN+kG2EVLdTGIWM2RmgKFxc7WvjdXG2/yqQwjUCUMbeJdSwZVdhN9ylc8CqqHzjXcAn3TqAi4XuPL34lhYOSW5vNU4gC9AgMBAAEwDQYJKoZIhvcNAQELBQADggEBABa1he959w5Ml1j3SToCAafq50Ts5O2cWAw0D8ww4ZVgl9sAipcbRHsEprzmndiM/nAZGqtfglneD+Pq++V8WSEvNHRZclfpnslZ4K1BX8d8WIvXmjL4TghqRmiusSDXgiDd8rl8u4lHa/GNkx7+ScgiMdAfP0QGpfBWepy60NSeVI29hrwL1x0++Lyz5tqQivhvO/jB2u7dGP6KmoINWoFg//V3daU+RWOtMJDGcDyhiqKQoXqEYVUpQgUSGWruB7Nrf3RHwaFX6K9pymtTvYcejFNNSb7eTihNEBpI/QopxbU/neWHHgdSSdpLbVy/2xGwHuj8z755pqojlZIsbp8=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/8116924247b3b65a78b40eb010e92827" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Amsterdam School of Real Estate</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Amsterdam School of Real Estate</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.asre.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Andrew Blok</md:GivenName>
+		<md:EmailAddress>a.blok@asre.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Dick Nijhof</md:GivenName>
+		<md:EmailAddress>d.nijhof@asre.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

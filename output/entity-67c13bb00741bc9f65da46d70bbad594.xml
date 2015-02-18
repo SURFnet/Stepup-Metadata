@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://idp.ihe.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">UNESCO-IHE Institute for Water Education</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">UNESCO-IHE Institute for Water Education</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">UNESCO-IHE Institute for Water Education</mdui:Description>
+				<mdui:Description xml:lang="en">UNESCO-IHE Institute for Water Education</mdui:Description>
+								<mdui:Logo height="100" width="108">https://static.surfconext.nl/media/idp/unesco-ihe.jpg</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Research IHE UNESCO-IHE Institute for Water Education</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Research IHE UNESCO-IHE Institute for Water Education</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1jCCAb6gAwIBAgIQV5ljzws5jblE6F1VoxTt3DANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDExxBREZTIEVuY3J5cHRpb24gLSBpZHAuaWhlLm5sMB4XDTEyMTAxMjIwNTg0NFoXDTE3MTAxMTIwNTg0NFowJzElMCMGA1UEAxMcQURGUyBFbmNyeXB0aW9uIC0gaWRwLmloZS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAPJhExBiK5VohwZH9oh2Zq1AnB4VKl6vkVFrOFnDOqPX/Z98/08ggTGGFrSYL9auD+ZAt/vq8LZ7+XYbypWgBWq/8XNSxCPjNpjYoOv5jbP8n4Zmx1psv9ScZLcG3+16d7ge/CpcucdOXsH5uB3X67VGaexNSwJh1vBEyRNRbInz4RJ1bmkL9KnBGuGFz8mxnFEQkqgM9KRl3X06zCWOWw291A6S+zjsQe/S2X3z3LfmPOB6gUynI3bOmf5X3RAYPDr+xPid1mltjL7C/BrWz8eNI42xGLQfjvuvq1i2KvIPiCo3MxcGAWcjxOXkmhivPqU4ggfyIV98LfPm5XYpbtkCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAB9e3Jvcy5d9vDq0AJFpJcLxfAiXF6ziFHNStZRpyMnCis/LlZS6Uy4s3PzbBRO592mv3QGPLtPRbRg1RhlIHh0SeMvy8QN6992FUUK0QE34yBFpz7HhQCOg5gRs4BJcFNl3KaZzUUgTml/NVW06nnTaoN3mkm16vtMpOH4ju6PKKYmhz8hISZDzJfqydbWztnxEvseF0deQEZSpYRSfvMJGggt9F6qGfAD0avi4GZIHlyztG8r08pwRH8UJIbrJblDw01dYoNq00XhmRL7qgzLXyL1XX4t95sjWG3BkjsliUYK+XIAyeh5rQF+Pj7LWk62Q7oTDFcY0IGeUCChNHLw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/67c13bb00741bc9f65da46d70bbad594" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">UNESCO-IHE Institute for Water Education</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">UNESCO-IHE Institute for Water Education</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.unesco-ihe.org/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Wim Glas</md:GivenName>
+		<md:EmailAddress>w.glas@unesco-ihe.org</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Wilmar Ceton</md:GivenName>
+		<md:EmailAddress>W.Ceton@unesco-ihe.org</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

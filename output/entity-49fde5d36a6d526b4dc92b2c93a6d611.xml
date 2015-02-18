@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://fedlogin.noh-i.nl/fed/idp"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Netwerk Open Hogeschool Informatica</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Netwerk Open Hogeschool Informatica</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Netwerk Open Hogeschool Informatica</mdui:Description>
+				<mdui:Description xml:lang="en">Netwerk Open Hogeschool Informatica</mdui:Description>
+								<mdui:Logo height="31" width="122">https://static.surfconext.nl/media/idp/ou-noh.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Netwerk Open Hogeschool Informatica NOHI OU HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Netwerk Open Hogeschool Informatica NOHI OU HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEhTCCA22gAwIBAgIRAMKsRyhEDPN4pVauz1XoXLowDQYJKoZIhvcNAQEFBQAwNjELMAkGA1UEBhMCTkwxDzANBgNVBAoTBlRFUkVOQTEWMBQGA1UEAxMNVEVSRU5BIFNTTCBDQTAeFw0xMTA3MjIwMDAwMDBaFw0xNDA3MjEyMzU5NTlaMF4xCzAJBgNVBAYTAk5MMSQwIgYDVQQKExtPcGVuIFVuaXZlcnNpdGVpdCBOZWRlcmxhbmQxDTALBgNVBAsTBElDVHMxGjAYBgNVBAMTEWZlZGxvZ2luLm5vaC1pLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsGIN0M9dJVZ3nvyqNS+nmC78oUn2rSrdmM4LXGniZPq7K35bryfENRMSzBtFneSgCvkWbZ64d75OCPbnsb41zMTp/zRizwO4jTuaemKuSNdagiDFp0/108qJL6M82PEplpcxRn+Mj20JzZv6ao51Z665+mOlYiT786PkWrnQysKTY0nR06TBOPtaUo5UCO56zIaIxHhb/FparnmwbaRly5SnhtvkeScyJdA5nMKX9dgeDqkI/40PCcXYmcXNQTJ7EU2qpz2KDXqi5QdcmhurrHMHCYLm5kM/uWvV2he3Nu7adb1iz3NroO3Em+v/PbdGeaX9mxA3EVYH6F8IPEvk4QIDAQABo4IBZDCCAWAwHwYDVR0jBBgwFoAUDL2TaAzz3qujSWsrN1dH6pDjue0wHQYDVR0OBBYEFK/2nXsnJ2DQKKTPTFf27sMVrogbMA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAYBgNVHSAEETAPMA0GCysGAQQBsjEBAgIdMDoGA1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly9jcmwudGNzLnRlcmVuYS5vcmcvVEVSRU5BU1NMQ0EuY3JsMG0GCCsGAQUFBwEBBGEwXzA1BggrBgEFBQcwAoYpaHR0cDovL2NydC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcnQwJgYIKwYBBQUHMAGGGmh0dHA6Ly9vY3NwLnRjcy50ZXJlbmEub3JnMBwGA1UdEQQVMBOCEWZlZGxvZ2luLm5vaC1pLm5sMA0GCSqGSIb3DQEBBQUAA4IBAQCjulT+nYopvUHpId00J57FLSzVUT60da+iSQ77NC17Sgiyeb/Zf8LL4bNyLz1gmd4wiGM9tuZnzFtP2QrQhxmQCxqyYZlEGq4YHbtw4lR9IIHF4IbWj3I/ybjl+MnxJ+78S6y3F5WMG77v1ggb7Yxdz9eQX7zQ8s5josX3WFXHgWtTrdKGSyeRMJS3X6ZDjaPjal5JKF4K5fKVXMW43newiCpVWzQ5g8YbNnb/RjfpbsR5jrzOk2FNEVxxLzQFQPJW/IXq6Wekmtdpbwj2kq8GkZbIXahpbSsc2a6eZp9+9YWECWsRUca64JAztt0yTuBn4EyGAKVq+K/zgbJ08IPd</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/49fde5d36a6d526b4dc92b2c93a6d611" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Netwerk Open Hogeschool Informatica</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Netwerk Open Hogeschool Informatica</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://noh-i.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Maarten Scholl</md:GivenName>
+		<md:EmailAddress>Maarten.Scholl@ou.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Hilde Loozen-Janssen</md:GivenName>
+		<md:EmailAddress>hilde.loozen-janssen@ou.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

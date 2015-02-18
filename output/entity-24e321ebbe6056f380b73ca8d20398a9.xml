@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs.glu.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Grafisch Lyceum Utrecht</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Grafisch Lyceum Utrecht</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Grafisch Lyceum Utrecht</mdui:Description>
+				<mdui:Description xml:lang="en">Grafisch Lyceum Utrecht</mdui:Description>
+								<mdui:Logo height="35" width="108">https://static.surfconext.nl/media/idp/glu.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Grafisch Lyceum Utrecht MBO GLU</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Grafisch Lyceum Utrecht MBO GLU</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2DCCAcCgAwIBAgIQHwKhJuIAaKlJc3JDPniRITANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIEVuY3J5cHRpb24gLSBhZGZzLmdsdS5ubDAeFw0xMzA1MjExMjAwMDdaFw0xNDA1MjExMjAwMDdaMCgxJjAkBgNVBAMTHUFERlMgRW5jcnlwdGlvbiAtIGFkZnMuZ2x1Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr2TAtij9RbK+cNbmtlU4s5b0S699tIQFYqJb4P15eqysaZE5S69iOQ5VeXDNo97iPCTLVoExO4vsuyhm12snZCFmPckzLeRl0nz+kg8TAqo5lNxcGQiUd0bBquqkIFE8TSedohEETc/DZLpQoloRPcX+flRDEaaJaXNSJRLYNXn/1v24B5u1O9ohoFVFl43To5BHkEspiWb8LsFnI4fBGYUyND2SRsCd03wo3tlH1e4wugUvJv0z5Lu8mbg3Llq7R//sKP4TqRQCQ+oHrdmKsD2KNX17uMhfObUBIfeB3VuQs0HMG4N/bQIFQSKAnOQ17fLk1RqzGwD99+S/AGq5JwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBqZkgrqmbb8/TIncnL5cEBELeXKqrLx36OPD/BgcpQuPEYkInl6/orTMwAX+2qzDiLVnFbW4/ZvtzWQ+SWg8c+kf4F+v+GBZuFEOGKOFNWSAmuzoaoRQGsRSVKNIuncUfv4HUOzNWeCZdEXMPgt+iz6H3rey0mVV/PXKQoedcK/J4IOyzAbt2xwUcMpg9GY7W2akuzlZKf3GsnvoeKthuYSjETQVNXbMaYOZdop6H0HMxbDK2BvUx3peu5b8/ymgKlVoFh+tVjKllNY0/zIGKaYUvVnXAil2o/unSSAGYKR1FXm4Ru6gRkkgo+fDEfdbqEUbu8MFIOTmSYhG0d/Kb+</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/24e321ebbe6056f380b73ca8d20398a9" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Grafisch Lyceum Utrecht</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Grafisch Lyceum Utrecht</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.glu.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Martin Roberti</md:GivenName>
+		<md:EmailAddress>mroberti@glu.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Martin Roberti</md:GivenName>
+		<md:EmailAddress>mroberti@glu.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

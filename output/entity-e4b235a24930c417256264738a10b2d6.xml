@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs.iknl.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Integraal Kankercentrum Nederland</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Integraal Kankercentrum Nederland</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Integraal Kankercentrum Nederland</mdui:Description>
+				<mdui:Description xml:lang="en">Integraal Kankercentrum Nederland</mdui:Description>
+								<mdui:Logo height="34" width="108">https://static.surfconext.nl/media/idp/iknl.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Integraal Kankercentrum Nederland</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Integraal Kankercentrum Nederland</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2jCCAcKgAwIBAgIQLPWvRDJqBYFITOmIVY0gZzANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBhZGZzLmlrbmwubmwwHhcNMTMwMTAyMTUwNzI4WhcNMTQwMTAyMTUwNzI4WjApMScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBhZGZzLmlrbmwubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCsXQycVMCegOF9g7e4qRf+OlZGwaahbb6MUiDOehiXr4MocFDsZ195CPsyfxVPuMnqkAkeGBNgYLmdjkHNar/6+B1gzCU/ZhvneOpsOzB/NhHUjlRevXvO9s7bP2GEtp4jmRAhwiLLG+GV+AVO8AnO+P99xPTa+vmGemH7PBBrdcqUbdRaPP3HkEGW9EGmWf+nMNxhoAeGN2RMqKYgdPRtAfmYx5o5iZQI38JZ0rZCFXq4DlusXhMOMacC+J4iA/BPuzPV/fu1kYe/nc3DP8Ej8YLkE3OacrICmI+exxNWRI9n7CyGTI/YvEHKVkvfQjgI3xzVFPZIik9bXpJe4ecpAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAELggB7dK6xXT0bjhKto11NwXowZZwzlhu6l6oW4F9lQUiJtntdop8Ut+CFcm+uTqAW75QVc+9Bwb59vBox9z/dX5Rv3uDffF1Q7GZCEWihVKxF0/hxu9L2+1xaTtFG60CzD5ONhmdtSSkBNhkQqTa9oUOZBxJXswxHx5T2F5HeuyuTCtF20paZFSHv1ixR17eSENpczf5klYWK2DAHN8wHo8eNG5292i47IsFSv7LO6F0/QZFdNqPVIgzQF9Sxq/o2QgY5mSjLcJIDdtLt9PD1chED5RZbtxFv+5zj42b6QOwpJt9UBNtZpt5OFXwQ9K4jgmNJcloHGlSCVALZj1fQ=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/e4b235a24930c417256264738a10b2d6" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Integraal Kankercentrum Nederland</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Integraal Kankercentrum Nederland</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.iknl.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Dominique Hermans</md:GivenName>
+		<md:EmailAddress>D.Hermans@iknl.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Dominique Hermans</md:GivenName>
+		<md:EmailAddress>D.Hermans@iknl.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

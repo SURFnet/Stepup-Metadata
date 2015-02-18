@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor
+	entityID="{{ name }}"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+         {% for item in metadata.shibmd.scope %}
+<shibmd:Scope regexp="false">{{ item.allowed }}</shibmd:Scope>
+{% endfor %}
+
+<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">{{ metadata.displayName.en }}</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">{{ metadata.displayName.nl }}</mdui:DisplayName>
+				<!-- If you don't add any other DisplayName TAGS remove this comment, please -->
+
+				<mdui:Description xml:lang="en">
+               {{ metadata.description.en }}
+            </mdui:Description>
+				<mdui:Description xml:lang="nl">
+               {{ metadata.description.nl }}
+            </mdui:Description>
+				<!-- If you don't add any other Description TAGS remove this comment, please -->
+
+				<mdui:InformationURL xml:lang="en">
+               IDP INFORMATION URL IN ENGLISH LANGUAGE - SUGGESTED
+            </mdui:InformationURL>
+				<mdui:InformationURL
+					xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT-OR-REMOVE-TAG">
+               IDP INFORMATION URL IN THE NATIVE LANGUAGE - SUGGESTED
+            </mdui:InformationURL>
+
+
+				<!-- If you don't add any other InformationURL TAGS remove this comment, please -->
+
+				<mdui:PrivacyStatementURL xml:lang="en">
+               IDP PRIVACY STATEMENT URL IN NATIVE LANGUAGE - SUGGESTED
+            </mdui:PrivacyStatementURL>
+				<mdui:PrivacyStatementURL
+					xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT-OR-REMOVE-TAG">
+               IDP PRIVACY STATEMENT URL IN THE NATIVE LANGUAGE - SUGGESTED
+            </mdui:PrivacyStatementURL>
+				<!-- If you don't add any other PrivacyStatementURL TAGS remove this comment, please -->
+
+				<mdui:Logo xml:lang="en" height="16" width="16">
+               IDP 16x16 LOGO URL FOR THE ENGLISH VERSION - SUGGESTED
+            </mdui:Logo>
+				<mdui:Logo xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT-OR-REMOVE-TAG"
+					height="16" width="16">
+               IDP 16x16 LOGO URL FOR THE NATIVE VERSION - SUGGESTED
+            </mdui:Logo>
+				<!-- If you don't add any other Logo TAGS remove this comment, please -->
+
+				<mdui:Logo xml:lang="en" height="60" width="80">
+               IDP 80x60 LOGO URL FOR THE ENGLISH VERSION - SUGGESTED
+            </mdui:Logo>
+				<mdui:Logo xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT-OR-REMOVE-TAG"
+					height="60" width="80">
+               IDP 80x60 LOGO URL FOR THE NATIVE VERSION - SUGGESTED
+            </mdui:Logo>
+				<!-- If you don't add any other Logo TAGS remove this comment, please -->
+			</mdui:UIInfo>
+		</md:Extensions>
+
+		<md:KeyDescriptor>
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>
+                  IDP_SELF-SIGNED_SUGGESTED_CERTIFICATE_USED_TO_SIGN_
+                  AND_ENCRYPT_THE_ASSERTIONS_EXCHANGED_WITH_A_SP-REQUIRED-CHANGE_IT
+               </ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+
+		<md:ArtifactResolutionService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+			Location="https://..." index="1" />
+
+		<md:NameIDFormat>
+         urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+      </md:NameIDFormat>
+
+		<md:NameIDFormat>
+         urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+      </md:NameIDFormat>
+
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+			Location="https://..." />
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"
+			Location="https://..." />
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://..." />
+
+	</md:IDPSSODescriptor>
+
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">
+         ORGANIZATION NAME IN ENGLISH LANGUAGE - RECOMMENDED
+      </md:OrganizationName>
+		<md:OrganizationName xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT">
+         ORGANIZATION NAME IN THE NATIVE LANGUAGE - RECOMMENDED
+      </md:OrganizationName>
+		<!-- If you don't add any other OrganizationName TAGS remove this comment, please -->
+
+		<md:OrganizationDisplayName xml:lang="en">
+         ORGANIZATION DISPLAY NAME IN ENGLISH LANGUAGE - RECOMMENDED
+      </md:OrganizationDisplayName>
+		<md:OrganizationDisplayName xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT">
+         ORGANIZATION DISPLAY NAME IN THE NATIVE LANGUAGE - RECOMMENDED
+      </md:OrganizationDisplayName>
+		<!-- If you don't add any other OrganizationDisplayName TAGS remove this comment, please -->
+
+		<md:OrganizationURL xml:lang="en">
+         ORGANIZATION URL IN ENGLISH LANGUAGE - RECOMMENDED
+      </md:OrganizationURL>
+		<md:OrganizationURL xml:lang="RFC5646_LANGUAGE_TAG-CHANGE_IT">
+         ORGANIZATION URL IN THE NATIVE LANGUAGE - RECOMMENDED
+      </md:OrganizationURL>
+		<!-- If you don't add any other OrganizationURL TAGS remove this comment, please -->
+	</md:Organization>
+
+	<md:ContactPerson contactType="technical">
+		<!-- If present, <md:EmailAddress> SHOULD be the entity's responsible persons, not personal, address. Remove this comment after changes -->
+		<md:EmailAddress>
+         mailto:EMAIL.ADDRESS.FOR.IDP.TECHNICAL.CONTACT - CHANGE-IT - SUGGESTED
+      </md:EmailAddress>
+	</md:ContactPerson>
+	<!-- AND/OR -->
+	<md:ContactPerson contactType="support">
+		<!-- If present, <md:EmailAddress> SHOULD be the entity's responsible persons, not personal, address. Remove this comment after changes -->
+		<md:EmailAddress>
+         mailto:EMAIL.ADDRESS.FOR.IDP.SUPPORT.CONTACT - CHANGE-IT - SUGGESTED
+      </md:EmailAddress>
+	</md:ContactPerson>
+
+</md:EntityDescriptor>

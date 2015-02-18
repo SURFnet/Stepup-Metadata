@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs3host.proxy.rocmn.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ROC Midden Nederland</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ROC Midden Nederland</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Midden Nederland is een onderwijsorganisatie voor middelbaar beroepsonderwijs, voortgezet onderwijs voor volwassen (VAVO Lyceum), bedrijfsopleidingen en participatieonderwijs in de provincie Utrecht.</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Midden Nederland is een onderwijsorganisatie voor middelbaar beroepsonderwijs, voortgezet onderwijs voor volwassen (VAVO Lyceum), bedrijfsopleidingen en participatieonderwijs in de provincie Utrecht.</mdui:Description>
+								<mdui:Logo height="70" width="130">https://static.surfconext.nl/media/idp/ROCMNlogo.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ROCMN, ROC Midden Nederland</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ROCMN, ROC Midden Nederland</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEiTCCA3GgAwIBAgIQN4Z/3GFhpBYbPW4e5GgIjTANBgkqhkiG9w0BAQUFADA2MQswCQYDVQQGEwJOTDEPMA0GA1UEChMGVEVSRU5BMRYwFAYDVQQDEw1URVJFTkEgU1NMIENBMB4XDTEyMTIwNTAwMDAwMFoXDTE1MTIwNTIzNTk1OVowYTELMAkGA1UEBhMCTkwxHTAbBgNVBAoTFFJPQyBNaWRkZW4gTmVkZXJsYW5kMRUwEwYDVQQLEwxTZXJ2ZXJiZWhlZXIxHDAaBgNVBAMTE2FkZnMydG9rZW4ucm9jbW4ubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCjY9gq0EMneHDfxbnz5+qeWMe3eRbrg5xPC4wtzELE9Cn2aNcvZrc6eS0IHx9hslQCzcsVoy0kobxKGgtwwniL+Oyi555ti/Ebh3xmHGCfcRUoPJiJIiQdbgO0zJ/1+q7jR4kfytH2QPdCHMtqk+1ptxcz1Axhaio9+w1WJ46YuSMTa9Vyy7ltZ7qklTKYElZgv/zstrhCTQ1udxnAgXvMVitdPb2PStm4kWJA7ZP4UdsE1NT4iZe7jOdFPAa1oLh9jCOv4gKxFztqJseGlJfOfgSyiGgOUMzpgEY8wLIbQW9LhWQ6iiE/NjwZsapHKEsmiASEkjRdhVSdhBLbywMLAgMBAAGjggFmMIIBYjAfBgNVHSMEGDAWgBQMvZNoDPPeq6NJays3V0fqkOO57TAdBgNVHQ4EFgQU6ti9w1rokup6BNmk9rw8JDePM1UwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBgGA1UdIAQRMA8wDQYLKwYBBAGyMQECAh0wOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8vY3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYaaHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwHgYDVR0RBBcwFYITYWRmczJ0b2tlbi5yb2Ntbi5ubDANBgkqhkiG9w0BAQUFAAOCAQEAMIwTjQOjirASEEiRNAe84xWX8PJZsWp8DwNySBuetcggL7oCFCxOjVyFf7PhF9EQRN0I1bI84bCWWKxfGaQV6JtffuSjPueNmBNuHF9yx8WWCwBuH3AOcuAaX2nlEB0cLOjOiFFM7GORnGVdO8v5A9A0pLcYXGVJrNu4wjhSpEZt8Qyh3Xzk589Tbin2QwPaGPywnpwVXMdh3q4q/Z6/xj5s/MyzTXA+Yr1bfbugvphJOeabkdvyYElkJ1jshV1Ej+gpLB/UsDq8jysNZ0i1jCykzE6Ip5eubv1Zj9WmDLMYjMhMo8JV7kE9N9UkFCt1n+O3eaeGxATmsLoga84kJw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/bbde5129d0d6c08aefc07ed679db3145" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Midden Nederland</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ROC Midden Nederland</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.rocmn.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Wouter Berman</md:GivenName>
+		<md:EmailAddress>wberman@2at.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Serverbeheer Harnold Vredendaal</md:GivenName>
+		<md:EmailAddress>serverbeheer@rocmn.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Frank Pinxt</md:GivenName>
+		<md:EmailAddress>f.pinxt@rocmn.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

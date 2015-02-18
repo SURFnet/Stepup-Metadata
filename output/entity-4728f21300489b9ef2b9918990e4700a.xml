@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://tcs01.pbl.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Planbureau voor de Leefomgeving</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Planbureau voor de Leefomgeving</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Planbureau voor de Leefomgeving</mdui:Description>
+				<mdui:Description xml:lang="en">Planbureau voor de Leefomgeving</mdui:Description>
+								<mdui:Logo height="35" width="108">https://static.surfconext.nl/media/idp/pbl.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Research Planbureau voor de Leefomgeving PBL</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Research Planbureau voor de Leefomgeving PBL</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1DCCAbygAwIBAgIQbwczlAXgKKBO4ksIc4sHrDANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDExtBREZTIFNpZ25pbmcgLSB0Y3MwMS5wYmwubmwwHhcNMTIxMDI2MjIxNDU5WhcNMTcxMDI1MjIxNDU5WjAmMSQwIgYDVQQDExtBREZTIFNpZ25pbmcgLSB0Y3MwMS5wYmwubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDiIUpisJAEMBMrEpxcCREtDUbHacy4g8Xh9kEzOaGImg7UN+k64oqGgOGB/YAjqpy261iCCWhYg0oA7+0bLzMZyJ+jPHnmhWhgmc4egUQhZDR27XrJM9H3aDJwH8mn0We8eavxvQRjhM/Tb6yQ9RkKxOp39k9xyFy9gZSDIyR23BO6QljtoHwjIVP8kiQ3NtDRjX6M0HZApKstSXVGBGe+ZGIzdhGVaWXbys9vxZlEuVfQbTLUUEJ7n55HfqolJhCLpozOEvtntVn4qJ6YUhNRTxB1C0KtB1kpJjOipDsefGqX/04e4c05K1c6fB2B2Xnhz0eUuO0gIN/n8eZiXw01AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAGqQKEWstrtFVu8qESQUKNND6RAzbHSg53BJKzalYLerbEBG3GOdy3XPzIASPCGbLeOU5XJniM3fcFwWUU04lgvgbg5Ik54v/+rRqPFDs/h84VIPmdt23BQJMDNsc3+KO9TuJGSaCdg17pKpxXzrVeojB7/IQfbZr44YzqiZOxP/TDkJAVmNYT+VZHymHXZlWnnbJWvxoSYvSms2lZi4rhf9YIPWToxY172DfhbFylmhJWoSZUJ8oA0lcdgxmlSVOb19VVg/ZvnVcQiBCxHMXBzHSDEHvZ3nYBkeJ6yfBvxrZGxfAlu28mccO/wB3mCQ+UItFlRZ+eL32vhdOq2Pry0=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/4728f21300489b9ef2b9918990e4700a" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Planbureau voor de Leefomgeving (old)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Planbureau voor de Leefomgeving</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.pbl.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Huib / Arjan den Boer / van Tent</md:GivenName>
+		<md:EmailAddress>technischbeheer@pbl.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Kris Rambaran</md:GivenName>
+		<md:EmailAddress>kris.rambaran@pbl.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Servicedesk PBL</md:GivenName>
+		<md:EmailAddress>Servicedesk@pbl.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

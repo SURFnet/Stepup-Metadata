@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.tio.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Hogeschool Tio</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool Tio</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool Tio</mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool Tio</mdui:Description>
+								<mdui:Logo height="40" width="108">https://static.surfconext.nl/media/idp/tio.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hogeschool Tio HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hogeschool Tio HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2DCCAcCgAwIBAgIQPS82Vd6ESoNLIZVhpxwsszANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIEVuY3J5cHRpb24gLSBhZGZzLnRpby5ubDAeFw0xMzA1MTYxNDMxMzRaFw0xNDA1MTYxNDMxMzRaMCgxJjAkBgNVBAMTHUFERlMgRW5jcnlwdGlvbiAtIGFkZnMudGlvLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApDyzGyI77s/vEXSFntxw9yLoCFRCtGIYLBfz2v51uOkn7j92PDnEOE24MePNVIwcs095vvAHLhJqSHVqeqP92YJapYVc+8wPfVnHXmFW3rCvxe0NiRo53Av7UKMXwTC25RxgYxqQdmQAI61TjPAUDTVUSvvkJvsf1jp3qH8M+uzmQNWcR1vNCtf0xodGRZ6eFilqosKz5q3T9aCIAyYV8epxV2HAova4Q+2hOqH1SCrcIaAwBUfFGpiGu7lAhdyPX9bFciKudQuOfpaGLrsU1sTqI27LIriP4wK8+3i8kRCC3cSe0UmOFTvqxOhqMjrUmm4BjdLOU3ua26wwkWdAfQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAcNZRjPGoyKVU8zkVni5Any1dX/0t/79LSKIEBHCxwap+Bfluc3z5RK9VqRJc60kQS+H4VaN5k7qL4YQx3jMDD6sIP+3IzXUGk/iHqjwa++vfI5dcaqawmleJlxwi8m4nvdKjbi2f5fb0QZHwD35P1eMnwJsE80hRoHSs1ydNfxZQ6tj1HDHQp11Z3fu/ZPmN596QS92XLCQdAgOpoL93savDtaapx2i6kqGEeLenF9r8R0psSkX24bE4ZeI/tVKS+wYXyE/pvN0LSs826bpybjptEp46XGqs5lpx+x3OuS6qMTZ75sAfBpw2jAzgOZrHFza/7XySRYez/3/NjX2LY</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/c6c3af6c7730ebb7ee71e2ea31f0d7b2" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool Tio</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Hogeschool Tio</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.tio.nl</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Ewout Kanger</md:GivenName>
+		<md:EmailAddress>e.kanger@tio.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>John Gadellaa</md:GivenName>
+		<md:EmailAddress>j.gadellaa@tio.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Servicedesk TIO</md:GivenName>
+		<md:EmailAddress>Servicedesk@tio.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

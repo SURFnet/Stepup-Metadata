@@ -1,0 +1,52 @@
+<md:EntityDescriptor entityID="https://idp.dir.garr.it/idp/shibboleth"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl"></mdui:Description>
+				<mdui:Description xml:lang="en">Identity Provider for GARR staff</mdui:Description>
+								<mdui:Logo height="300" width="500">https://static.surfconext.nl/media/sp/GARR.jpg</mdui:Logo>
+								<mdui:Keywords xml:lang="nl"></mdui:Keywords>
+				<mdui:Keywords xml:lang="en">garr it idem edugain</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDJzCCAg+gAwIBAgIUMJUKlH8ou/Aqe5RpN9dGZSep/CQwDQYJKoZIhvcNAQEFBQAwGjEYMBYGA1UEAxMPaWRwLmRpci5nYXJyLml0MB4XDTExMTEyMTEwNDY1NloXDTMxMTEyMTEwNDY1NlowGjEYMBYGA1UEAxMPaWRwLmRpci5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtQSmT31kE2g6itpnCjcLrFBCUL04LsMioxbBFbCFsMn3vgHOubmhpwuNOUBYhl8MkSIGjoAcYCbDc4hDSucQMSx1fgvFX/S2QfJr7Bu6mNxzt9RqMoXWnuqkKKZYZw+DjITqzZp3g2+lB3i3b9x1jOh4AhSeOoWoVyXx/x+EQS9WJ55GEw/fKi70GtrrKI5wu4D/z+bigZG5TOg3A3o197mLt0nsjwSd51WdtbZ+AccwyTOyQgFCqwRxszQEvqIt2wyNYt0AOcYi2jRUlpc2jnikytXN9hsNZPT0Y9Yuxi5IVRxSIkdeIs9eGOxrJqxg6FWwIdFHpNyF9MVjx4eZewIDAQABo2UwYzBCBgNVHREEOzA5gg9pZHAuZGlyLmdhcnIuaXSGJmh0dHBzOi8vaWRwLmRpci5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRybtrE0ndZvt7hHlAA+e035msGLzANBgkqhkiG9w0BAQUFAAOCAQEAWFusaIXa/wOcsEEvKRA83mFVulM/R0lA/D+Zm0LH1SxVEprX7/Iv001U1M5c6ySFWHgR6v7CIHHVpNF+aMr1kNw4U2wcXMWli2Htykpd8sgrjx7Eg4+3WITxupXwxbvxU86orNntPcJCASVcDVbrBReC6mZ2lxawzxIGWbSVbKo24lUcklBeoMKiG8Itw2/ouzjcmdw3defNBMlZ9akWdFSK1z58pm4pftMyNdlh91nMxDa0caZ8+7fZcTPs0bFQdivu3vdL1+OcwlAmcloilD54xfiV5vGMEoxK1AfQhXgis+ZYJ2VRydbeSS0gEohRmR/53LIOjBfZ6VnKy71yew==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">GARR | eduGAIN</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.garr.it/b/eng</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>GARR GARR</md:GivenName>
+		<md:EmailAddress>system.support@garr.it</md:EmailAddress>
+	</md:ContactPerson>
+								
+										
+									</md:EntityDescriptor>

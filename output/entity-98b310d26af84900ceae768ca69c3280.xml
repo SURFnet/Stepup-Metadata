@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs2.politieacademie.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Politieacademie</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Politieacademie</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Politieacademie </mdui:Description>
+				<mdui:Description xml:lang="en">Politieacademie </mdui:Description>
+								<mdui:Logo height="48" width="100">https://static.surfconext.nl/media/idp/politieacademie.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Politieacademie </mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Politieacademie </mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC7DCCAdSgAwIBAgIQJXuHV4Zn77BL3IXbwHA+mDANBgkqhkiG9w0BAQsFADAyMTAwLgYDVQQDEydBREZTIFNpZ25pbmcgLSBhZGZzMi5wb2xpdGllYWNhZGVtaWUubmwwHhcNMTQwNTAyMjAwODUxWhcNMTkwNTAxMjAwODUxWjAyMTAwLgYDVQQDEydBREZTIFNpZ25pbmcgLSBhZGZzMi5wb2xpdGllYWNhZGVtaWUubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDglZAB+c3cyjr46qbC/bRLKbwOFuOzDgVwU3+EIC8JARHn2HTlcEzoU5OnJ2NRf9YcFxBDlIyeS4wd9NSv7ZEGRacMZLyyy2pkglRCzfZTqHlhn9tx9rovsW/XlnJRkGRaoJmncKPZ8zvB5lio+/MyKCerSset1Vk4VeCY5BuyzYO82p/N4nKqJbeAPJxuOVY3Yg5XdjoltiryfMS2ed0WHEhxpbbHbZxND+Jsc2Ru2YBSVgj/Rd1jPkqdUD26mg0h3FU579Oai0V73ZR34gXj1nwyB4XEyH606MYCevJJxJWORQszMrLcvHITXSVEarIBdedPbU2JNppBuC67ijlHAgMBAAEwDQYJKoZIhvcNAQELBQADggEBACc5fQ5HW5Vibas1689J09DLZBdVbxL5rmJpCkOpBvVjq9wr53J2IYBye7jKdtg6uoMm/15q+K9ET6P9gFzigq/qUcoLpZzjr6OwjSI0T8k4bDPl97q4+hOgUFW8LTgs6/Tc7qjCzuf4TASfYiQukiXk98clPzo0F/bIPqGSFerCsG/xWlS2mgvAV7Hq7TGBc67eJrxWV5k1HHcjDUGM1sDfrensgMsCE+D98mV+oOL49ncDkl8ElgxdJNB8t3DYzfHlTuf6Tj6CXEpJ1F1k87zfp0jCqvvRqaAOQxjtWhFQOnmZ3AEclXhPuDLCj3WYVpEvZRfYKW1Ghtph0kcwjKo=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/98b310d26af84900ceae768ca69c3280" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Politieacademie</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Politieacademie</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.politieacademie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Darwin Dijkstra</md:GivenName>
+		<md:EmailAddress>darwin.dijkstra@politieacademie.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Bert Mulder</md:GivenName>
+		<md:EmailAddress>bert.mulder@politieacademie.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

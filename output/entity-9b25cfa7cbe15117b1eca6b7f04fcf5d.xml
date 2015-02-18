@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://idservice.zuyd.nl/nidp/saml2/metadata"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Zuyd University (new)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Zuyd Hogeschool (nieuw)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Zuyd Hogeschool</mdui:Description>
+				<mdui:Description xml:lang="en">Zuyd University</mdui:Description>
+								<mdui:Logo height="48" width="45">https://static.surfconext.nl/media/idp/hszuyd.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Zuyd University Hogeschool HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Zuyd University Hogeschool HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEjjCCA3agAwIBAgIQA5hbICefiSFZOXxDfDCAwDANBgkqhkiG9w0BAQUFADA2MQswCQYDVQQGEwJOTDEPMA0GA1UEChMGVEVSRU5BMRYwFAYDVQQDEw1URVJFTkEgU1NMIENBMB4XDTEyMDcyNTAwMDAwMFoXDTE1MDcyNTIzNTk1OVowaTELMAkGA1UEBhMCTkwxIjAgBgNVBAoTGVN0aWNodGluZyBIb2dlc2Nob29sIFp1eWQxGzAZBgNVBAsTEkZhY2lsaXRhaXIgQmVkcmlqZjEZMBcGA1UEAxMQdWFwb3J0YWwuenV5ZC5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOFS0pTfolfqZajiuCKaA2pogU9Wj5954UO0n4eKcT9Ra5k8Jwr9wMaENXwkQq01tCKQ1U5PNe2/Rm3z4W11o2USz4+J9arQOmsSBsDX13i2XkQzT5IvRi0+jSfRCF90MsOsL7HakqL3HgrJk3Gm1qEXU9tlSnE53nf9nY18D7DUdfAuBTfo9J9/d4MXZX6fUU2XIgZIAox/F5j0CJ38riEx51VIgXv5P0xOh2zxN29gJ5FrqNmhD7xqmvZFeXUnckiINWhjOOR1DADGJ7l4PxwcCEzvb1DPhXIpLI75nNqwfVrD6/QZ2ZLCnX1/R1wjmOOarBYV3X/KpYEzlFAZjL8CAwEAAaOCAWMwggFfMB8GA1UdIwQYMBaAFAy9k2gM896ro0lrKzdXR+qQ47ntMB0GA1UdDgQWBBQYa2kvN1kKBpQbv8hHwS80qacqTjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwGAYDVR0gBBEwDzANBgsrBgEEAbIxAQICHTA6BgNVHR8EMzAxMC+gLaArhilodHRwOi8vY3JsLnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNybDBtBggrBgEFBQcBAQRhMF8wNQYIKwYBBQUHMAKGKWh0dHA6Ly9jcnQudGNzLnRlcmVuYS5vcmcvVEVSRU5BU1NMQ0EuY3J0MCYGCCsGAQUFBzABhhpodHRwOi8vb2NzcC50Y3MudGVyZW5hLm9yZzAbBgNVHREEFDASghB1YXBvcnRhbC56dXlkLm5sMA0GCSqGSIb3DQEBBQUAA4IBAQBIva1JdFm8TnOGCRzGcWwWGWZu6DI3miY4b4eM9fsFMoerueBQp5PUT3dyQ7ts9nPl/m4OrgiuMJJxnaA5QGeAJOCFgXMm26Q4JYKpOox0EEdszAZoBUknwctlb9dzt/xurOudBO9lxUMLlk0qWLIIS8GQuwm4VbUy1Ep/xOGi+c+vOuB0c9t3sBkVaHRmbJG2c/SLtFzxJ1d9f7DdKPAAWt7920A8XAd9O6ezMZdr3oj+fSgbiMiLXxsaHxVyXL9ss4l2+16pLTn42RzGcJPiqDvCrk0ZoIbItQyUCBOHKsIlMiBsC8gecEUiBjodYinZa/BEkV99brof+PdQtEtB</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/9b25cfa7cbe15117b1eca6b7f04fcf5d" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Zuyd University</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Zuyd University (new)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en"></md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>IAM Identity and Accessmanagement</md:GivenName>
+		<md:EmailAddress>ICT-Servicedesk-Zuyd-Hogeschool@zuyd.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Andre Hochstenbach</md:GivenName>
+		<md:EmailAddress>andre.hochstenbach@zuyd.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Ralf Kruytzer</md:GivenName>
+		<md:EmailAddress>ralf.kruytzer@zuyd.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

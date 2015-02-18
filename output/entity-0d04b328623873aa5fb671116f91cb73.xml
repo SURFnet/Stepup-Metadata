@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://conext.authenticatie.ru.nl/simplesaml/saml2/idp/metadata.php"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Radboud University</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Radboud Universiteit</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">An IdP operated by Radboud University Nijmegen</mdui:Description>
+				<mdui:Description xml:lang="en">An IdP operated by Radboud University Nijmegen</mdui:Description>
+								<mdui:Logo height="96" width="586">https://static.surfconext.nl/media/idp/ru_toplogo_nl_nieuw.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">universiteit nijmegen ru</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">university nijmegen ru</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC+jCCAeICCQCK1sPRfrYGLjANBgkqhkiG9w0BAQUFADA/MQswCQYDVQQGEwJOTDERMA8GA1UEBwwITmlqbWVnZW4xHTAbBgNVBAoMFFJhZGJvdWQgVW5pdmVyc2l0ZWl0MB4XDTE0MTEwMzE1MjQwNVoXDTQyMDMyMDE1MjQwNVowPzELMAkGA1UEBhMCTkwxETAPBgNVBAcMCE5pam1lZ2VuMR0wGwYDVQQKDBRSYWRib3VkIFVuaXZlcnNpdGVpdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALhgfuPGvo/Jhovy7mPYQu1L/qDWSxCmpwrfXS6c4msaxEPMwnaYFqpUQXY/MzqRdjsPEF+X+gREWnJWkn4RCsh/8SiaTO3EsQg1VWOhHWNAeNrgguQ4IL2oahcRvQG6ZHVlILyNJrO2+/oRFeOClqabigOCrNqc2u+Xwh6gRxeBluWzwwotBjbxOltZCXQ1u+DcevQMUZZVy8NYmmTxfkthCGYQteDWAGg4sJkg1vwFQyjl1MXVt6Ev8wpr4kV4EwKb3XST4fSzHnb5Mozbmi5VBvAFixLj6xKIH6cKXEmGGkQJOOW5M0i3ukHNz5hEkZlc19fv6YQqBfL1t22hBDkCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEACXBIk9RMt3Go1a4/BZBz1sKaCZHQd5iwJpKy8vagWtzJiL00DyRTyYZoes/nEtc9VWJ9OIdK/duD58JOeQ3WF+RNKHfaPpGRYoCVOZzaMgkq75tM9JgGmy2B4SGktSK09MIWkCK6o3CSjQFbhgn+HKET6Qu8RB7vC4/l1zOQ4aSGE3aIjHK62EjQ/S2+ASN4NYeNM+uoSZXpMTA+fvFoUczmgE0CJTilL3eOpZe4VYY3lx5Jb7Ta1MJJf3Shhne2p8CHOn5Pz/su1CSRgn7dflT2iSQH4Y3KoClqyOFHT5wqbtwn6Jy/vGAxlynbTnqdhUpgKNv3MDuJvKFzOdz9bw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/0d04b328623873aa5fb671116f91cb73" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Radboud University</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Radboud University</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.ru.nl/english/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>RU SURFconext beheer</md:GivenName>
+		<md:EmailAddress>lux@uci.ru.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Eric van de Sande</md:GivenName>
+		<md:EmailAddress>E.vandesande@uci.ru.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gaston Janssen</md:GivenName>
+		<md:EmailAddress>G.Janssen@uci.ru.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

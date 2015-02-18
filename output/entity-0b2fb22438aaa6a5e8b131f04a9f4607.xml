@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://login.ecn.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Energieonderzoek Centrum Nederland</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Energieonderzoek Centrum Nederland</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Energieonderzoek Centrum Nederland</mdui:Description>
+				<mdui:Description xml:lang="en">Energieonderzoek Centrum Nederland</mdui:Description>
+								<mdui:Logo height="35" width="108">https://static.surfconext.nl/media/idp/ecn.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Energieonderzoek Centrum Nederland ECN</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Energieonderzoek Centrum Nederland ECN</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2jCCAcKgAwIBAgIQbG6AeoBx7KBE6k1hsJqVdTANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBsb2dpbi5lY24ubmwwHhcNMTIxMTMwMDkzMzMwWhcNMTMxMTMwMDkzMzMwWjApMScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBsb2dpbi5lY24ubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCh2yHabbEHVEj66rSMiW/yDGr7CfMIdSL5YwdPgbCVj4oSBoggYJZzm9l5K6CEQt9l+SbDqRtqII/IkkNKIgdjttbLSIlPO4SbGLYxDJx+m9vQwWLoTKv7dF3fSyiBV1qx3PJxE0YW4XpKFcjAu2/wq+s4d9ASZ7CmfXofI6yvenLkmjFaWQtW4Yxhi3Z9r1B6tesgI/SBwZKS4yUCGYc8zPfwuAYqRob8dRqcyCKXuXqJGfqi+B3ffrXVN0Go0hD7AhI8RMv1ZH73z7S7J+YohiQbe6Xyl1SXe/KtJ2t9LZzjWO49Si9EaIx4Rc3unQy1BPhxajgIwq/HtO0M6cL/AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAHMlubNOdS3RlxtKeNJm2XlR8IPPDstm92oQxgAGwCFDrnP60as2i5uV15qipLhPBiCRayqoOvIF3auvfkXAbwXg5FlDqypB0my7Pjgx9zJM2eewoUxFQGgPlYcIUd32sHoFPJvO4jYHixxZkKPtoFNN//4YUt3shXI8GkHdl/Tibcfhw/UAfsqkx+ct6/sR6xaCtb+GxYWSJHhj1C8sjlM7VdhsC9txumWrQjaTGtPm0mS/886W8QEDdBlZzBRzT3Cw1H0PjDRQKiVTNE+r9as7MBBFm8q3tdvqfZxRjFgXjpptHjnVpXmi9108/L5NBZKNljN2fxEg782ElALTVIM=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/0b2fb22438aaa6a5e8b131f04a9f4607" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Energieonderzoek Centrum Nederland</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Energieonderzoek Centrum Nederland</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surffederatie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>R.V.G. Meijer van Putten</md:GivenName>
+		<md:EmailAddress>meijervanputten@ecn.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>D. Voetelink</md:GivenName>
+		<md:EmailAddress>voetelink@ecn.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>ECN IT Helpdesk</md:GivenName>
+		<md:EmailAddress>helpdesk@ecn.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://NSAB4050.NLDA.NL/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Nederlandse Defensie Academie - NLDA</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Nederlandse Defensie Academie - NLDA</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Nederlandse Defensie Academie - NLDA</mdui:Description>
+				<mdui:Description xml:lang="en">Nederlandse Defensie Academie - NLDA</mdui:Description>
+								<mdui:Logo height="44" width="108">https://static.surfconext.nl/media/idp/mindef.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Nederlandse Defensie Academie - NLDA KMA </mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Nederlandse Defensie Academie - NLDA KMA </mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIFVTCCBD2gAwIBAgIRAIj6i2D4In+EquBEs11a5T0wDQYJKoZIhvcNAQELBQAwgZAxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTYwNAYDVQQDEy1DT01PRE8gUlNBIERvbWFpbiBWYWxpZGF0aW9uIFNlY3VyZSBTZXJ2ZXIgQ0EwHhcNMTQxMDMxMDAwMDAwWhcNMTYxMDMwMjM1OTU5WjBUMSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0ZWQxFDASBgNVBAsTC1Bvc2l0aXZlU1NMMRkwFwYDVQQDExBuc2FiNDA1MC5ubGRhLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2GaUTHZ/3TfU747Fw2KO9hRuw5Avg9b3jXQ7yU4yiZx3QeECrq0BXz+x+TZOgw0OM9nqM2K6NahqOjlsVFysX8msEIitOKl5zi6bYuxYlI0+v1TJgbdltZ5CYvOq5pYxEMPYCt+cnLaXwViLSiB6VnXEY1GrTfBnNboAKtvWHWKhcIg15BEK5CC3qc4ZWo8+pU2/6jM1NGmsx25KcWdmnDOC0cmWCnoAQxLXevFBi3USIRShcY6T3morl/WMd+3NN+1tfPiCb+GkX/MR0cCyc6V8vbjrXS0MgbH/EmhZZab+XwGghfB7cIb5Kum97xmuE9oh4QgCq0aE7jNdmFkIuwIDAQABo4IB4zCCAd8wHwYDVR0jBBgwFoAUkK9qOpRaC9iQ6hJWc99DtDoo2ucwHQYDVR0OBBYEFPd9BhdDa+K46loz4upGM81od/3dMA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBPBgNVHSAESDBGMDoGCysGAQQBsjEBAgIHMCswKQYIKwYBBQUHAgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5jb20vQ1BTMAgGBmeBDAECATBUBgNVHR8ETTBLMEmgR6BFhkNodHRwOi8vY3JsLmNvbW9kb2NhLmNvbS9DT01PRE9SU0FEb21haW5WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3JsMIGFBggrBgEFBQcBAQR5MHcwTwYIKwYBBQUHMAKGQ2h0dHA6Ly9jcnQuY29tb2RvY2EuY29tL0NPTU9ET1JTQURvbWFpblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcnQwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmNvbW9kb2NhLmNvbTAxBgNVHREEKjAoghBuc2FiNDA1MC5ubGRhLm5sghR3d3cubnNhYjQwNTAubmxkYS5ubDANBgkqhkiG9w0BAQsFAAOCAQEAaTGclLok+KUiXL4UP473KKObd+WsTHXcNVKZ5rjfTawL4IskMb/9ymyplY1h89Ipw3nqPl+hGddNMxIxshsoIPYdPF7aDYT3urlOw2uBUjoawr+2mbSAnUvFDdyYJs+KSNkbtkoGtmvc29ART6Ob5gMTBskOBQkCBPwZdGft2lr1JXdC2AzWA1j4syWUigckiz/itONMOsOx5aC7VwAKKmeP9BNLUh5jeuMn1+lKJFB4cI4kwsG+HMbqPRgbFqWd9z0IicnyMIQUJlMTwdCHgu39uYC48j+vgaqDo1jCtsAwooaaPL1aoCmzvhvXhbTgVJ1M9nJegDTgGhNryS69vw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/dbbf06163847747a8c239e88b183a547" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Nederlandse Defensie Academie - NLDA</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Nederlandse Defensie Academie - NLDA</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.defensie.nl/nlda/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>AAI Beheer AD Beheer</md:GivenName>
+		<md:EmailAddress>ADS.ACTIVE.DIRECTORY.BEHEER.RP3.HRMDC.DCS.PLS.IenS.OPS.IVENT.CDC@mindef.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Albert de Ruiter</md:GivenName>
+		<md:EmailAddress>AA.d.Ruiter@mindef.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gerard van Wijhe</md:GivenName>
+		<md:EmailAddress>G.v.Wijhe@mindef.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

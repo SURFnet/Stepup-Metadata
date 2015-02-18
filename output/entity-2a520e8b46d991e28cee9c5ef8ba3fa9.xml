@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://login.loi.nl/saml2/idp/metadata.php"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Leidse Onderwijsinstellingen hogeschool</mdui:Description>
+				<mdui:Description xml:lang="en">Leidse Onderwijsinstellingen</mdui:Description>
+								<mdui:Logo height="47" width="48">https://static.surfconext.nl/media/idp/loi.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Leidse Onderwijsinstellingen LOI</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Leidse Onderwijsinstellingen LOI</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDaDCCAlCgAwIBAgIJAIUg0RDzYz4DMA0GCSqGSIb3DQEBCwUAMF0xCzAJBgNVBAYTAk5MMRUwEwYDVQQKEwxsb2dpbi5sb2kubmwxFTATBgNVBAMTDGxvZ2luLmxvaS5ubDEgMB4GCSqGSIb3DQEJARYRaW5mb0Bsb2dpbi5sb2kubmwwHhcNMTQwNDI1MDczOTIwWhcNMjQwNDIyMDczOTIwWjBdMQswCQYDVQQGEwJOTDEVMBMGA1UEChMMbG9naW4ubG9pLm5sMRUwEwYDVQQDEwxsb2dpbi5sb2kubmwxIDAeBgkqhkiG9w0BCQEWEWluZm9AbG9naW4ubG9pLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3kPu8Nol2uzLL1DXrF2ib61S/mnmE4YRtAYvrYBkxrGgxVBS9H1qKeXbtUYNn+/+awrZDOMzCf+9keElL192e8HoVL4eSSWlTqvSBVcyuc9GVWdpYTlC7AEttIoKWgnPtYG5iZAqzapnxhX0JsW8UScOaS5Fp6NPj8i8HV4Vd13ResTP2QI3ud1hmLHf1HK/3o9f/+Cmze86KtnVmuUmSRrjibr/M2pcWY1nevVn1mEULYaive2kFc5//b7PU98gYJ/Ima5rnRzBoF1j89MVK/uh8UfekA/GbQQn01SMinEZ/H/u/JW05VwofsHm/6I/ZdrJWwi/FNkThe+ARvdQ3QIDAQABoyswKTAnBgNVHREEIDAeggxsb2dpbi5sb2kubmyCDioubG9naW4ubG9pLm5sMA0GCSqGSIb3DQEBCwUAA4IBAQCXLhndIDtfLHsmsJD5pYtIpUoPPlc2Cu7lqCZWw9AsZPYe+nRB/QbtBOclQ9JMXmytIIqXcsSiw+YTlSTfuxBF7ZfY1Bpw65cSqts/LdsKRvgS6W9Bx+61PO//38wzJfO7AtZdD28Oz8PQE58lSyRlDonmgWhOP9HlpDXplqhHWgHbdamvxux644Ap9BY3sfYWWEEbKKv3GibrtVSLBXakSeUtMCZhBxYsBmSoNtxzU1G3YBdIHLd16y7cqsMKVYB0WHKLLVKOzqQOhmMF82mnmrjUnUPTBLagaE/fSP36tSwFZ7lYe7EA/ecGXg1epEK5QOtewKFl4q6S7q3uP/Nd</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/2a520e8b46d991e28cee9c5ef8ba3fa9" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Leidse Onderwijsinstellingen</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.loi.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Linux Beheer</md:GivenName>
+		<md:EmailAddress>linuxbeheer@loi.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Bert Goddijn</md:GivenName>
+		<md:EmailAddress>bgoddijn@loi.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Helpdesk LOI</md:GivenName>
+		<md:EmailAddress>frontoffice@loi.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

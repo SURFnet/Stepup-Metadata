@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs1.oba.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Openbare Bibliotheek Amsterdam (OBA)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Openbare Bibliotheek Amsterdam (OBA)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Openbare Bibliotheek Amsterdam (OBA)</mdui:Description>
+				<mdui:Description xml:lang="en">Openbare Bibliotheek Amsterdam (OBA)</mdui:Description>
+								<mdui:Logo height="48" width="48">https://static.surfconext.nl/media/idp/oba.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Openbare Bibliotheek Amsterdam OBA</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Openbare Bibliotheek Amsterdam OBA</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2jCCAcKgAwIBAgIQK1EUhbgbmqdAceZu3rCFUTANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBhZGZzMS5vYmEubmwwHhcNMTIxMTMwMjA1NDE0WhcNMTcxMTI5MjA1NDE0WjApMScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBhZGZzMS5vYmEubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCXUsbS0y84use2klrZg2UgHtJRwb8gAB3E0cMKxiLaIPiiOnJeEIHkIGk/PzQ+pXoiquowCHUo/0tLQneFw8TUUanJR1HtVKnVqal63l35j7Rjjq12KVeEjgVJbT8p9LumiKGJcXavL8967uM7ofLtv+rgSUxItLWm/ZCqF99GL7p5WJax85KXDAje04v3je5S8g4+c05/1/iBNu5aHshGm6LQH1vkYXr8/JaREs671cykmAYteXdtczTyCPkyiNSc0c3jvn8KzW6uMN1D4Vv1tsEb6BrGdM0dall46b4NukeiQNqQAsVa/N/6SAnsxb4Yz7Ao5QnZ1Jt/7Rug/xZzAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAHkkmCiAuN8wytj3O5+Fwx8xCeuvIf6dbYyT/Xd6eoq4zK80GgtYgeKZQ/bqO1asE9LWDRUnUf2lag4SBg0gDlFHZEVmtUopZg5gs3CUFHWf+xC0eD02cAK4SNvEemysJazxQsbaAMmZxvQ+MgbkwQOdlpEgnIydfl7gFZ3mW8JD29btw++FX9jaF15FvCPoCK8HOJaYp/2rWBORt55KaQdNx/T6/WTV5ED7N2RsnZhIjDhixPpIK3fQW883x493CzAmJXH2GCbfZSS4fIESB3CsprEZyUnawJtL91uaMcSKLnQANT+GLMMrKjyB6fTUGzj8T2mjd0UHTXjqf4Ye6zg=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/effd01c35b2da13885151fd82ac263a2" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Openbare Bibliotheek Amsterdam (OBA)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Openbare Bibliotheek Amsterdam (OBA)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.oba.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Rik van der Stoel</md:GivenName>
+		<md:EmailAddress>r.vdstoel@oba.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Jolanda van Leeuwen</md:GivenName>
+		<md:EmailAddress>j.vanleeuwen@oba.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

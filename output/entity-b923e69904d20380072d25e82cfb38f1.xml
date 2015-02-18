@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://login.has.nl/nidp/saml2/metadata"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Has Hogeschool</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Has Hogeschool</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">HAS Hogeschool is dé hogeschool voor studies op het gebied van Agro, Food en Groene Ruimte met vestigingen in Den Bosch en Venlo.</mdui:Description>
+				<mdui:Description xml:lang="en">Has Hogeschool</mdui:Description>
+								<mdui:Logo height="172" width="250">https://static.surfconext.nl/media/idp/HASlogo2012_NL_klein.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hogeschool HAS</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hogeschool HAS</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIFJTCCBA2gAwIBAgIkAhwR/6UpyioS6luLRb9rHgmFFplgkP4KH/WeO3WaAgIWC/ElMA0GCSqGSIb3DQEBBQUAMDExGjAYBgNVBAsTEU9yZ2FuaXphdGlvbmFsIENBMRMwEQYDVQQKFApuYW0wMl90cmVlMB4XDTEzMDUyMTE0MjgxMloXDTIzMDUyMTE0MjgxMlowQDEVMBMGA1UEAxMMdGVzdC1zaWduaW5nMRYwFAYDVQQLEw1hY2Nlc3NNYW5hZ2VyMQ8wDQYDVQQKEwZub3ZlbGwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDWM51ELefEsM/1BSIapCOYVA7OFSReA/c5lmEg0MQcB9/rGNa6pbz/XLpoEBEr7OVRoz7pXvKU9o88XlO272YdUhDwDS1r2dbEnWnyylOrmAvzGKn8XsGPguSZ+Dn+Ac4p9aqCmCCCDQrJymeB4QQPZiAjZlZcEsetrKgJCJ+qFCfbfP2UyWZkrjmORmTBgsL6Za4hixx/LMj4FL3nZXUEXgIDYtczBfTulQMbtFnaS3Nw8rhgNC6zd0ynpeL30ZIPCEZ+LNCNTSSvs6pknKRUTYoegzUdB/4/bu3QiP19O/OwQ44nHVOhAH6GCbmDA5QIKvqBsYRJM/LZplwTl9ZHAgMBAAGjggIUMIICEDAdBgNVHQ4EFgQUgohFP4nY/Qa9dKtIVzXRHZxUKcgwHwYDVR0jBBgwFoAU6cj4Hmriinf8uaZmopT/N4/eIncwggHMBgtghkgBhvg3AQkEAQSCAbswggG3BAIBAAEB/xMdTm92ZWxsIFNlY3VyaXR5IEF0dHJpYnV0ZSh0bSkWQ2h0dHA6Ly9kZXZlbG9wZXIubm92ZWxsLmNvbS9yZXBvc2l0b3J5L2F0dHJpYnV0ZXMvY2VydGF0dHJzX3YxMC5odG0wggFIoBoBAQAwCDAGAgEBAgFGMAgwBgIBAQIBCgIBaaEaAQEAMAgwBgIBAQIBADAIMAYCAQECAQACAQCiBgIBFwEB/6OCAQSgWAIBAgICAP8CAQADDQCAAAAAAAAAAAAAAAADCQCAAAAAAAAAADAYMBACAQACCH//////////AQEAAgQG8N9IMBgwEAIBAAIIf/////////8BAQACBAbw30ihWAIBAgICAP8CAQADDQBAAAAAAAAAAAAAAAADCQBAAAAAAAAAADAYMBACAQACCH//////////AQEAAgQR/6UpMBgwEAIBAAIIf/////////8BAQACBBH/pSmiTjBMAgECAgEAAgIA/wMNAIAAAAAAAAAAAAAAAAMJAIAAAAAAAAAAMBIwEAIBAAIIf/////////8BAQAwEjAQAgEAAgh//////////wEBADANBgkqhkiG9w0BAQUFAAOCAQEAhddyOq3O7HD82nBzfzh9SnUwYALnmIrXAXkC1HksrgnFMIqC+o55V7puWS9o8p1CtMkqcxaG2LgGO6ncuriHxTl0JWIQpNn2tioSUoRbXpzbg4803JUkPselnyyuCsYcQvZqsIxUecnRegrU1dd/2JhfsMR3QrVqM91C8GBuJZCOcTjRRz/npDjXp2uyvp4IfYnAjOlvd+xitnjO5ba+03eXfe59oB8E2yVHSRoKvzzA25S5vlUYwQ8bgP4NdNaXe3sF62Efft6/3JW0OBCCSw4V2AWTQdNKbXn2fFt/q7zMe1XrKt0UB/5loVn5ijrRoyYCBmLdEeLevAP7EnbZew==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/b923e69904d20380072d25e82cfb38f1" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Has Hogeschool</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Has Hogeschool</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.has.nl</md:OrganizationURL>
+	</md:Organization>
+				
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Patriek Bijnen</md:GivenName>
+		<md:EmailAddress>p.bijnen@has.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Infodesk Infodesk</md:GivenName>
+		<md:EmailAddress>infodesk@has.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

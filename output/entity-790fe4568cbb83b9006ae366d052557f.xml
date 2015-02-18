@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.kb.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Koninklijke Bibliotheek</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Koninklijke Bibliotheek</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Koninklijke Bibliotheek</mdui:Description>
+				<mdui:Description xml:lang="en">Koninklijke Bibliotheek</mdui:Description>
+								<mdui:Logo height="15" width="108">https://static.surfconext.nl/media/idp/kb.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Koninklijke Bibliotheek KB</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Koninklijke Bibliotheek KB</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC0DCCAbigAwIBAgIQV5ogGV0VALhG+ZOGG9GaNTANBgkqhkiG9w0BAQsFADAkMSIwIAYDVQQDExlBREZTIFNpZ25pbmcgLSBhZGZzLmtiLm5sMB4XDTEzMDMxNTE1MzAwN1oXDTE4MDMxNDE1MzAwN1owJDEiMCAGA1UEAxMZQURGUyBTaWduaW5nIC0gYWRmcy5rYi5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKqcVv1kYg+mnD/MjcoVAYPjpKCtuHDUwHiD049e/jt880bzK44ZPOO/n0ZOYXC7u+qW2uPNfz6k0mKLBnV6lrqoWR4EiZhwkHP44jltvvwDuucwtV6I3NpNrox/4DMTxj61WOjnwnk1R5PkbDSMoJfHSgbyu6TzA50y7PyZmNjSSjRyrjHu4DdWcebBrUz4Ua2NTtE6C0kQ9SJbyTRoRk6EnwuSDz9g2pd4pNOSTfnBAiFdGf51Z2QgqCCjB9OIjv7T5+usmkkrkcT+qIRS8c9Zq8gIlygIUr/3wP/vKhLc8uwOr3SI8aB1rf/WsIoo7ns+Y1f1UPexVkYnIUMmPa0CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAAV6gZfH9H8UqmtA5K8faeAQW9yzPN2iMYAVJ80U8n0dwITtS16JZJPdqV0w01ASJYt7jitr8/4hH09X68Z3rgJ3Dfj4ecNLoKDQlSfsE5gSW8M+UtuQcDKk8riBwsHFMp+UPUne181l4Tx+945xDSsJVWexIr0Yt3UzGO5v226NTe6ktnaAGve70JooyVsoB272wWpLf7t7lxHpPQGUq4TSZSPDs2vUlHlyWLImpIkFt5JFjFANPvHise0jupnfjxtff9ymuS5YuZAJOn96CgwORzpd/SPSdENmdmZ5xUMyfEfBx1TCArRUfDOBLXh2O46rZBd/yv6Qv/mA2Rnihag==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/790fe4568cbb83b9006ae366d052557f" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Koninklijke Bibliotheek</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Koninklijke Bibliotheek</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.kb.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Hans Hoogeveen</md:GivenName>
+		<md:EmailAddress>Hans.Hoogeveen@KB.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Hans Hoogeveen</md:GivenName>
+		<md:EmailAddress>Hans.Hoogeveen@KB.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Servicedesk Traxion</md:GivenName>
+		<md:EmailAddress>servicedesk@traxtion.com</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

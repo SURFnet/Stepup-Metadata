@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs2prod.aventus.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ROC Aventus</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ROC Aventus</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Aventus</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Aventus</mdui:Description>
+								<mdui:Logo height="32" width="108">https://static.surfconext.nl/media/idp/aventus.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ROC Aventus MBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ROC Aventus MBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC6jCCAdKgAwIBAgIQUpEwvjQRD4BHTjroKriQhTANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDEyZBREZTIEVuY3J5cHRpb24gLSBhZGZzMnByb2QuYXZlbnR1cy5ubDAeFw0xMzA2MDcxMjQyNDRaFw0xNjA2MDYxMjQyNDRaMDExLzAtBgNVBAMTJkFERlMgRW5jcnlwdGlvbiAtIGFkZnMycHJvZC5hdmVudHVzLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthFI3aLiNmE4YIdXV14dVqfj3XhFP2yT8u6u0LNwCkThyIIVb0CG/IEKHK6z+HIgrNssMfV0a2sW0Y/CqexDCNsBQF6Hk6qx2zGuL5Tb9lgIgxY9HcSMeJI00j8Ebb5A92IRZUMLddrApPOhdMecDwCZhpH6fBAeVz6o96xOOhdQnE+QlFyPQ1xQ9BxcAJBac1b68BjHQjHDOKREWfwAss71Ve5t/sOH9+rhtOnW5obly++bwXYiNPISYbfakZrfIGEzt3ntHJ5W/9/HUT5GzTeVvm06MnP5esqrVrdi5L+rj7p3tnkoGXkgJH1epooqHR34kPMdAnZ9MCxPx16quQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQB1zC/etE2mymmLhQOtoEZbcFpqnDpz4upcVrVS8MGuZKrEqwRKZcLMAFNGM8sHPhKVu1jdx2XPGkhF4Y2pHkNytzXgTCk5u312WIRkYYY5ngfmzXIJwBnx4LRJnu+Facar9Bf86x0ea9vXyLEOmVHm9OJxG7GbJOvNGjGNiDd8Uj0iuWaADx34mg6OdZJzhfm9x8WOpgs9I5y/yb6vpTO5T+UuK3oUmAL4xEYVK8mTxa2emjdwux32cyRI6rOwdX8KbBjtBPgSSlas3qfCdjrrSQad8pPVQOVyu2xOfdL5yKe2OZzAjobCZXThtjPJ2gdBkBlnB3UwPn5dngVqOkaY</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/6d2b9e04e943f721ccde0f28862cec4c" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Aventus</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ROC Aventus</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surffederatie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Roy Dusink</md:GivenName>
+		<md:EmailAddress>r.dusink@aventus.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Roy Dusink</md:GivenName>
+		<md:EmailAddress>r.dusink@aventus.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://fed.nhtv.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">NHTV internationaal hoger onderwijs Breda</mdui:Description>
+				<mdui:Description xml:lang="en">NHTV Breda University of Applied Sciences</mdui:Description>
+								<mdui:Logo height="48" width="78">https://static.surfconext.nl/media/idp/nhtv.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">NHTV Breda University of Applied Sciences Nationale Hogeschool voor Toerisme en Verkeer</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">NHTV Breda University of Applied Sciences</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC0jCCAbqgAwIBAgIQZ6A7GPI2l6JNGOz00/R21jANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDExpBREZTIFNpZ25pbmcgLSBmZWQubmh0di5ubDAeFw0xMzA2MTkxMzM1MDdaFw0xODA2MTgxMzM1MDdaMCUxIzAhBgNVBAMTGkFERlMgU2lnbmluZyAtIGZlZC5uaHR2Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs3xvUbkjNcfMPC4M9jEMHoq0kBxqBzYwuOa+vV5YI3GIPcwEIhPeLxcpgnAQcu3mi1+Zb5K5VP/zCMdwr1k9uguO48U6UsQg+L3XNRkbY+zdOVW4JeZZdEiksM8OKmnnkr5FGKSejb4SNuOawQh/xBlYY4F0Jow2NuzVcMMvPyuYYC9bAUUQVHZ94q4hes3HUNSpIERsiVt5VkRfd8UzO4mfODw9RQ2Vlf2zRmDb/ZHZ+/doHk+LJixOenULwsFN+u+7UnHARKm2/k2yi5Bwo3Rv+HvP9nxBOla3clck4DjdTEHyc7Cc8s6+Cv6i5HiHkM0FTcDi0BAFV0zYERKMGwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAaUIgyBlxYLxzPO4/l9sK6/juL250XI3+6PJUrUL3OfbQHe1SUFYKDpv3ZnCVOOSUpDyUDoLwl84FVVlL32Qj03fd3RfLQaX/SH4ileHvBUrJgr7h2XRV0cGETh2Isn/NrrTaRhMcANWpIoq21OxY1fNPd6cbFWcDmRnrf/pH1OfFRScydlHkti32HdTI7qui3X7+nNJ/+XL0jqaOxVMqU1VN8tq+qPVyUX2YhJyPnCLdH9OcGl9cMR9Azjoy5bYhLEFaJqsFbT6Dzqr3ZxDIgekqXojmUEYuFbEYf/4kq/6EWVfx9W6ohUNBjBINtkSS5V/O1nYm47cX8dxaC+JGU</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/d5f955107c70b084e9df9a1e8261e973" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">NHTV Breda University of Applied Sciences</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.nhtv.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Eric Burger</md:GivenName>
+		<md:EmailAddress>Burger.H@nhtv.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Barry Westdorp</md:GivenName>
+		<md:EmailAddress>westdorp.b@nhtv.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>ServiceDesk Support</md:GivenName>
+		<md:EmailAddress>servicedesk@nhtv.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://federatie.clusius.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Clusius College</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Clusius College</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Clusius College</mdui:Description>
+				<mdui:Description xml:lang="en">Clusius College</mdui:Description>
+								<mdui:Logo height="37" width="108">https://static.surfconext.nl/media/idp/clusius.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Clusius College MBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Clusius College MBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC6jCCAdKgAwIBAgIQXlx0ky4TNKpA/56Eosz26jANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDEyZBREZTIEVuY3J5cHRpb24gLSBmZWRlcmF0aWUuY2x1c2l1cy5ubDAeFw0xMzA1MTUwNTQ1MDNaFw0xODA1MTQwNTQ1MDNaMDExLzAtBgNVBAMTJkFERlMgRW5jcnlwdGlvbiAtIGZlZGVyYXRpZS5jbHVzaXVzLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxLIoWtk4v2ZqYUPzypUhaOqABXKzKb8rWT1Gm9oOXBM898ixShnFNTr/gPyrXXKhqBozyYqdRjwS96RtorXrbwXaVOhIY2opa9ql8bzUWjvsQ9Ul/xkFHutM2V8K7szwkw9r5ENpvYv/3vtf8fzj2zeQBcBz3falv/v4g6M9lQFnyJUxnxCXTKTL3lRC8V1JK2zZoTq6Q+d754oEfLyl633xhsiJ9YCnGF87fpMgnTw9jFuYJ2+g8iEB4Da0tnONkwWgJWvdKnfENEKIwq/MiBNA6A9VNn0Fp0FlhSBlX+GvTW4aE4mebXLArMQNECbocV6EdjY2lBnJpR7K71OLowIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAmnXE1X4Jnqz4ufMa9psGuPmu4+mmr6+YGRJW/dgSA+SfI5DXM9i2J68qzhqHqMBekogx9vzq7TZEFk1vdiJQb+uPEuVMVpZYqwni/qq1+4Zx0hocFqZVPpS3QnX3gQdla8w1R+7yQwJwuIvLf2UEPjEPlBjKI1PpPe1/zmFJhIq12c1JsS3sJzCmjAO+FXZ/9SCEoI1zrExuU/L7kQUeQJ9A0XTeM+vbS5wylQl3/TQseHCm8te5swOWNxng5rESfH/8dbdPwe2dU0ZV7jGVx36NkoL2e50AXKERuXuHHho/qL6Wp92UykMytOyJ71jxowrX5kH6xsmdgF0sVdGEn</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/47d9881f7198a3e15644c76503f0402d" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Clusius College</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Clusius College</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surffederatie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Chris Houthuijs</md:GivenName>
+		<md:EmailAddress>c.houthuijs@clusius.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Chris Houthuijs</md:GivenName>
+		<md:EmailAddress>c.houthuijs@clusius.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Chris Houthuijs</md:GivenName>
+		<md:EmailAddress>c.houthuijs@clusius.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

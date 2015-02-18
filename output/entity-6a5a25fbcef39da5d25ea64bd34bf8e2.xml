@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://fedlogin.schakelzone.nl/fed/idp"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Schakelzone Recht</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Schakelzone Recht</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Schakelzone Recht</mdui:Description>
+				<mdui:Description xml:lang="en">Schakelzone Recht</mdui:Description>
+								<mdui:Logo height="22" width="108">https://static.surfconext.nl/media/idp/ou-schakelzone.jpg</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Schakelzone Recht OU </mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Schakelzone Recht OU </mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIICJTCCAY6gAwIBAgIBIjANBgkqhkiG9w0BAQQFADA2MTQwMgYDVQQDEytmZWRsb2dpbi5zY2hha2Vsem9uZS5ubCBTaWduaW5nIENlcnRpZmljYXRlMB4XDTExMDcxMDE5MDU0NVoXDTEyMDcxMDE5MDU0NVowNjE0MDIGA1UEAxMrZmVkbG9naW4uc2NoYWtlbHpvbmUubmwgU2lnbmluZyBDZXJ0aWZpY2F0ZTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAgJ43yHqnVt2yjisjMvB/HiiDrUs/Rmdgz3AyLAQKJgONbO1D3q0I96Awy48p7u9ECDe4Yn1mRA6uj5uK10po2wMzgEUgaWfUQ4Bkx0sk///ef61OEimzDQcIRmrqfPrTmcPV0GWULDw+Vdq1bgcJOPpWJ9VynGde5SwYNJLjnU8CAwEAAaNDMEEwDwYDVR0TAQH/BAUwAwEB/zAPBgNVHQ8BAf8EBQMDB/AAMB0GA1UdDgQWBBTc19tIHrApKq/dp/hk8eEG9nVpIDANBgkqhkiG9w0BAQQFAAOBgQBaKekN9RXDVeH2N6Uj6INn0PsIA7JOtBA/pmjNTyIrtNbr+KlcfMBdTVLPyJN9EmCNIBQg6y4JjI2X9oloQ5fRdPKImOUmGnRQruthpbqo6X4VtGZK1YhZTnK3/Pl0gjd5VnwfWMNvBhIiMyI0yuNwA/wJt9+wTs1rpXyvCh2ZDQ==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Schakelzone Recht</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Schakelzone Recht</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://schakelzone.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Maarten Scholl</md:GivenName>
+		<md:EmailAddress>Maarten.Scholl@ou.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Hilde Loozen-Janssen</md:GivenName>
+		<md:EmailAddress>hilde.loozen-janssen@ou.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

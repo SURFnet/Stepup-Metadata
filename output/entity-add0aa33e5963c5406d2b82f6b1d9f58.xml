@@ -1,0 +1,58 @@
+<md:EntityDescriptor entityID="https://login.terena.org/idp/saml2/idp/metadata.php"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<shibmd:Scope regexp="false">terena.org</shibmd:Scope>
+							<shibmd:Scope regexp="false">terena.nl</shibmd:Scope>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">TERENA Secretariat</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">TERENA Secretariat</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">TERENA Secretariat</mdui:Description>
+				<mdui:Description xml:lang="en">TERENA</mdui:Description>
+								<mdui:Logo height="60" width="120">https://static.surfconext.nl/media/idp/terena.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">TERENA Secretariat Trans-European Research and Education Networking Association</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">TERENA Secretariat Trans-European Research and Education Networking Association</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIID6zCCAtOgAwIBAgIJAOZjMMdXnKhhMA0GCSqGSIb3DQEBBQUAMIGLMQswCQYDVQQGEwJOTDELMAkGA1UECAwCTkgxEjAQBgNVBAcMCUFtc3RlcmRhbTEPMA0GA1UECgwGVEVSRU5BMQwwCgYDVQQLDANBQUkxHTAbBgNVBAMMFGxvZ2luLnRlcmVuYS5vcmcvaWRwMR0wGwYJKoZIhvcNAQkBFg5hYWlAdGVyZW5hLm9yZzAeFw0xNDAyMDUxMzEzMjRaFw0yNDAyMDUxMzEzMjRaMIGLMQswCQYDVQQGEwJOTDELMAkGA1UECAwCTkgxEjAQBgNVBAcMCUFtc3RlcmRhbTEPMA0GA1UECgwGVEVSRU5BMQwwCgYDVQQLDANBQUkxHTAbBgNVBAMMFGxvZ2luLnRlcmVuYS5vcmcvaWRwMR0wGwYJKoZIhvcNAQkBFg5hYWlAdGVyZW5hLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMxDthZPCdtXh7T5aJPTz9+CzucmoIifKhSL2Gc2vaRJcbakepzWbtuu1j5I+zm0K1AMb7IawTpfLoqHDCCtxy5IpQfslmff1oi3NObx/Ngo5oeX+TB7ti2q4dDcABQKcitJmC8fkVuyOs5z3QC4GrdPYWFHKB4x+LlMiDQ4uovk7Osihpd8uD6A6zjQfbx0xEmNOWQCSesWnIzL9NdActoFygePB85Sy+3A2wa7RX2MHmF/7MnrWAKZ52Y6mf6qK+Nzsslm0mZF/5jmTBVVeU6pw6nzfO/3RMx3jSbfJVrU6FRW+VJHmyAHK9PfUSCV7gI10wnHLrZGqglcpISUhQ0CAwEAAaNQME4wHQYDVR0OBBYEFHPwjBq8cea/r0VEIZcnvP9lF/bwMB8GA1UdIwQYMBaAFHPwjBq8cea/r0VEIZcnvP9lF/bwMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAHPpt/jIkWnu95k3SP2yEOAGnOP05ZtxtbahBQ8X5erStK6hUIBMdmU5glITlbWKIP7Gct2v2PkV4+UV3GGlYKKBWvgK7DohEX2W13L2pPCKwhkadtpRzbdIPNa7FvEyq9L4PnziU07Ij6flhyFNPS15rAb0omnZMGbLlT7tgYwBZURUWA285i6eMiLr7xwaVenpd1frcHdNgpptbqtrrPQ75DApAkM+py19NJOppUSauoDltG2JULIEcxoYA3sRYcU8EoCjVQjL3ExaIF1MQhSxLEefwhW61gnF1IiYD4Umvjyk1Ekz2e+znpuRDZTsIcQ0sOFn6I0wdBahCnYHpKc=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/add0aa33e5963c5406d2b82f6b1d9f58" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">TERENA Secretariat</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">TERENA Secretariat</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.terena.org</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>The TERENA AAI team</md:GivenName>
+		<md:EmailAddress>aai@terena.org</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Dyonisius Visser</md:GivenName>
+		<md:EmailAddress>visser@terena.org</md:EmailAddress>
+	</md:ContactPerson>
+								
+									</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://ADFS.volkenkunde.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Het stichtingsjaar 1837 maakt Rijksmuseum Volkenkunde tot een van de oudste volkenkundige musea ter wereld....</mdui:Description>
+				<mdui:Description xml:lang="en">The foundation year 1837 makes Museum Volkenkunde one of the oldest ethnological museums in the world....</mdui:Description>
+								<mdui:Logo height="153" width="500">https://static.surfconext.nl/media/idp/museumvolkenkunde.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Museum, Rijksmuseum, Volkenkunde, Volkenkundig, Wereldculturen, Wereldcultuur, Cultuur, Culturen, Ethnografie, Collectie, Onderzoek, Tentoonstellingen, Educatie, Leiden</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Museum, Rijksmuseum, Volkenkunde, Volkenkundig, Wereldculturen, Wereldcultuur, Cultuur, Culturen, Ethnografie, Collectie, Onderzoek, Tentoonstellingen, Educatie, Leiden</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC4jCCAcqgAwIBAgIQWTRu9oqsuZZI3525QjWILDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJBREZTIFNpZ25pbmcgLSBBREZTLnZvbGtlbmt1bmRlLm5sMB4XDTE0MDEyOTEzMDUxN1oXDTE1MDEyOTEzMDUxN1owLTErMCkGA1UEAxMiQURGUyBTaWduaW5nIC0gQURGUy52b2xrZW5rdW5kZS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALWNOovmOo5Vq+g4vSIQ8klMJIlZNlGr+TAo2Sf+7+RpRrzp0TXI9K4VSRUkb6aX1IwN4gMkyF4NashmzpHJFqOlD2kqrYEn529xGD7gOTszV4/Mw6KKDmsfQP3DOo0E8rQHJVYsIACnfjg39tJK/wG1Fe4JkVJtJQKPcBEY1eQF0XHI9Wo9txZJ4I146dmtdG0GfLjOD0FXgchapOPzu6J0PlrSuo+/+7pE4I6fBuPt39iPsZraJrksfdlTEOtOT/a9YJiqdbJ0+kwTHE/eUALZG6FuuRPQV4p7FjfMvn7RigNa79KK+ePSoQtkQN7mNZN6+hwFMaWOPx6JZ9BkVEkCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAf+/u9b/9kG+bhMSRaHpAuXSPxYJawruCCklEe+8h0CVX4Yo+CljMpDmuhcVL7Xe8xeVgG9BfYQPpXH2cN5zq1aDPm7usb3Z09jiJb9t0gSCOkSK4DNBM0G9RQ33422XCr+4IotWJNmPJFw7Gek8WZqVEXoVm0XhrvsMI+APWaWlhyE9etTpYWwcacptVczKBj5/YnJ9sTs3gvQq0Cp/TCkXIMdBGuj0i2XSObwK+RFh3MMf5JytUnhOKD0JkbcbVtKa79T5NjxLzq02pkUvTBOkK4oecvrFmUY71vT7gRbwuLbUx5MEd/ZxJ9SpE91LWqkCmVHPOSLQbhuqbXbnapw==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/f71582a9c9b88e33ffb7ce46188eaefa" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">National Museum of Ethnology</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.volkenkunde.nl/en</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Jamal el Khatouti</md:GivenName>
+		<md:EmailAddress>jamal.elkhatouti@volkenkunde.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Jamal el Khatouti</md:GivenName>
+		<md:EmailAddress>jamal.elkhatouti@volkenkunde.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Gebruikers Helpdesk</md:GivenName>
+		<md:EmailAddress>helpdesk@volkenkunde.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.nwo.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">NWO</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">NWO</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">De Nederlandse Organisatie voor wetenschappelijk Onderzoek (NWO) financiert wetenschappelijk onderzoek en stimuleert kwaliteit en vernieuwing in de wetenschap.</mdui:Description>
+				<mdui:Description xml:lang="en">The Netherlands Organisation for Scientific Research (NWO) is the Dutch national research council and promotes quality and innovation in science.</mdui:Description>
+								<mdui:Logo height="251" width="500">https://static.surfconext.nl/media/idp/nwo.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Nederlandse Organisatie voor Wetenschappelijk Onderzoek NWO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Netherlands Organisation for Scientific Research NWO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2DCCAcCgAwIBAgIQbZDlGatfBYdAKUtJcGrmIzANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIEVuY3J5cHRpb24gLSBhZGZzLm53by5ubDAeFw0xMzA5MjUxMTU5MDFaFw0xNDA5MjUxMTU5MDFaMCgxJjAkBgNVBAMTHUFERlMgRW5jcnlwdGlvbiAtIGFkZnMubndvLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvr72Hfy4a5DsBuYzMv5i5XZwCWk7OwEagpC/Jz2G9jcowQaXuExSN5Fj0ks+a5UkKGzoqLK7Zj6Z/l0IVmewB+wr/YrS44lr769u6rZ8+3XUYFafcwZhaWeAPrON7NxFPk/zQiESXZQH9HBAdLyeJQ+FxPc5N6D7C8pksq9yM81trCnMwMxXroDReT/aaYcGXbEsypGcf1DB5G+htRKfK1e0K7eViQfme4aWdbdy4F2bU8mKEjSYZLc5L9zpUNPWdxeJ7sXdAVgHe93fQGbNobqjAbXbkPunH3i/GDcJDQr/mY/HsICXe/YaBMV5fnxs7kwy/yDIuGhPODPRvsRiVwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC6hnwywpWRXXujDgLNjkh63Bzjo0FaD9RfWFWADPJl1yXgCLX8m3MZtb2Ogyx1Ioiu1LNx+zUNj58LvWkGrWZ8/T5y5nWMuCTSOoLnKT2QJJzDjnIxJJkNO1/hXIta3zF0wChM28G3P4/GnJGoyVdrilPdJ53gaErU442HSccpGlLnqRnx5592AJso5nQMT6YyXCif2pP5D0ujWbS1DGBHjrmBJdoX3MYFV7xG0XZHrecWEqgAMNGMWI7DIv2q3ChW+MIwxK5p8Y/da5wfZxYLggPLoRJfatgRtsHTdhQfsdTUXKtn8CERSxp3mXYaZNdr/orhYUH8PUqjOxoHy0Rd</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/8e1798a9aacb6918015ddf5cbce658bc" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">NWO</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">NWO</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.nwo.nl/en/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Oscar Kortekaas</md:GivenName>
+		<md:EmailAddress>o.kortekaas@nwo.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Nick van der Laan</md:GivenName>
+		<md:EmailAddress>n.vanderlaan@nwo.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Servicedesk NWO</md:GivenName>
+		<md:EmailAddress>servicedesk@nwo.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

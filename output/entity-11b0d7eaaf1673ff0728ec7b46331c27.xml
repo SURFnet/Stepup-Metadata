@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs.fom.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">FOM-bureau</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">FOM-bureau</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Stichting voor Fundamenteel Onderzoek der Materie - bureau</mdui:Description>
+				<mdui:Description xml:lang="en">Foundation for Fundamental Research on Matter - bureau</mdui:Description>
+								<mdui:Logo height="300" width="500">https://static.surfconext.nl/media/idp/fom.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">FOM Stichting voor Fundamenteel Onderzoek der Materie bureau</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">FOM Foundation for Fundamental Research on Matter bureau</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC0jCCAbqgAwIBAgIQfXoozCbP7pBIz1qj8vLtlTANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDExpBREZTIFNpZ25pbmcgLSBhZGZzLmZvbS5ubDAeFw0xNDA4MTExNDI4MDdaFw0xOTA4MTAxNDI4MDdaMCUxIzAhBgNVBAMTGkFERlMgU2lnbmluZyAtIGFkZnMuZm9tLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwt/+44Bo6emjqBQaehXX5D9f06yXCJJtzaJgEa240eqwro3pzXDfGx6GhGJ5ZNM5ajYpU1JLRieBsAJIC4cOdgLMYP289XxeMiuEO+Durz0qInaNWeIne2l+0eyoKfhA36TwH1GP/zm/W5XJH9XSQKbORY9UrOmD0hLwbXCbYCMTkococp0QVYUq4FWp6GkJltgwZ7KD3zUW3GzEIDNY9fVeSTqGR8D3elJEhUkN1Cgv+E/HXE65BKEguR/MM4oXR5nP775IDXkO53VFMhqP+WlMQ2w4uOEh7wbxnxvCywOAv18Ji1xTKJDMkJ/SLUobn3Hg1cktzTC6uK3iultDxwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCGEBvYO2xUb5Lz2irYg0Z12QnQ6D3w2KLJVGhXtiIYHuaocsWmtUIxwKNRSDjP2YNLNh1lisak2I9tP+/ifmRzsx96D1ZTKNnfDiu6mkyAypI3+TgNlbsFOXj3OxbJaNu5ODb7vMu23083lpgR/DsJpE6KrFVKINEvdFiAYc172rQXk/ZWiauPNzfXo2wzE952NkBD5td7EdCuoVKiFs1N1WpuizDxjjH53fbLhlUOSIFroAg2Q+Cksn+MDwfNnE+9zwy8lV2+JlkVeMyGCqK0bu1R01d/7lzFfn36TrDGaecYzP6nVWXSDBiWuQkeUtoAEgn8TRSdg/sJNtenk/bj</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/11b0d7eaaf1673ff0728ec7b46331c27" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">FOM-bureau</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">FOM-bureau</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en"></md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Jeroen Camstra</md:GivenName>
+		<md:EmailAddress>IenA@fom.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>IenA FOM</md:GivenName>
+		<md:EmailAddress>IenA@fom.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Sido de Vries</md:GivenName>
+		<md:EmailAddress>IenA@fom.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

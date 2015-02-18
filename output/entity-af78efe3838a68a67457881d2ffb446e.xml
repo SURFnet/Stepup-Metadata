@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://fs.rocmondriaan.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ROC Mondriaan</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ROC Mondriaan</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Mondriaan</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Mondriaan</mdui:Description>
+								<mdui:Logo height="78" width="214">https://static.surfconext.nl/media/idp/ROC-Mondriaan_Logo.jpg</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ROC Mondriaan International Business Hotel Management</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ROC Mondriaan MBO Den Haag Zuid Holland </mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC4DCCAcigAwIBAgIQXAh12gHoHJtHV8H3HK99SjANBgkqhkiG9w0BAQsFADAsMSowKAYDVQQDEyFBREZTIFNpZ25pbmcgLSBmcy5yb2Ntb25kcmlhYW4ubmwwHhcNMTMxMDA3MDAyODU0WhcNMTgxMDA2MDAyODU0WjAsMSowKAYDVQQDEyFBREZTIFNpZ25pbmcgLSBmcy5yb2Ntb25kcmlhYW4ubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCpKFPXuTsB8Dpir9w7SmrB2mD209b8sBXcujXehzw/m/Cjbh+9jJLZ4xFmTC2trmyGFNEvLHV8AtBJ1yEQUQ81LVpVm4NXy6Wk8LleqbfLgymdLgvNWwn8eJeXKAsUkW/RDkii7P33AVekXD5YirjTJQ5pWFqj2M9HmX8hVL1PUne4osEXplT5hnlMH0mUU7JnkPpQpkBmrSd4aIV7FQPErmL3MybPbHWZ5T8Pe+ZWYvsfUzZpWMktGVq+3FHCXFLE4gObBqta/rT0zJI1cajsOx0atZZeNhNL/7I8vJcRXRgY0wNritGamBupn76l66BeR9OVuEPoYra8mYu8ewG5AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAJSMS4G/XE5+Ttc12W4jxS0H+iApBA1RibTvqNVEx+ZlF6ZM192wNVJHQ4uD1XNyfOXu0Cyd3cl9kejADGvsiMW0xGb3nU5waMm4JI/klIRXgZ8Qy9ZmxdhPMoj+m/1Ipc50aFAIt531X9WjU3l01Xus0UHKIh+FGA4BdYGwOnDPH+GLW4uUBuhG1COsfV2P4bVY+5Nepc6icxkNCNPOsPbRjXa6MOZv2VLUXxpnKRMa4IebK6Bhj2SWgSzM0g2ZoHmW/PKGXOBrGtIWP5lxx4hSDoJJwdqgmfkyDbHbx8HarBeeHyDs79jqbkGpSJzFDWHxB+DHU+7VTVjacSqSYfw=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/af78efe3838a68a67457881d2ffb446e" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Mondriaan</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ROC Mondriaan</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.rocmondriaan.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Clement Adu Twum</md:GivenName>
+		<md:EmailAddress>C.Adu@rocmondriaan.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Clement Adu Twum</md:GivenName>
+		<md:EmailAddress>C.Adu@rocmondriaan.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Clement Adu Twum</md:GivenName>
+		<md:EmailAddress>C.Adu@rocmondriaan.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

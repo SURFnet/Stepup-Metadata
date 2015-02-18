@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs20.hva.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Hogeschool van Amsterdam</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool van Amsterdam</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool van Amsterdam</mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool van Amsterdam</mdui:Description>
+								<mdui:Logo height="44" width="266">https://static.surfconext.nl/media/idp/hva.jpg</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hogeschool van Amsterdam HVA HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hogeschool van Amsterdam HVA HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC1jCCAb6gAwIBAgIQRDeI7J07YqJOQKF4tkAWSTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBhZGZzMjAuaHZhLm5sMB4XDTEzMDYyNjA5MjY1NVoXDTE4MDYyNTA5MjY1NVowJzElMCMGA1UEAxMcQURGUyBTaWduaW5nIC0gYWRmczIwLmh2YS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALbRy7YONXzqqqLjXDQn6/l0NliKSufqfGWEPDLYPOEhW7n4Ide3VXyUkBEZy4agSe5wezleNl0zkM57YvAaNAnTADEhBewT+dSZCBLiSikJgWf8TR11QmJ18UVILsefLxqq57ba9s/Uoi3pTzJYs5ZriXfNtjhJ8yuy2v7dmQ1TzkpJ1rN3uefJjc3FQCxgvHAgyMh8MwLZRBpH1KoOE0khwIWIW4CZA5MqCc9VSD7OE6detIRQ8N9iM4RMzEmMUmecFNbJtGdoNYNtDFCFlMoH6eJX0wezN88W7X3F1h4XmA9Y4n9lQ9pO5vR9Fg/5lMtKeIWsEMhbuFaIYRO+jw8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAqyURTaW7yJGPu2W1qhA3gFZp5Z7jGG58wPoIfDuQCM3JW3aA0MgNaJ18G3pHkDfeGWRZmNCzLEVQWB7iMEW3vwOpeDdOpjmnli5AvkAmroZker75qxouxMegMDy1U0URFKREQerFM0OlpFCu+vWrmBVvx8vUpQU3dn2O6396UAxGbZuykZF+PiADgOEE0KCSFIbNERia0gnK5Q1ePzx8xJAIcz5+HFPjNgRcyhM07vPzdF2c5zVhm3ksW0+oAu1KxSt22NymNmCPs/XgVCCe+kAvhvkuoCc/APVsmbp3Lapne04tXkWNhbPutPWqXGIqhAGh6E/RQGN9NLZd9ANnig==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/03466f0351c4c98ad0e435706253d05f" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool van Amsterdam</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Hogeschool van Amsterdam</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.hva.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Richard Vermaas</md:GivenName>
+		<md:EmailAddress>R.Vermaas@hva.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Rene Visscher</md:GivenName>
+		<md:EmailAddress>r.g.w.visscher@hva.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs.hsleiden.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">University of Applied Sciences Leiden</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool Leiden</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool Leiden</mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool Leiden</mdui:Description>
+								<mdui:Logo height="48" width="38">https://static.surfconext.nl/media/idp/hsleiden.gif</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">University of Applied Sciences Leiden Hogeschool HSLEIDEN HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">University of Applied Sciences Leiden Hogeschool HSLEIDEN HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC3DCCAcSgAwIBAgIQPuLFanIf7qZCMOdSo8gtjzANBgkqhkiG9w0BAQsFADAqMSgwJgYDVQQDEx9BREZTIFNpZ25pbmcgLSBhZGZzLmhzbGVpZGVuLm5sMB4XDTEzMDgwNzA2MTQyN1oXDTE2MDQyMzA2MTQyN1owKjEoMCYGA1UEAxMfQURGUyBTaWduaW5nIC0gYWRmcy5oc2xlaWRlbi5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALp4Sqe3UYavEVc9d9vzihzWjLgdawCjXuaiWiEipROojt6JgLI1pNQVaujvBgSRQfcjui5rVy91QP71Y4QtXcRCAbP5cCpNbzhgoEGRoPGMIARuq/si3c+gvWdwCgwc2AV54W3pIRRAOLBY+n9pbnQ7XK1EomQ9LguEXWKtNCqHRlLgWzHaj5ptVBA7bNm+phhyoc181wc0gZ3K6lf0kQ+h85sEGZDRZcnY+aI/SUkJV3hm0B0HR5pFY4tFLATCWZYRVRXhdERlJy08yuya0k0KsSVV878IOUcISwqphxaj40xUPb2yvtbJKHdyh0H0DaB7Xx1MuwNSYGAPehBgUisCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAFVngly5hMYc8kfPR9I/3M+5ek+eQ8aYSenT+9NKKGFjiGvB+koi+2vXBhnv31dlGxsRNj7V/JLjl1N/WepK674JQhQZTZvz7Ved5fDuRvuF+ofRmTLGWEy0eE/qr6Ao1K9QiGgikrbVgdeR7P1kntOts6rr//Fo//BRuJPpXfFNpcZUN+rrEso9r+cb1nYzi4v8z22K7K05hbIL5Ys9U6zN6YLjbHR2p8/L//Eh4DmaJZhPzniG/DYxlWlTK8a6efPpcREjv1mu/AXGq25xnlJ7YNu9tqWTEh1U4PVdpXCeMwVIVXvtTs2I/CUI7qC3mti3ZGceVWZz0ua/ffTi1nA==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/83296d2fee18c20dc85ce959b3d2e4b5" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool Leiden</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">University of Applied Sciences Leiden</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.hsleiden.nl</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Dora Woudstra</md:GivenName>
+		<md:EmailAddress>woudstra.d@hsleiden.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Marc Evenhuis</md:GivenName>
+		<md:EmailAddress>evenhuis.m@hsleiden.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

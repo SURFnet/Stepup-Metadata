@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs2.cbs.knaw.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Centraal bureau voor Schimmelcultures (KNAW)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Centraal bureau voor Schimmelcultures (KNAW)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Centraal bureau voor Schimmelcultures (KNAW)</mdui:Description>
+				<mdui:Description xml:lang="en">Centraal bureau voor Schimmelcultures (KNAW)</mdui:Description>
+								<mdui:Logo height="48" width="83">https://static.surfconext.nl/media/idp/knaw-cbs.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">KNAW Research CBS</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">KNAW Research CBS</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5DCCAcygAwIBAgIQEH7+dCtZzbpMgbjye8zv7zANBgkqhkiG9w0BAQsFADAuMSwwKgYDVQQDEyNBREZTIEVuY3J5cHRpb24gLSBhZGZzMi5jYnMua25hdy5ubDAeFw0xMjExMDcxMjQxNDVaFw0xMzExMDcxMjQxNDVaMC4xLDAqBgNVBAMTI0FERlMgRW5jcnlwdGlvbiAtIGFkZnMyLmNicy5rbmF3Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwvOZ55mowfcs2xStS/CwYPiL91ES6cR2wax5RGU2CGaujt92RaS0+1gpETXrfOaCIyWYZhWRGd0deY+wJi6l/d0+LgUtS6v0mccdOxdrJvHalcTUvd0bZkcCicyWq27+PrJJN9fQzWw4GTZggQDwhlvX2pRQBA/iCZJ379hRplw1S2/KL5drV9e82fyMwFl7UqtXpv03CJcgunjRbhkhhbp+3jHVtV7vqTg8RN79VaVmmu7o11I9iqQ/51pYUNmhAyP44A88a88ui8K1xOo+qHrKNOaw9ZXBB84eezDxVOZxPx/Enjj2H4OePMA8498ugQadWKcCNIVDKCXlwYJq6QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBFkaHTCcz3BTxN9EHyWOtPDgFlbJErzHF73KOd3BLdGyEOG7/JSnSMkCJvaG7tE99damVqQBEhWECDeNRRBPj6sEw7AY5FcRdmF1AUg6yBwHa4TKGLf/ifwnvqq8F15hCD18VAMw+6OSaCz+Hr1cUOBXqQm1eynB2LgCl5R8rRJe1aSK5smp5etatEU60SHLWMm0g/xU00VFuYHU1JDCs+KuTVMtpH3NzvD8lxWUCzv6TnfpbPqlKfj6VMnwRdkQ7TO+bNMxrQW+FEdHxrDXVLcl7KC1qLjRvl1opGvr90e8mDX4AMf0jbdDWh89VH58GRaIRJxh3VMp5shyqa2vw8</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/7b669cf6629e68546de4c6dfbeb9991b" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Centraal bureau voor Schimmelcultures (KNAW)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Centraal bureau voor Schimmelcultures (KNAW)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.cbs.knaw.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Huib te Pas</md:GivenName>
+		<md:EmailAddress>huib.te.pas@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Tine Sierink</md:GivenName>
+		<md:EmailAddress>tine.sierink@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gerard van de Langemaat</md:GivenName>
+		<md:EmailAddress>g.lagemaat@hubrecht.eu</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

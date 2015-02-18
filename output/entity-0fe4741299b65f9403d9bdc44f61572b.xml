@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://fs.rocleiden.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ROC Leiden</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ROC Leiden</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ROC Leiden</mdui:Description>
+				<mdui:Description xml:lang="en">ROC Leiden</mdui:Description>
+								<mdui:Logo height="82" width="101">https://static.surfconext.nl/media/idp/ROCLeiden2.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ROC Leiden</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ROC Leiden</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2jCCAcKgAwIBAgIQHw48iWq5qqpH5pgm2QPC0TANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBmcy5yb2NsZWlkZW4ubmwwHhcNMTQwNjE5MDkwMTE3WhcNMTkwNjE4MDkwMTE3WjApMScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBmcy5yb2NsZWlkZW4ubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5skuQ48crTqBYyu207bhrNXQwShcThpn/NQb1MqkimIcBVig2MFB3bsM+S+QcQ8USXO1Vsic8+Rwq1PJ/l4S4HZsqOn7dgopKs+3gLWVnvsLS7ZDeks/SVnrS/o8EG8Cjan+pnoZMf69R8PSjei0t+ly9AEPB3MDoh1e2AE5W1W5rX7MvcXsedcIThnNZhDKdRjucyEW+I9+TgvZbURpOM9OdMNoYI7q/62vAL0MPUEoO6w1Td9aPv7ZtF3PCOKCeFAo2cH7FoSW4z/Fgb7Aj7QvLdPF1s4y4j8Ef0sW2IITYEIJp3oPAN86z63cGsDaq49tGehYsNy8LLC1ZhSG1AgMBAAEwDQYJKoZIhvcNAQELBQADggEBABYbhTf7hTa4ZbzIcNNAESRqcaqmm5g5I73LK+zBohP01zYiY4ArnnSlpuzh/fedy6HKsJjVle84GOwLtcJLS3Y8XA5SUvvtrA2oJdyAcKhgsfG12uqBXogjdC98BcGJuPmBfdUmN6qEHYEXP1fxWwaQMcZRXsws9suiPXaa5Kxth/Eyk6Z+PbpYgr3QctMlsx9aIutUOvR+eo+my4DXR/J3xv27MKyWsFcdnlGkMjotaHFCwgdguDWmRr42TNF2l5k3F+ueIG7FplSmWGv03xdlquFgRkUf/Xde2qRAdvaPQRwdx79t5sLb949Onh7wFV+lNhK3HGVciNQLp+Vp7SQ=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/0fe4741299b65f9403d9bdc44f61572b" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ROC Leiden</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ROC Leiden</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.rocleiden.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Jos van der Molen</md:GivenName>
+		<md:EmailAddress>j.vd.molen@rocleiden.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Jos van der Molen</md:GivenName>
+		<md:EmailAddress>j.vd.molen@rocleiden.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>support eindgebruikers</md:GivenName>
+		<md:EmailAddress>helpdesk@it-workz.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

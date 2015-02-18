@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://remote.bplusc.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Bibliotheek plus Centrum voor kunst en cultuur</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Bibliotheek plus Centrum voor kunst en cultuur</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Bibliotheek plus Centrum voor kunst en cultuur</mdui:Description>
+				<mdui:Description xml:lang="en">Bibliotheek plus Centrum voor kunst en cultuur</mdui:Description>
+								<mdui:Logo height="88" width="108">https://static.surfconext.nl/media/idp/bplusc.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Bibliotheek plus Centrum voor kunst en cultuur bplusc</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Bibliotheek plus Centrum voor kunst en cultuur bplusc</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC4jCCAcqgAwIBAgIQEGZgnAvnfq5DC32zwmxTtTANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJBREZTIEVuY3J5cHRpb24gLSByZW1vdGUuYnBsdXNjLm5sMB4XDTEyMTExNjA4NTgyNFoXDTEzMTExNjA4NTgyNFowLTErMCkGA1UEAxMiQURGUyBFbmNyeXB0aW9uIC0gcmVtb3RlLmJwbHVzYy5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMnbEaDwM4XgQJOe9VpIaClniS/JWXNL617iaoujSdcptZwIh5sjEBTFpBYioAhytGXP/rhdd2jpmaMBKfy1NAq6//OcgA5jQrhcjNZgjXoMYXcHQ9vvoRkpAwa2JrbI5bzBrcM9B+8Hxozpum8RY6xqrqNchLTrGb4nO5w1v85VnWQng0xycxC7heDLeB8tHBn4Vj33TS1fe4XueN/QRDRYyZUNMApghr/f48CKvRa5ceWNZI66VzzBFIx0Ok8S2ZoI2aVOBgyzyq+ngMwSXMtwKsbGTJ/CoHqPF5xn+gChGn5CWKyq9sPh9XJQOeoXD177UubwboPp/7aDx1fgRE8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAMQ0e+jb51HkiBglo4GBqiFoaY9X1Y+AqJjmIj7uW7ixdvTzLCGp9tCbvXs5bpaw8ls0uQ3/wTqIGVQTeBRCYwnTF4XGeLEBIpbC/gsfhkS8PpjMZtAXlxrqvb2w9WxHnkV38EjQTUCl18uJsAgbKX4s/QnH1AiVBDuoqKhosrRoxAUvtWaXddfJ6HXCqUk76Fa0ZvHdMdHWVuOmg5hxjVGIq7wz/pgxPr/2kua4r0poPdKt/XcUCaGPgnyjc6VRshjNmfyxriNaHj2h/qt5gHbmWvX19S+5IxL3t5xc177H6NyG7aXG4pC36sE7GUmHa7bwG8Ocb99qlyQ+AAVgU9w==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/41ad832c2a97594700fce8e8ec25b631" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Bibliotheek plus Centrum voor kunst en cultuur</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Bibliotheek plus Centrum voor kunst en cultuur</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.bplusc.nl</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Hans van Rooden</md:GivenName>
+		<md:EmailAddress>H.vanRooden@bplusc.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Hans van Rooden</md:GivenName>
+		<md:EmailAddress>H.vanRooden@bplusc.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

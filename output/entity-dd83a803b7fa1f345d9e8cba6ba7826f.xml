@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfsv2.inholland.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Inholland University of Applied Sciences</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool Inholland</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool Inholland </mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool Inholland </mdui:Description>
+								<mdui:Logo height="37" width="108">https://static.surfconext.nl/media/idp/inholland.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hogeschool Inholland Inholland University of Applied Sciences HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hogeschool Inholland Inholland University of Applied Sciences HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEvTCCA6WgAwIBAgIRALMiiTuPQ92GYLWIclprG+kwDQYJKoZIhvcNAQEFBQAwNjELMAkGA1UEBhMCTkwxDzANBgNVBAoTBlRFUkVOQTEWMBQGA1UEAxMNVEVSRU5BIFNTTCBDQTAeFw0xMjA2MTAwMDAwMDBaFw0xNTA2MTAyMzU5NTlaMIGTMQswCQYDVQQGEwJOTDE7MDkGA1UEChMySG9nZXNjaG9vbCBJTkhPTExBTkQgU3RnIEhvZ2VyIE9uZGVyd2lqcyBOZWRlcmxhbmQxKTAnBgNVBAsUIElDVCBOZXR3b3JrICYgVGVsZWNvbSBPcGVyYXRpb25zMRwwGgYDVQQDExNhZGZzdjIuaW5ob2xsYW5kLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bhmCamqm6CwJrP0lQQMprPmwhnlYL81K74aHEifFdGjpiSGXzOrBDBatqw/R4SbQ1Sy6XElk9wQSO3bfHw3JWiQ5TUWnnUvrmz6MCgeLUUh7lUfs8GSraBkJ54wicRuTZewzriti2aJaJbdpj9AmGHJSvYNkwQLDIgyhNsCROaNpNH1rfPAzJWq08V6x3W0cHlgllRA/CHAv7sf5Gfj3Hn9eTLv5Rx43eWtIlTb1Ont6H1kfM3BhUdwzp7NmWpNzscsfHMT2mzdvrQuxeTWSH+kzwh79UHR40L/of+7xfv+HkjzgvVu3NXAA+obuTpDkKNqfZYHOgrc0ghTXQH3LQIDAQABo4IBZjCCAWIwHwYDVR0jBBgwFoAUDL2TaAzz3qujSWsrN1dH6pDjue0wHQYDVR0OBBYEFLZleHa2HA7ddjwrdf9IllZLYqx1MA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAYBgNVHSAEETAPMA0GCysGAQQBsjEBAgIdMDoGA1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly9jcmwudGNzLnRlcmVuYS5vcmcvVEVSRU5BU1NMQ0EuY3JsMG0GCCsGAQUFBwEBBGEwXzA1BggrBgEFBQcwAoYpaHR0cDovL2NydC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcnQwJgYIKwYBBQUHMAGGGmh0dHA6Ly9vY3NwLnRjcy50ZXJlbmEub3JnMB4GA1UdEQQXMBWCE2FkZnN2Mi5pbmhvbGxhbmQubmwwDQYJKoZIhvcNAQEFBQADggEBAFdtsYM7lO1XB2agpOLms9XqqtIOh4PuhSCVF7sT/rHVmWvKnWT7z5G7yB1/0+JBuNpo6+1C2S23kT6BtD9BjG78EaYdadBCC8ua8HDtZsUARrjPUNVdnWBl3RWNtzfrCzYyeE33B3LRdlNXuTkEMxYHLkSH+Ly1EuzBk5iP349ccytHQg0qULB31VGIhUKQUup/i8quKAxzKdLJ675dIu0y2i0owqhs0kRwXfjOMxCc/PiNWMvkuBs0/FugHiV95WKiMYKNUU5Diw8LFygODgtBhEJ2us96IYmzy1Yk9xNNfIRqDXtnRELoTaICyyWr5DC+iP6WgpzQaJqI+vjRqLc=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/dd83a803b7fa1f345d9e8cba6ba7826f" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool INHOLLAND</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Inholland University of Applied Sciences</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.inholland.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Robert Beudeker</md:GivenName>
+		<md:EmailAddress>Robert.Beudeker@INHOLLAND.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Martijn Timmer</md:GivenName>
+		<md:EmailAddress>martijn.timmer@INHOLLAND.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

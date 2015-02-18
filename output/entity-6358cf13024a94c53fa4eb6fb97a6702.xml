@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://surfspot.biblionetwerken.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Biblionet Groningen</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Biblionet Groningen</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Biblionet Groningen</mdui:Description>
+				<mdui:Description xml:lang="en">Biblionet Groningen</mdui:Description>
+								<mdui:Logo height="42" width="108">https://static.surfconext.nl/media/idp/biblionet.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Biblionet Groningen BNGRON Bibliotheek Library</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Biblionet Groningen BNGRON Bibliotheek Library</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC8jCCAdqgAwIBAgIQJkJOICsQ759EMB/q2phO2TANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDEypBREZTIFNpZ25pbmcgLSBzdXJmc3BvdC5iaWJsaW9uZXR3ZXJrZW4ubmwwHhcNMTQwNzI4MjI1OTU3WhcNMTUwNzI4MjI1OTU3WjA1MTMwMQYDVQQDEypBREZTIFNpZ25pbmcgLSBzdXJmc3BvdC5iaWJsaW9uZXR3ZXJrZW4ubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC39dMTg6XEFJBqINC2A2aa6qIl3OeJMFa/cynU0KirhStjvwP1sbJ0iLud3xz3S+01e3ho52xIZPmYmbJ266LhH1iOiTHS/TtEQj5CnEMtjH0CbMe2jh1+hzt1uowNnmbNfx4azzMg9NGz6iG3UZIZrCXb3YcBsoHrDI6TkViSqFNgyMHV/m7xZsai1DD9cKR1vrBm96eI8j2W2jjfMBgdtdnYp16knv+db+kWm7+QDO4/kddSs9x7pFhZY6yNVz/g5XM+KGcTIw9zs+K+dg69kVA8mt+ycaqv+WfHPjXAEKMzxHk/U8vABB6yrL7hWwhdxr8SOzDNd2OkU7UM8/jrAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAA4IjkWIJExIxTHYcF3Czn1JmGpu2EKIvbvcKbTrQvC5usPTfsuwgQtpCnKEGvUIIVyZFf3iducxn4Yx3ph0QA6B8C6SC5VcHlj4fC8li0JrQYm+NfBDZkok3IfnQjre7I4KZDcpE+WTKi3+hd2izYJYE5XjkOdADBPudIqzjJJU+fMSqPbSys2kaHhF+lOtcBc7wB424RfPCDoSoGcPxi3Z+LNXkv6qYZ1AhyR4zxKyDOWwiMyup8XKsHzRx90MtFIOtIRXASy6B4EpykhgjMSHZdjSYdimvxZMvkP4RCqiwIcVJCoj/0Qpy1roiU0zXDy+s9tOhVMKf7+54gAmmLM=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/6358cf13024a94c53fa4eb6fb97a6702" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Biblionet Groningen</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Biblionet Groningen</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.biblionetgroningen.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Ashton Amatsidik</md:GivenName>
+		<md:EmailAddress>a.amatsidik@mijneigenbibliotheek.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Richard de Vries</md:GivenName>
+		<md:EmailAddress>r.devries@mijneigenbibliotheek.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

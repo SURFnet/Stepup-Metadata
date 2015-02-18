@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://sso.han.nl/ssp"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">HAN University of Applied Sciences</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool van Arnhem en Nijmegen</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool van Arnhem en Nijmegen</mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool van Arnhem en Nijmegen</mdui:Description>
+								<mdui:Logo height="21" width="108">https://static.surfconext.nl/media/idp/han.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">HAN University of Applied Sciences Hogeschool van Arnhem en Nijmegen HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">HAN University of Applied Sciences Hogeschool van Arnhem en Nijmegen HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIID0DCCArigAwIBAgIJAJ+kjvNZHHXEMA0GCSqGSIb3DQEBBQUAME4xCzAJBgNVBAYTAk5MMSowKAYDVQQKEyFIb2dlc2Nob29sIHZhbiBBcm5oZW0gZW4gTmlqbWVnZW4xEzARBgNVBAMTCnNzby5oYW4ubmwwHhcNMTEwNTI3MTIyMjMwWhcNMjEwNTI2MTIyMjMwWjBOMQswCQYDVQQGEwJOTDEqMCgGA1UEChMhSG9nZXNjaG9vbCB2YW4gQXJuaGVtIGVuIE5pam1lZ2VuMRMwEQYDVQQDEwpzc28uaGFuLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApZJlVOPlkAsKB3oTnagNEW0iH41+OEZtnjAzcOVYdk2u+weAzVWiAHJrKIvrJmXW0s3nZ2PafBVNcWsDqu7L63EjgXk3pb5beDtDEzblZaPKMPALOXBx3SZRwQaCoZZHOArMbs09ktU20jtaQ/S1UzAfbNtK/P1hb1uWsz8pYLMh3sSiV1Uda5ZZgxv1hcosBWFifJ3CWs9d/qDxtQNqza05Vidl0k9xrDF+3EPN10kSQf/Dw6WEuWJVFB/hXudAXD4FniTErlHBKCJHFgmAcPryNDZXcL1YaXGOU0nG/unJcMNsho9Rw3PvQxBpMDi/kaik/KJLZyG3CTlX919SnwIDAQABo4GwMIGtMB0GA1UdDgQWBBQbst9xtGfkp7MU1Z8zwaiXCw9fFDB+BgNVHSMEdzB1gBQbst9xtGfkp7MU1Z8zwaiXCw9fFKFSpFAwTjELMAkGA1UEBhMCTkwxKjAoBgNVBAoTIUhvZ2VzY2hvb2wgdmFuIEFybmhlbSBlbiBOaWptZWdlbjETMBEGA1UEAxMKc3NvLmhhbi5ubIIJAJ+kjvNZHHXEMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBACMTtoa1tgRBQrPrZsjeSCotBHTVT6anSHtkx1I4w2ChEkKwpzh9E7IVN0Y6nBeh+QR+zr15K0895a0ThhTl93Bk5izr+awUBy1u2xZqDyLe8MEH29nr4/GfTr9dg41eWRMBdXzuGCQj9cyQrtzdMM4G9E1dM+viz4bHEXe/iWtRZlr9DwtOuAmUB7BkNHK/V58y5Qna++G38gc5OcqsU1HpB6V4EZDez7PqRGB4df6wkXd7ZgO2UFAIP9S0ONm25bkNT+TRhJsiHNxYCELbnHl2VdlWNo8hAWHklgU9CJE5PqtM277/ePNUbXDWyIMQrEtsJEL+vtDgkhHbd5AcTFs=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/2bcc4b974a6b5107c3cd0f0aba1d73ef" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool van Arnhem en Nijmegen</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">HAN University of Applied Sciences</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.han.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Patrick Honing</md:GivenName>
+		<md:EmailAddress>Patrick.Honing@han.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Patrick Honing</md:GivenName>
+		<md:EmailAddress>Patrick.Honing@han.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>ICT Helpdesk</md:GivenName>
+		<md:EmailAddress>Helpdesk.ICT@han.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://inloggen.hogeschoolutrecht.nl/openaselect/profiles/saml2/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">HU University of Applied Sciences Utrecht</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hogeschool Utrecht</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hogeschool Utrecht</mdui:Description>
+				<mdui:Description xml:lang="en">Hogeschool Utrecht</mdui:Description>
+								<mdui:Logo height="39" width="108">https://static.surfconext.nl/media/idp/hu.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">HU University of Applied Sciences Utrecht  Hogeschool Utrecht HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">HU University of Applied Sciences Utrecht Hogeschool Utrecht HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIEhzCCA2+gAwIBAgIQdt3f1XJQTmSqptuQHqoCMzANBgkqhkiG9w0BAQUFADA2MQswCQYDVQQGEwJOTDEPMA0GA1UEChMGVEVSRU5BMRYwFAYDVQQDEw1URVJFTkEgU1NMIENBMB4XDTEzMDUwMTAwMDAwMFoXDTE2MDQzMDIzNTk1OVowSzEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRhdGVkMSYwJAYDVQQDEx1pbmxvZ2dlbi5ob2dlc2Nob29sdXRyZWNodC5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJeZDhwH0t6Lyd6eQVSncG2Ddo0Z0/ggusKOYBs42FzrQYI34UjpTqvAoqFzCN8eRtrwCox5qbx0RqBcDLTfM7y9yvImW6BoPMrYHrXGsG1nQAQpUX+djefGehy0gUIivxaDaJ0deyQl34LuaQ8CtbeH4jITNEHVpRkA5iG54GgeEeVF6PtdlWoROAVp0RLNDmkVQ6SyYZXNEFpTW5kxdIXrHv6dvnD/4ybCCL5NSI0k+RK/u2PjtSc3OmAxYNmtyeebbitvTN1p9kLhV6mb+j4moUfka6Mjt+4YlhrLk4q8+c7ON94niEIjB7Fng1HjyMk2L78LMcH9whD/I8mUgjcCAwEAAaOCAXowggF2MB8GA1UdIwQYMBaAFAy9k2gM896ro0lrKzdXR+qQ47ntMB0GA1UdDgQWBBRmrI6g1j+YQzKZjaBcbolnH3HQ5jAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwIgYDVR0gBBswGTANBgsrBgEEAbIxAQICHTAIBgZngQwBAgEwOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8vY3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYaaHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwKAYDVR0RBCEwH4IdaW5sb2dnZW4uaG9nZXNjaG9vbHV0cmVjaHQubmwwDQYJKoZIhvcNAQEFBQADggEBAJC3nAJmRJPpWJKnEcqQ28zO0I4LDnEwYJveYOdU17oCjacGEBMAv8DiU/l5v/D7UE9zCq2ns+7EU5dSea1z3wByYvUU8rmOO/ssxy4apek08mGsSE7VhnsjpoS2k+H9SJrdqe1FLrrSFbwxVJTtvDmz08Z5/78dMJg5+BK39sw711xgScaRSEDVpGA3wBJXMbwaPk4nYirwhXKb8rxgwCyJcIGzpHP4p5DXwe076hhvErGXIYRvNG7hcvcz1iXM6Me0G0TDX8QSvz/5yRc1vI7KrjUz8kFO6AAO2o+eJKyzlbcYTJX7InZ3mM38F0uBeEmdIpeOhlLwy5F2nxMUYEc=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/265c1f948fe360d0755dfd7310985bc0" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hogeschool Utrecht</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">HU University of Applied Sciences Utrecht</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.hu.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gerard Vullings</md:GivenName>
+		<md:EmailAddress>gerard.vullings@hu.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Ed de Vries</md:GivenName>
+		<md:EmailAddress>ed.devries@hu.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

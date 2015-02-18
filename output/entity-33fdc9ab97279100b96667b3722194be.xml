@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://federation.springer-sbm.com/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Springer Science+Business Media</mdui:Description>
+				<mdui:Description xml:lang="en">Springer Science+Business Media</mdui:Description>
+								<mdui:Logo height="32" width="108">https://static.surfconext.nl/media/idp/springer.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Springer Science Business Media</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Springer Science Business Media</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC9jCCAd6gAwIBAgIQXoBuvah1wKpOihibIr1d0zANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDEyxBREZTIFNpZ25pbmcgLSBzZW5sZG9nbzA4MDMuc3ByaW5nZXItc2JtLmNvbTAeFw0xNDExMTExNDQ1MDFaFw0xOTExMTAxNDQ1MDFaMDcxNTAzBgNVBAMTLEFERlMgU2lnbmluZyAtIHNlbmxkb2dvMDgwMy5zcHJpbmdlci1zYm0uY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy6bD0fIp32W//17DJCCymDCb1z/odniB1wvHDap7SIdkqcNB6v/4YUEWsigmFnxC92dXYp730cKcTTkIuRL9ybT+qvDxDSW3mB13UsmyY2ijb2/Hn1+tG50BoAeg3ttRu+3a/FemkEkB6TAj7jJEpOAml3xZvtzltPfO4PBAS9EEgbFTG1FvlQt5nPIB9KxSGlo35IS6wjpUkqnjBWJ2vruQpgds3Xj9H+zI272KHZgEHXkW/VVoN1UZUtqWHH8aMNLxiqcWp89QtNNeoCWSuqrHn1Qe0rkonKtOEgDUFlkA3s+tkGtBj4foDr165c24OjwxpuPJ5yFEnVV4TMDE7wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAz1dd18+LSjrTG4W9jDgSd+JFYxRIinGJ36Rk5Dm3AglmsOSP0JbxSKR1gX3NuIjTMZcySF2u46BfbIVcu+ZdMKIkshIgv8xROXte0pAOyhAMw2Bk7VYv+vN993d4OALGeqsRVQrQ+vxmY4628gdSGlZgDa0a+yQnykq9Lv0YPoXeqBaGpJnmvLs4TS/xVfsqT8nXZSbsJFipUW3vgswb3SeHzVeXmP141i64I/qI4+ACVPRn28hPnhQfpDQfNAVD1OUnnhLTwxV/8EdyKWi/F7vCop7Ok/MC0sMNzsOrMiAB4RqYz5lbf9nXqHkgi3Mbd8RpvY3zHxWbZFtCdHHiw</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/33fdc9ab97279100b96667b3722194be" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Springer Science+Business Media</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.springer.com</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Jaap Schipper</md:GivenName>
+		<md:EmailAddress>Jaap.Schipper@springer.com</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Jaap Schipper</md:GivenName>
+		<md:EmailAddress>Jaap.Schipper@springer.com</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Jaap Schipper</md:GivenName>
+		<md:EmailAddress>Jaap.Schipper@springer.com</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

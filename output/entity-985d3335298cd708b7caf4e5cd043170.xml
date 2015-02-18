@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://adfs.meteogroup.net/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en"></mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl"></mdui:DisplayName>
+				<mdui:Description xml:lang="nl">MeteoGroup Nederland B.V.</mdui:Description>
+				<mdui:Description xml:lang="en">MeteoGroup Nederland B.V.</mdui:Description>
+								<mdui:Logo height="300" width="500">https://static.surfconext.nl/media/idp/meteogroep.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">MeteoGroup Nederland</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">MeteoGroup Nederland</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIErDCCA5SgAwIBAgICPc8wDQYJKoZIhvcNAQELBQAwRzELMAkGA1UEBhMCVVMxFjAUBgNVBAoTDUdlb1RydXN0IEluYy4xIDAeBgNVBAMTF1JhcGlkU1NMIFNIQTI1NiBDQSAtIEczMB4XDTE0MTAxNTAzMTA1MFoXDTE2MTIxNDE3NDk1NlowgZcxEzARBgNVBAsTCkdUMzkyMzQ2MzAxMTAvBgNVBAsTKFNlZSB3d3cucmFwaWRzc2wuY29tL3Jlc291cmNlcy9jcHMgKGMpMTMxLzAtBgNVBAsTJkRvbWFpbiBDb250cm9sIFZhbGlkYXRlZCAtIFJhcGlkU1NMKFIpMRwwGgYDVQQDExNhZGZzLm1ldGVvZ3JvdXAubmV0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxoOKisNraa2B5ykYL/klL0p672SIRZZF+6xtfrjJlhkf5HJ/bHMykk+r6w9LThXrvWBHDuHuhqvERk6M+yyYy0L++QzQdSMUNDNOP3lWfNNVrDVNfn9bzwZKo3G0RnYP5+oDhFsuCOMgd/WNbHHLCKebRAMIeQFlrxw4NHZJ2dBPVSsJcDPCB8UN29YgkwuVqDAaQXPrSPAaIjC3YxMVZBvV22/DYSJ2jf/AShtA1CRAfWEXdw9lyRhNxzueUe8u5By/KtY+EEQubbx+pOAz8yMRPN7ZJPz+5se+H0h1ddQmpvJSFjZkFIk1/6zwhlW5gQByF39oRP9gTCDwHFngXQIDAQABo4IBTzCCAUswHwYDVR0jBBgwFoAUw5zz/NNGCDS7zkZ/oHxb8+IIy1kwVwYIKwYBBQUHAQEESzBJMB8GCCsGAQUFBzABhhNodHRwOi8vZ3Yuc3ltY2QuY29tMCYGCCsGAQUFBzAChhpodHRwOi8vZ3Yuc3ltY2IuY29tL2d2LmNydDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB4GA1UdEQQXMBWCE2FkZnMubWV0ZW9ncm91cC5uZXQwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL2d2LnN5bWNiLmNvbS9ndi5jcmwwDAYDVR0TAQH/BAIwADBFBgNVHSAEPjA8MDoGCmCGSAGG+EUBBzYwLDAqBggrBgEFBQcCARYeaHR0cHM6Ly93d3cucmFwaWRzc2wuY29tL2xlZ2FsMA0GCSqGSIb3DQEBCwUAA4IBAQCdBPmqkmmxdV1T6FHE6XY8stxCvQ29poYwvvrcmzIprT1MS34fVEhE0NCKgU44IG8ZKrT8XLq72jXxbPrxZwBuDw2ivbYI0701puKsG2E2fCRCMShECg0Sz2RzTPMLLgC/eGSZF+CmBM26LSGC26kRPBGLEL/sBG9BOVw7CsQAqJ8bhZbbKVa+k1LEXYMJ9v1YeczldRTkrMWQcDRonsFoHV+PpPfTWCo87LdH1mO2bxWVwX2wFpLgaeBoWsITQyQN5hc74rtEmC5f6ss6Y6zrWkzy4P19Bdys4gQF2rSeYRM69TNvL8seKgoBMfu9rB5VVe1jhsKzy7V4XrL9xe1L</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/985d3335298cd708b7caf4e5cd043170" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">MeteoGroup Nederland</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en"></md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.meteogroup.com/en/us/home.html</md:OrganizationURL>
+	</md:Organization>
+				
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Epco Dijk</md:GivenName>
+		<md:EmailAddress>Epco.Dijk@meteogroup.com</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Epco Dijk</md:GivenName>
+		<md:EmailAddress>Epco.Dijk@meteogroup.com</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

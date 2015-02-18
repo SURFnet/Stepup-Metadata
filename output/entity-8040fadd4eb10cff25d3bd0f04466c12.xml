@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="http://federation.hdh.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Hotelschool den Haag</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hotelschool den Haag</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hotelschool den Haag</mdui:Description>
+				<mdui:Description xml:lang="en">Hotelschool den Haag</mdui:Description>
+								<mdui:Logo height="35" width="108">https://static.surfconext.nl/media/idp/hdh.gif</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hotelschool den Haag HDH</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hotelschool den Haag HDH</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC3jCCAcagAwIBAgIQLumKox4+n4NF+dhQ+osrajANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDEyBBREZTIFNpZ25pbmcgLSBmZWRlcmF0aW9uLmhkaC5ubDAeFw0xMzA2MjAxMTU5MDhaFw0xODA2MTkxMTU5MDhaMCsxKTAnBgNVBAMTIEFERlMgU2lnbmluZyAtIGZlZGVyYXRpb24uaGRoLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsalS+zNcsvmOeN1feExTcUjiPlkFgBJNXpm8yrB2xmim3vs/iQ3MbZkXZTqVml6RMuuGimkSKsrbwhE8cN7XqLYb8uWrXOEulqn4ZB/EuJbtRd0RbwmhugGIPvSiWn+VmrZP6rzYsrJXKsYYqgso1QrbSIKiajBv8lswx5wU/xHJ0CBKMOurE5XRBNC7s+x/orTjEQH/fYQ9Ir98PfWS5DX7iTYIhG5whUxVRlKBu3gYVL81D2ak41tII/Xr2dqrOD4KywGSluKA0dMmSZ7mhSn/XUSFU1+ptQcYRU12Pj0ObVbchh9ZU9fHX6ClAelPgx+KwiWNUXcB8mS6Ok+jkQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAqvXqhD3ceIWDmhDf+kHod0xnLSZSl460jGlHg38hYz/WIJUvHZOz4JwsNJEa25sAM9giGmud/9GTjwhsVP8K2407rfXjoXv4UG1o7MyFh/bkMZPbENAae60VwUKTTRpy1Y/aQ+0xeLe8ehRuSxsACuwuTBtMzCRzcPm6ehuCGXid4sTyvHVcA3dLBJvx2D6jlGkI4IzkyFy8TpNlb1qmppz0eSGmSQpjjb4v2OykQbJD46Pz4fGTSKwHby2Od5P7ZIHjOfYINvqOG2ar6WRhuKxnjnaW8naYvE2SwUQ7qTz/vxdDWCA8gfF85N9sh2Bl1wQ4+7zmU+Zk7Ymb3PJ1C</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/8040fadd4eb10cff25d3bd0f04466c12" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hotelschool den Haag</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Hotelschool den Haag</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.hotelschool.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>D. Camman</md:GivenName>
+		<md:EmailAddress>D.Camman@hdh.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>M.L. Staelens</md:GivenName>
+		<md:EmailAddress>M.Staelens@hdh.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+									</md:EntityDescriptor>

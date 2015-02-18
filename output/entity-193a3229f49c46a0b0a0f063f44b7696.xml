@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://federation.hanze.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Hanze University Groningen</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hanzehogeschool Groningen</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hanzehogeschool Groningen</mdui:Description>
+				<mdui:Description xml:lang="en">Hanze University Groningen</mdui:Description>
+								<mdui:Logo height="60" width="120">https://static.surfconext.nl/media/idp/hanze.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Hanze University Groningen Hanzehogeschool Groningen HBO</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Hanze University Groningen Hanzehogeschool Groningen HBO</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC6DCCAdCgAwIBAgIQNY+V1plPqYhICsVWYrO3HjANBgkqhkiG9w0BAQsFADAwMS4wLAYDVQQDEyVBREZTIEVuY3J5cHRpb24gLSBmZWRlcmF0aW9uLmhhbnplLm5sMB4XDTEzMDkwODE0MDQ0OFoXDTE0MDkwODE0MDQ0OFowMDEuMCwGA1UEAxMlQURGUyBFbmNyeXB0aW9uIC0gZmVkZXJhdGlvbi5oYW56ZS5ubDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJK/BYsaWUESa6/3vtblp/aMZd5DCgmOkB8+6EJB6Uzqw21301tFFx/tEcgz0ok9SHATDwFS0t/GCr3P+8l4Qd6xMo947HQbYWvT5d5ITcW2hs9ogrEW1WnwGBW9fiNTLmveRMxz0N4/81mriZdQGfEjK0hZHhINz+Jp4pkjBlpxvDUW4aO31z2w0+xsrDMXXt8wnpzE32y8msIB9WBQWUsv/Zo8Dhg4Xk8gy7BuAbrdB93dMj8+eXOW3oBvuioAkQ0mrgV76cE3WCj+fvYjeDoxuZddV8JYsNAa0Lr9Kqjb5AKAj9wK1oYZM/2xQjNgrQhPLqA1/69QqY/TjK+PmzMCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAZ/OlngwidqvtiwNt2SyyQ85noWRXIoC890EI6IPa0ldT/uxTOwtQAbkaUfSy3D2kfv60ST7Z2DPpcSUcua0A1Zr1fctA3hTM6dWDKR3M9VTtdoh25mxil9nFAcB3/TlBkOO5HE4Fxis/2An4wqhlMc5b1BhmAJ+2RNJ2qXwcYjUl4+cWRYmwfwaTPqglA8flHnfFkrmvgCNAdi1LfeRiYkURinRyPfuvWJdgzZt0DV04twBDaXiN9hmR5B+D6o38PN0TuT9xDHp1qg84M7RqfuDXguY9KJjYDu6YDgg7Et0ysPL10sWRcPJQuP6AA3cF1ewTuRBWDXGjKeSJbgVFHg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/193a3229f49c46a0b0a0f063f44b7696" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hanze University Groningen</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Hanze University Groningen</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surffederatie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Peter Kruit</md:GivenName>
+		<md:EmailAddress>p.g.b.kruit@pl.hanze.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Peter Kruit</md:GivenName>
+		<md:EmailAddress>p.g.b.kruit@pl.hanze.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Peter Kruit</md:GivenName>
+		<md:EmailAddress>p.g.b.kruit@pl.hanze.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

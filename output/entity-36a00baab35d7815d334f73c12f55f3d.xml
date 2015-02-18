@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://idp.cwi.nl/simplesaml/saml2/idp/metadata.php"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Centrum Wiskunde &amp; Informatica</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Centrum Wiskunde &amp; Informatica</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Centrum Wiskunde &amp; Informatica</mdui:Description>
+				<mdui:Description xml:lang="en">Centrum Wiskunde &amp; Informatica</mdui:Description>
+								<mdui:Logo height="20" width="108">https://static.surfconext.nl/media/idp/cwi.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Centrum Wiskunde Informatica CWI research institute for mathematics and computer science</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Centrum Wiskunde Informatica CWI research institute for mathematics and computer science</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIID5zCCAs+gAwIBAgIJAPiws1FcAD67MA0GCSqGSIb3DQEBBQUAMIGJMQswCQYDVQQGEwJOTDELMAkGA1UECAwCTkgxEjAQBgNVBAcMCUFtc3RlcmRhbTEMMAoGA1UECgwDQ1dJMQwwCgYDVQQLDANJVEYxEzARBgNVBAMMCmlkcC5jd2kubmwxKDAmBgkqhkiG9w0BCQEWGUFhZC52YW4uZGVyLktsYWF1d0Bjd2kubmwwHhcNMTIwODMwMTI0NzM1WhcNMjIwODMwMTI0NzM1WjCBiTELMAkGA1UEBhMCTkwxCzAJBgNVBAgMAk5IMRIwEAYDVQQHDAlBbXN0ZXJkYW0xDDAKBgNVBAoMA0NXSTEMMAoGA1UECwwDSVRGMRMwEQYDVQQDDAppZHAuY3dpLm5sMSgwJgYJKoZIhvcNAQkBFhlBYWQudmFuLmRlci5LbGFhdXdAY3dpLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5fQ9J6XpFKfzBaYNIYfFRIWH57aw5Gfd9Wq05M99MYDGgxmDCurgHy0cWJMJdoUjc/cpmGRRL1iUnanqcZw3+17rh4bhGWKWMFo2EAfxwfHWSxe8pXbgsnSZVwwPSoDChwUTqIbNYPRbGJg+0YixDqC5i3Ie3dtHkthX2cmCFRCOHgUapUsjjnZB/X3Z4mXSEItanrXUItMo4GFY7OVL7AOQe8P6KIEeMw5a7UFgGqjAhBW9LYk7iMwjvsUd1eH+uSFfmQtQ9N3ELse+t6rslp4HGlfui8toQXSdD1kFFMuMkT61rtmazZREC6D5zqSvNu17pHgAyWBUNqX95hJgcwIDAQABo1AwTjAdBgNVHQ4EFgQULIasQX1hz409/z0DcpZI8tQ/U64wHwYDVR0jBBgwFoAULIasQX1hz409/z0DcpZI8tQ/U64wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEAW44XMowrYzVkIgbrTMTjHHLBVbwlQy/qOy7Yq4wRvZVq6W0F3yz3+tPgcdYeELcHx2dRw4XgwE52+nD3iuaDEpgjytsuwe22Vj4fxrGImgWIV36kKvD60eO0hpmgP/Zh8JMFXOx5+AoqxGnXmfZfaa1kNdzu+TrdgEsnLJ+uYhVb/O3X977OpseNWLJ/qpQ09s6JzS5jP/hKxtt6xVT7JvbIzqeWk7gWcabechgOwlhPkYzjS4gcG2YNq65J/dJRSfkFDv3AWf06SKsDdZESnGlapYcM3m8nWRPqb5QqAo+ApicNPvbAqBhVg1tSYkyUtlMulLjm9xMUS/iK4s8Iew==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/36a00baab35d7815d334f73c12f55f3d" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Centrum Wiskunde &amp; Informatica</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Centrum Wiskunde &amp; Informatica</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surffederatie.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Aad van der Klaauw</md:GivenName>
+		<md:EmailAddress>Aad.van.der.Klaauw@cwi.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Aad van der Klaauw</md:GivenName>
+		<md:EmailAddress>Aad.van.der.Klaauw@cwi.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+									</md:EntityDescriptor>

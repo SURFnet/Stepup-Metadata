@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://federatie.nivel.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Nederlands instituut voor onderzoek van de gezondheidszorg (NIVEL)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Nederlands instituut voor onderzoek van de gezondheidszorg (NIVEL)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Nederlands instituut voor onderzoek van de gezondheidszorg (NIVEL)</mdui:Description>
+				<mdui:Description xml:lang="en">Nederlands instituut voor onderzoek van de gezondheidszorg (NIVEL)</mdui:Description>
+								<mdui:Logo height="88" width="108">https://static.surfconext.nl/media/idp/nivel.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">Research Nivel instituut voor onderzoek van de gezondheidszorg </mdui:Keywords>
+				<mdui:Keywords xml:lang="en">Research Nivel instituut voor onderzoek van de gezondheidszorg </mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5jCCAc6gAwIBAgIQOTQYpsTinbtAiyyxR530yjANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDEyRBREZTIEVuY3J5cHRpb24gLSBmZWRlcmF0aWUubml2ZWwubmwwHhcNMTIxMTEyMDk1MzA2WhcNMTMxMTEyMDk1MzA2WjAvMS0wKwYDVQQDEyRBREZTIEVuY3J5cHRpb24gLSBmZWRlcmF0aWUubml2ZWwubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUp6hUUuX+nVRw6U6e61n5P+ki2lwAyeJi3L1qOrMVne0xlMGLCT9/7Qupa0lxz1Bg8m1qFvpaqZlm8HCg4MnHMIoa/U2sWtySCENGHxYmjOLst3YFLD5ZSvejqh6DFtYzWAnFJebRzuVnl9d4SXUbOJIXIGoKCFdzGj8apT2TR1sq9+p/zt32vrgfKYLUlQcHndTxD7lD8HY+13P7AAf2z4/RiV0eHwIRHg3LVtStKfA0tTBdW2PC8pHk3SYRUjhbfLEbDpPgLxYkqIgv++yeChwSkamKZh9auH9MJjFHcCRenrHpqzionsrXtIzl+8gYWjUmRtqKLrURohwIbJqtAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFD6Tn4zkZqeCAwpzXYMaUy2Y4VOyfy7VVEhxAQH1mmfNIqmRgZFqCgAHtPwDf/v1MZ1qKiC3SnGcqYx3oa7xHrt6v3xwH7fhAKSUpnT2aW/2GQIcltmxhQQJXoPJma8wr5dqoLrrKn5TnLht//NPX2SfvdFO/Mr6shcp0uWz0dDKTaxo3+yrF08YdnrApg5K2PNJCL+jFC3pHlN5bkws082Zphh1UrXtGGBeDB3H24ugjiNwdb1cS2zJqNMCkitAoJJlzPKtsV7ui6iEjQggoTCyfRNQdtpHspcRg/C4vGzTlhP4hzAOtJV18T1zVo6D9jk4zNjEEynygkQJXWi7Os=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/ea0f40be5fe61fabe61d372add8904f9" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Nederlands instituut voor onderzoek van de gezondheidszorg (NIVEL)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Nederlands instituut voor onderzoek van de gezondheidszorg (NIVEL)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.nivel.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Ron de Vries</md:GivenName>
+		<md:EmailAddress>R.Vriesde@nivel.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Antonio Contente</md:GivenName>
+		<md:EmailAddress>A.Contente@nivel.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>NIVEL CT Support</md:GivenName>
+		<md:EmailAddress>Tsupport@nivel.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>

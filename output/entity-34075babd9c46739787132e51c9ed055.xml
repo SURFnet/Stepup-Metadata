@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://adfs2.hubrecht.eu/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">Hubrecht Institute (KNAW)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">Hubrecht Institute (KNAW)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">Hubrecht Institute (KNAW)</mdui:Description>
+				<mdui:Description xml:lang="en">Hubrecht Institute (KNAW)</mdui:Description>
+								<mdui:Logo height="22" width="108">https://static.surfconext.nl/media/idp/knaw-hubrecht.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">KNAW Research Hubrecht Institute Instituut</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">KNAW Research Hubrecht Institute Instituut</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC5DCCAcygAwIBAgIQYynAnb3p8KFMJU+yxVUw3jANBgkqhkiG9w0BAQsFADAuMSwwKgYDVQQDEyNBREZTIEVuY3J5cHRpb24gLSBhZGZzMi5odWJyZWNodC5ldTAeFw0xMjExMjkxMjUwMjdaFw0xNzExMjgxMjUwMjdaMC4xLDAqBgNVBAMTI0FERlMgRW5jcnlwdGlvbiAtIGFkZnMyLmh1YnJlY2h0LmV1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuFA4fBAznANkZ94jW4+pawjL8pX9T281gcD+s6VmGyoL+oM5XcsBkssQuNxvruydLDBZcC8AiHtpkdFpGzkdkW9IMlG38F9kL5Y/zjQ4ZjpoqlvZS7Qb8gHUmaSiidnlovqQw/gjzOtgkshkQiVBQ1ZPRjmQ0FICTE8yrGILVLh7ms2u1hvMp3937txEzarFiZuUSkhCE6yKEa1wFGWQ/482OEaQEmuixEU+nLj0JKP1zPfVEvpUg9nUr2jOHBEkWejCO513ycx8MDmZWvyFZNn3Gcu5OhXrUZigcYPmGD1PsvQwMo2oAyaH8qA1g+8alhEyk1Z6n825g8tBm/thMwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA4/iOUkmb93vpd7dw+irvySA86onYbfL+3crhSuovyzstp/D/rojJFZ0rf2c6qNmxm9y9WDN8gAgiIQMopaao2fKnhnBBosxKF5NHsU+cttVRe+sqllOTKn0AHl7iXctpepTjiVceGtJYuVeW6POCS7jcnZ5FgRKmUcjWNIgdJ1ZKNT9Pa1meQa/3ne0fY78DTlIQ/COYeqp4BeSHnYNGAI2J04hapY8hjvvshGbfX5dFilVFV/tnrL5fMOPnGsCNX3FdkCE+mqUDqzh+xlAZQnAhw3XLQuVv/WVZhAxxcaYX5ak5Tqy8qEB0F61aXQUUr+3rjCiVKfDEeA4tgLeMF</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/34075babd9c46739787132e51c9ed055" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Hubrecht Institute (KNAW)</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Hubrecht Institute (KNAW)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">https://adfs2.hubrecht.eu</md:OrganizationURL>
+	</md:Organization>
+				
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Huib te Pas</md:GivenName>
+		<md:EmailAddress>huib.te.pas@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Tine Sierink</md:GivenName>
+		<md:EmailAddress>tine.sierink@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Gerard van de Langemaat</md:GivenName>
+		<md:EmailAddress>g.lagemaat@hubrecht.eu</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

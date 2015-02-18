@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="http://sso.sara.nl/adfs/services/trust"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">SURFsara (ADFS2)</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">SURFsara (ADFS2)</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">SURFsara ADFS2</mdui:Description>
+				<mdui:Description xml:lang="en">SURFsara ADFS2</mdui:Description>
+								<mdui:Logo height="77" width="204">https://static.surfconext.nl/media/idp/SURFsara.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">SURFsara SARA ADFS2</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">SURFsara SARA ADFS2</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIC2DCCAcCgAwIBAgIQG2fPa8CCW6ZMtJ0enQ2brzANBgkqhkiG9w0BAQsFADAoMSYwJAYDVQQDEx1BREZTIEVuY3J5cHRpb24gLSBzc28uc2FyYS5ubDAeFw0xMzA1MjgwNzQyMjVaFw0xNDA1MjgwNzQyMjVaMCgxJjAkBgNVBAMTHUFERlMgRW5jcnlwdGlvbiAtIHNzby5zYXJhLm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw06areZFeGBSbiF99LfMR28Ln6qGFPL3PjYt/43/a+Xd0V99niWUVbu+BN7SfDZikhxdZ4WFFR0H1RtC70sqMblbkskhvKj75G0LPqqWA//SM4N7UCG9oqBOcJFw2I4jEz67FeO56HyZN3QO1Batrf8/KLIgXeKacEVtI3gQXr/GZzaqpG2h12JSRrn/jb4llfSBfyCvuk4GW4Z2ey5f/zQqVOFKT/gQVdt/LYRpbw5srIT0Y0MY9VwdSWLMJRCAR5cpU306AgMHhHDEpAjyox3Iwqp/q/CCUQJ3hskvAGElbZ1owVofSAwy4IX4CGrhfwC7mi5/mUTJaGBRKQHrNwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAHqfayP6Qfx/E9XJ6O6CLDafSEyyuBBKRxlBm0y0I1kA1/PMNnQu7ItKzwR0AhuJphCK+gr+EQ6zP0T6132gkg1Z3cpID7o2LH4sQRflrZnoUqmd5DiVLJJ/q2Cu8rmiJIwyydjybdexjX0bPYDPDj3YfURFZ4d8ECkN9JSeEa6UErXOqRqWd7ccLxUwPTd15KqQQagRUIy34dWlRj//VpevOlASVAZGqoK+LsCmn+YofgZ+XztHJrNfTb8n3aooGuR5oXTtK5/3JP8I8npDN3E8KL99SK12pwRCR54FllVVmzH8GBTvlE6qyNHSbqLL3qdXYXm3eE3Nh3sxE+CM4A</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/4b08794ee424c96bc1f9a5bfc10b054f" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">SURFsara</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">SURFsara (ADFS2)</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">https://www.surfsara.nl/</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Servicedesk Vancis</md:GivenName>
+		<md:EmailAddress>servicedesk@vancis.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Sedat Capkin</md:GivenName>
+		<md:EmailAddress>sedat@sara.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>Evan Groeneveld</md:GivenName>
+		<md:EmailAddress>Evan.Groeneveld@vancis.nl</md:EmailAddress>
+	</md:ContactPerson>
+							</md:EntityDescriptor>

@@ -1,0 +1,60 @@
+<md:EntityDescriptor entityID="https://monitoring-idp"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">SURFconext monitoring IdP</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">SURFconext monitoring IdP</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">SURFconext monitoring IdP</mdui:Description>
+				<mdui:Description xml:lang="en">SURFconext monitoring IdP</mdui:Description>
+								<mdui:Logo height="100" width="186">http://www.surfnet.nl/SURFnet%20imagebank/Logos/logo_surfconext_themasite.png</mdui:Logo>
+								<mdui:Keywords xml:lang="nl"></mdui:Keywords>
+				<mdui:Keywords xml:lang="en"></mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDOzCCAiOgAwIBAgIJAICbjMIYbTmDMA0GCSqGSIb3DQEBBQUAMDQxHjAcBgNVBAoMFVNVUkZjb25leHQgbW9uaXRvcmluZzESMBAGA1UEAwwJbG9jYWxob3N0MB4XDTEzMTEyMDEzNDQyN1oXDTIzMTEyMDEzNDQyN1owNDEeMBwGA1UECgwVU1VSRmNvbmV4dCBtb25pdG9yaW5nMRIwEAYDVQQDDAlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDIHtlqU9HZMpkXEoHB9UJsCIu5vXn3TGBDxxNhvuAQntxKXeKGcJUUtTZRi7HP5I+K1u+E82uw6v+/jNf5lu7iUQKyCfzvV7YmPrlBbov33F2l6FvWyrX27XZuK8TwEGf1dUxQXLNq8nZnRjcJ0bLdVjUOsT3NZD3yJgwf5HOrswJpy1PShxAaDBAxJ3FfQFdJ/40Qo20fsWktQQzfVXXOYdAnI51evlYs9Eds/tPyC8Oio5qsw3bxkRiNWOAuu4/cFGaLw5WONOjm//ap9DbTwWPgmWzJ3xsmrQ5qYx4jLiAz1CSIVhU9vKVRwgYfUdhrW/9A41lbGYK8/xxOpT5pAgMBAAGjUDBOMB0GA1UdDgQWBBRGzFptk0JehHDTkA9IM/26KvJgUjAfBgNVHSMEGDAWgBRGzFptk0JehHDTkA9IM/26KvJgUjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAWWqoXNd25bL/F9QPMQ3jD4t9Y6o6fAb5nOKKWOLm3LzKk3LFteI/FRUsoknsNcai62sHQ7uyvhzAQhokX4EDTcFKAuqFkvWreqiybKAKyuwDTzmXKZBQNVZtJkFFAcOuNi5aKpRdlKB4QhzF9PCVSsTjJbgDmHq3/e0H1jXIVD0bBUJ8OucL17AC1goJbMuwuFpGwLY4h1VLFL5j8Sh0UOtNI1PVyNwRSHhz1R6nztLgFGtZs2y+e6MiVNscNeIhJlMssoFZ2Zmvkze0CEQgfzwQSuTf7hvabjwcwVwAinhtBQGv8jWUz473t7t3MtDuocLBZm2GzRTsdhyFhARqH</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">SURFconext monitoring IdP</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">SURFconext monitoring IdP</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.surfconext.nl</md:OrganizationURL>
+	</md:Organization>
+				
+						<md:ContactPerson contactType="technical">
+		<md:GivenName>SURFconext Beheer</md:GivenName>
+		<md:EmailAddress>surfconext-beheer@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+								
+								<md:ContactPerson contactType="support">
+		<md:GivenName>SURFconext Beheer</md:GivenName>
+		<md:EmailAddress>surfconext-beheer@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+						
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>SURFconext Beheer</md:GivenName>
+		<md:EmailAddress>surfconext-beheer@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+									</md:EntityDescriptor>

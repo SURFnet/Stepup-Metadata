@@ -1,0 +1,56 @@
+<md:EntityDescriptor entityID="https://nam-id.astron.nl/nidp/saml2/metadata"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+	
+	<md:IDPSSODescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:Extensions>
+							<mdui:UIInfo>
+				<mdui:DisplayName xml:lang="en">ASTRON</mdui:DisplayName>
+				<mdui:DisplayName xml:lang="nl">ASTRON</mdui:DisplayName>
+				<mdui:Description xml:lang="nl">ASTRON</mdui:Description>
+				<mdui:Description xml:lang="en">ASTRON</mdui:Description>
+								<mdui:Logo height="31" width="108">https://static.surfconext.nl/media/idp/astron.gif</mdui:Logo>
+								<mdui:Keywords xml:lang="nl">ASTRON Institute for Radio Astronomy Instituut Astronomie</mdui:Keywords>
+				<mdui:Keywords xml:lang="en">ASTRON Institute for Radio Astronomy Instituut Astronomie</mdui:Keywords>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+			use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIFKjCCBBKgAwIBAgIkAhwR/7J2qHSreArmiH6qyLITBm+kCMp9dHgUy0bEAgIWeUpWMA0GCSqGSIb3DQEBBQUAMDYxGjAYBgNVBAsTEU9yZ2FuaXphdGlvbmFsIENBMRgwFgYDVQQKFA9OVFNFUlZFUjU4X1RSRUUwHhcNMTQwMjE4MTMxNTI0WhcNMTYwMjE4MTMxNTI0WjBAMRUwEwYDVQQDEwx0ZXN0LXNpZ25pbmcxFjAUBgNVBAsTDWFjY2Vzc01hbmFnZXIxDzANBgNVBAoTBm5vdmVsbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ4XTfLCIx7F5thdpbaY05UIPrF0JbVAraVsqx5Qo0zUYk0EIi++vmj9okN2QGUN0yabesGX9KNDM7XXHmyGqAoVbOPCHhUG7plCZyHvCleo9APG0zews7JxbF0BrSsATrYkvYn5y4E9qb75eK3N1SkT9akUTRyMD37cY9ldKjtChvcehnXsiF/9YaHR7nLJP9Q+gbSheF1pGlPeDtkH1LhCxgzboIXpTndqp1M9mY8/XGbd1+xXXVUfX+N53Fl8xy8B+ozir94GwUuHTg8DBAsDxrBTRDQ74/Sq4M31SSKuoFHOhM+wxWJCgYVhKauR6ZTqs+ha6mAsANuNX1T0n7MCAwEAAaOCAhQwggIQMB0GA1UdDgQWBBSUcDT0WEm3aWS+0NPU8nzAu8zAUjAfBgNVHSMEGDAWgBRyiqbTNheBZ/430bdipfMzp5h3pTCCAcwGC2CGSAGG+DcBCQQBBIIBuzCCAbcEAgEAAQH/Ex1Ob3ZlbGwgU2VjdXJpdHkgQXR0cmlidXRlKHRtKRZDaHR0cDovL2RldmVsb3Blci5ub3ZlbGwuY29tL3JlcG9zaXRvcnkvYXR0cmlidXRlcy9jZXJ0YXR0cnNfdjEwLmh0bTCCAUigGgEBADAIMAYCAQECAUYwCDAGAgEBAgEKAgFpoRoBAQAwCDAGAgEBAgEAMAgwBgIBAQIBAAIBAKIGAgEXAQH/o4IBBKBYAgECAgIA/wIBAAMNAIAAAAAAAAAAAAAAAAMJAIAAAAAAAAAAMBgwEAIBAAIIf/////////8BAQACBAbw30gwGDAQAgEAAgh//////////wEBAAIEBvDfSKFYAgECAgIA/wIBAAMNAEAAAAAAAAAAAAAAAAMJAEAAAAAAAAAAMBgwEAIBAAIIf/////////8BAQACBBH/snYwGDAQAgEAAgh//////////wEBAAIEEf+ydqJOMEwCAQICAQACAgD/Aw0AgAAAAAAAAAAAAAAAAwkAgAAAAAAAAAAwEjAQAgEAAgh//////////wEBADASMBACAQACCH//////////AQEAMA0GCSqGSIb3DQEBBQUAA4IBAQDFzonNlMlw9t2aqEw4dtlXYFcjEoMs8q4yuhwrTheRm5aL453AJ1On37Sa/limplY6lxcgpjVxLTEuZmyEnyHQw98b5XfYL8lbcs/p1O4pHCdBGoxk+z6Gr7bQXjeVVVC8FAxIVaS3L/cHeS1u+8ARwOsb03BV4hGpheamusnNkpia+r9sU9Rw/By/D4qyMqdNI91t3v+eVaD6Biq9TC9LuvbNWDpy4ZiigbHSrAnr2ZrtBVAc0bQUZmqZ60a5h4L6Fo+xESXCdrd75VaAhsrwADwxp8Vm04EeWZDq2qfHf98xNj3hvKaygspRHyHA6tKQD4W4zXX10QzqIIYBVrns</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
+			</md:NameIDFormat>
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://stepup.surfconext.nl/authentication/idp/single-sign-on/key:default/a8169f477c5de8d6100a46264c9ce87d" />
+	</md:IDPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">ASTRON</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">ASTRON</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.astron.nl</md:OrganizationURL>
+	</md:Organization>
+				
+										
+				<md:ContactPerson contactType="administrative">
+		<md:GivenName>Mark Luichjes</md:GivenName>
+		<md:EmailAddress>luichjes@astron.nl</md:EmailAddress>
+	</md:ContactPerson>
+										
+								<md:ContactPerson contactType="support">
+		<md:GivenName>Mark Luichjes</md:GivenName>
+		<md:EmailAddress>luichjes@astron.nl</md:EmailAddress>
+	</md:ContactPerson>
+					</md:EntityDescriptor>
