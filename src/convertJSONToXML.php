@@ -11,11 +11,11 @@ Twig_Autoloader::register ();
 $dateFormat = "Y-m-d H:i:s";
 $output = "[%datetime%] [%channel%] [%level_name%] %message% \n";
 $formatter = new LineFormatter ( $output, $dateFormat );
-if (! file_exists ( '../log/convertJSONToXML.log' )) {
-	$fh = fopen ( '../log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program. \n" );
+if (! file_exists ( 'log/convertJSONToXML.log' )) {
+	$fh = fopen ( 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program. \n" );
 }//if
 
-$streamHandler = new StreamHandler ( '../log/convertJSONToXML.log', Logger::INFO );
+$streamHandler = new StreamHandler ( 'log/convertJSONToXML.log', Logger::INFO );
 $streamHandler->setFormatter ( $formatter );
 
 global $logger;
@@ -29,7 +29,7 @@ global $processedIdPs;
  */
 
 // The JSON source file to parse
-$JSONFile = "../input/entities.json";
+$JSONFile = "input/entities.json";
 
 // The SUUAS SSO URL
 $StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-sign-on/";
@@ -154,7 +154,7 @@ function outputEntityDescriptors($IdPsArray) {
 	$logger->info ( "Preparing EntityDescriptors files..." );
 	
 	// Init Twig
-	$loader = new Twig_Loader_Filesystem ( '../templates/' );
+	$loader = new Twig_Loader_Filesystem ( 'templates/' );
 	$twig = new Twig_Environment ( $loader, array (
 			'cache' => '/tmp/',
 			'debug' => true,
@@ -178,7 +178,7 @@ function outputEntityDescriptors($IdPsArray) {
 		$logger->info ( "Outputting " . $value ['name'] );
 		
 		// Move the outputs to the output folder
-		file_put_contents ( '../output/' . $newfile, $output );
+		file_put_contents ( 'output/' . $newfile, $output );
 		$counter ++;
 	} // foreach
 	
