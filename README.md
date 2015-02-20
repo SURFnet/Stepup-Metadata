@@ -30,9 +30,7 @@ The code uses/needs:
 
 # Run the program
 
-cd /opt/Stepup-Metadata/src
-
-php convertJSONToXML.php
+./run.sh
 
     The output files will be in the output directory
     The log file is on the log directory (check if problem)
