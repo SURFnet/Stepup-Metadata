@@ -1,24 +1,26 @@
 <?php
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Formatter\LineFormatter;
-
 
 Twig_Autoloader::register ();
 
 // create a log channel
 $dateFormat = "Y-m-d H:i:s";
 $output = "[%datetime%] [%channel%] [%level_name%] %message% \n";
-$formatter = new LineFormatter($output, $dateFormat);
+$formatter = new LineFormatter ( $output, $dateFormat );
+if (! file_exists ( '../log/convertJSONToXML.log' )) {
+	$fh = fopen ( '../log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program." );
+}//if
 
-$streamHandler = new StreamHandler('../log/convertJSONToXML.log', Logger::INFO);
-$streamHandler->setFormatter($formatter);
+$streamHandler = new StreamHandler ( '../log/convertJSONToXML.log', Logger::INFO );
+$streamHandler->setFormatter ( $formatter );
 
 global $logger;
-$logger = new Logger('defaultLogger');
-$logger->pushHandler($streamHandler);
+$logger = new Logger ( 'defaultLogger' );
+$logger->pushHandler ( $streamHandler );
 
 global $processedIdPs;
 
@@ -41,7 +43,6 @@ $StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-
  * return an array of these IdP
  */
 function extractIdPFromJSON($JSONfileName) {
-
 	global $logger;
 	$logger->info ( "Extracting IdPs information from JSON source file..." );
 	
@@ -105,10 +106,11 @@ function cleanIdPInfos($IdPsArray) {
 /**
  * replace all SSO locations by Suuas own SSO location
  * Add the md5 hash value at the tailing end of the SSO location URL
- * e.g. Location="SSO_BASE_URL+key:default/+EntityIDHash"
+ * e.g.
+ * Location="SSO_BASE_URL+key:default/+EntityIDHash"
  */
 function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
-	global $logger;	
+	global $logger;
 	
 	$logger->info ( "Preparing the IdPs SSO URL for transparent metadata..." );
 	

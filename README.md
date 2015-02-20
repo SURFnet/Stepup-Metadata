@@ -26,6 +26,7 @@ The code uses/needs:
     Install TWIG and Monolog
         cd /opt/Stepup-Metadata/src (where there's the "composer.json")
         sudo composer install
+    Check the repository Unix rights (for write log)
 
 # Run the program
 
