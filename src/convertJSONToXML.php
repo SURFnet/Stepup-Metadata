@@ -12,7 +12,7 @@ $dateFormat = "Y-m-d H:i:s";
 $output = "[%datetime%] [%channel%] [%level_name%] %message% \n";
 $formatter = new LineFormatter ( $output, $dateFormat );
 if (! file_exists ( '../log/convertJSONToXML.log' )) {
-	$fh = fopen ( '../log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program." );
+	$fh = fopen ( '../log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program. \n" );
 }//if
 
 $streamHandler = new StreamHandler ( '../log/convertJSONToXML.log', Logger::INFO );
@@ -44,6 +44,7 @@ $StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-
  */
 function extractIdPFromJSON($JSONfileName) {
 	global $logger;
+	global $processedIdPs;
 	$logger->info ( "Extracting IdPs information from JSON source file..." );
 	
 	$JSONentities = file_get_contents ( $JSONfileName );
@@ -148,6 +149,8 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
  */
 function outputEntityDescriptors($IdPsArray) {
 	global $logger;
+	global $processedIdPs;
+	
 	$logger->info ( "Preparing EntityDescriptors files..." );
 	
 	// Init Twig
@@ -179,7 +182,12 @@ function outputEntityDescriptors($IdPsArray) {
 		$counter ++;
 	} // foreach
 	
-	$logger->info ( $counter . " IdPs metadata XML files were created" );
+	if ($counter != $processedIdPs) {
+		$logger->error ( "The program did not outputted the right amount of IdPs, only ".$counter." have been processed instead of ".$processedIdP );
+		die ("The program did not outputted the right amount of IdPs, only ".$counter." have been processed instead of ".$processedIdPs);
+	}//if
+	else $logger->info ( $counter . " IdPs metadata XML files were created for a total of ".$processedIdPs. " IdPs.");
+	
 } // outputEntityDescriptors
 
 /**
