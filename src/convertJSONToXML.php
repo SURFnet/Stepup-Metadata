@@ -20,6 +20,7 @@ global $logger;
 $logger = new Logger('defaultLogger');
 $logger->pushHandler($streamHandler);
 
+global $processedIdPs;
 
 /**
  * PARAMS to configure *
@@ -40,7 +41,7 @@ $StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-
  * return an array of these IdP
  */
 function extractIdPFromJSON($JSONfileName) {
-// 	$logger = Logger::getLogger ( 'myLogger' );
+
 	global $logger;
 	$logger->info ( "Extracting IdPs information from JSON source file..." );
 	
@@ -61,7 +62,8 @@ function extractIdPFromJSON($JSONfileName) {
 	} // foreach
 	  
 	// RESULT
-	$logger->info ( "Number of entities left: " . count ( $entitiesArray ) );
+	$processedIdPs = count ( $entitiesArray );
+	$logger->info ( "Number of entities left: " . $processedIdPs );
 	return $entitiesArray;
 } // extractIdPFromJSON
 
