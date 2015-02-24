@@ -162,7 +162,7 @@ function outputEntityDescriptors($IdPsArray) {
 	) );
 	
 	// Buid a single entity XML file
-	$file = 'entity-template-surfconext.twig';
+	$file = 'entity-template-surfconext-IdP.twig';
 	$counter = 0;
 	// Output the result into an entityDescriptor XML file
 	foreach ( $IdPsArray as $key => $value ) {
