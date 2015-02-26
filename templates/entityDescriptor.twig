@@ -1,5 +1,9 @@
-<md:EntityDescriptor entityID="{{name}}">
-	
+<md:EntityDescriptor entityID="{{name}}"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+
 	<md:IDPSSODescriptor
 		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
 		<md:Extensions>
@@ -12,7 +16,8 @@
 				<mdui:Description xml:lang="nl">{{ metadata.description.nl }}</mdui:Description>
 				<mdui:Description xml:lang="en">{{ metadata.description.en }}</mdui:Description>
 				{% for logoItem in metadata.logo %}
-				<mdui:Logo height="{{ logoItem.height }}" width="{{ logoItem.width }}">{{ logoItem.url }}</mdui:Logo>
+				<mdui:Logo height="{{ logoItem.height }}"
+					width="{{ logoItem.width }}">{{ logoItem.url }}</mdui:Logo>
 				{% endfor %}
 				<mdui:Keywords xml:lang="nl">{{ metadata.keywords.nl }}</mdui:Keywords>
 				<mdui:Keywords xml:lang="en">{{ metadata.keywords.en }}</mdui:Keywords>

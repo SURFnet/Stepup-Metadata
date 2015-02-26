@@ -7,15 +7,19 @@ use Monolog\Formatter\LineFormatter;
 
 Twig_Autoloader::register ();
 
+// Path for tests into the IDE. Empty string in production
+global $testPath;
+$testPath = "../";
+
 // create a log channel
 $dateFormat = "Y-m-d H:i:s";
 $output = "[%datetime%] [%channel%] [%level_name%] %message% \n";
 $formatter = new LineFormatter ( $output, $dateFormat );
-if (! file_exists ( 'log/convertJSONToXML.log' )) {
-	$fh = fopen ( 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program. \n" );
-}//if
+if (! file_exists ( $testPath . 'log/convertJSONToXML.log' )) {
+	$fh = fopen ( $testPath . 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program. \n" );
+} // if
 
-$streamHandler = new StreamHandler ( 'log/convertJSONToXML.log', Logger::INFO );
+$streamHandler = new StreamHandler ( $testPath . 'log/convertJSONToXML.log', Logger::INFO );
 $streamHandler->setFormatter ( $formatter );
 
 global $logger;
@@ -29,7 +33,7 @@ global $processedIdPs;
  */
 
 // The JSON source file to parse
-$JSONFile = "input/entities.json";
+$JSONFile = $testPath . "input/entities.json";
 
 // The SUUAS SSO URL
 $StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-sign-on/";
@@ -150,45 +154,79 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 function outputEntityDescriptors($IdPsArray) {
 	global $logger;
 	global $processedIdPs;
+	global $testPath;
 	
-	$logger->info ( "Preparing EntityDescriptors files..." );
-	
+	$logger->info ( "Preparing " . $processedIdPs . " entity descriptors files" );
+		
 	// Init Twig
-	$loader = new Twig_Loader_Filesystem ( 'templates/' );
+	$loader = new Twig_Loader_Filesystem ( $testPath.'templates/' );
 	$twig = new Twig_Environment ( $loader, array (
 			'cache' => '/tmp/',
 			'debug' => true,
 			'auto_reload' => true 
 	) );
+	$twig->addExtension(new Twig_Extension_Debug());
 	
-	// Buid a single entity XML file
-	$file = 'entity-template-surfconext-IdP.twig';
+	// Buid a single entity descriptor XML file per IdP
+	$entityDescritorTemplate = 'surfconext-IdP-entityDescriptor.twig';
 	$counter = 0;
 	// Output the result into an entityDescriptor XML file
 	foreach ( $IdPsArray as $key => $value ) {
-		
-		// Prepare the output file name
-		$newfile = "entity-" . md5 ( $value ['name'] ) . ".xml";
-		$logger->debug ( $newfile );
-		
-		// Use that new file as a template
-		$template = $twig->loadTemplate ( $file );
-		// Populate the template
-		$output = $template->render ( $value );
-		$logger->info ( "Outputting " . $value ['name'] );
-		
-		// Move the outputs to the output folder
-		file_put_contents ( 'output/' . $newfile, $output );
-		$counter ++;
+	
+	// Prepare the output file name
+	$newfile = "entity-" . md5 ( $value ['name'] ) . ".xml";
+	$logger->debug ( $newfile );
+	
+	// Use that new file as a template
+	$template = $twig->loadTemplate ( $entityDescritorTemplate );
+	// Populate the template
+	$output = $template->render ( $value );
+	$logger->info ( "Outputting " . $value ['name'] );
+	
+	// Move the outputs to the output folder
+	file_put_contents ( $testPath.'output/' . $newfile, $output );
+	$counter ++;
 	} // foreach
 	
+	// Sanity Check
 	if ($counter != $processedIdPs) {
-		$logger->error ( "The program did not outputted the right amount of IdPs, only ".$counter." have been processed instead of ".$processedIdP );
-		die ("The program did not outputted the right amount of IdPs, only ".$counter." have been processed instead of ".$processedIdPs);
-	}//if
-	else $logger->info ( $counter . " IdPs metadata XML files were created for a total of ".$processedIdPs. " IdPs.");
-	
+		$logger->error ( "The program did not outputted the right amount of IdPs, only " . $counter . " have been processed instead of " . $processedIdP );
+		die ( "The program did not outputted the right amount of IdPs, only " . $counter . " have been processed instead of " . $processedIdPs );
+	}  // if
+else
+		$logger->info ( $counter . " IdPs metadata XML files were created for a total of " . $processedIdPs . " IdPs." );
 } // outputEntityDescriptors
+
+
+/**
+ * INPUT an array containing SAML IdP informations
+ * OUTPUT a unique EntitiesDescriptor XML file
+ * Uses TWIG templates engine with SURFconext IdP EntitiesDescriptor template
+ */
+function outputEntitiesDescriptor($IdPsArray) {
+	global $logger;
+	global $testPath;
+	$logger->info ( "Preparing an entities descriptor file" );
+	
+	// Init Twig
+	$loader = new Twig_Loader_Filesystem ( $testPath.'templates/' );
+	$twig = new Twig_Environment ( $loader, array (
+			'cache' => '/tmp/',
+			'debug' => true,
+			'auto_reload' => true
+	) );
+	$twig->addExtension(new Twig_Extension_Debug());
+
+	// Build an Entities descriptor XML file
+	$entitiesDescritorTemplate = 'surfconext-IdPs-entitiesDescriptor.twig';
+	$IdPsOutputFile = "suuas-transparent-metadata.xml";
+	$template = $twig->loadTemplate ( $entitiesDescritorTemplate );
+	// Populate the template
+	$output = $template->render ( $IdPsArray );
+	file_put_contents ( $testPath.'output/' . $IdPsOutputFile, $output );
+	print_r($IdPsArray);
+
+} // outputEntitiesDescriptor
 
 /**
  * ********************** MAIN **********************
@@ -199,7 +237,8 @@ $logger->info ( "*************START****************" );
 $IdPArray = extractIdPFromJSON ( $JSONFile );
 $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
-outputEntityDescriptors ( $JSONSuuasIdPMD );
+outputEntitiesDescriptor ( $JSONSuuasIdPMD );
+//outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $logger->info ( "**************END*****************" );
 
