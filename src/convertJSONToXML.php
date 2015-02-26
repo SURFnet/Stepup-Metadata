@@ -9,7 +9,7 @@ Twig_Autoloader::register ();
 
 // Path for tests into the IDE. Empty string in production
 global $testPath;
-$testPath = "../";
+$testPath = "";
 
 // create a log channel
 $dateFormat = "Y-m-d H:i:s";
@@ -168,7 +168,7 @@ function outputEntityDescriptors($IdPsArray) {
 	$twig->addExtension(new Twig_Extension_Debug());
 	
 	// Buid a single entity descriptor XML file per IdP
-	$entityDescritorTemplate = 'surfconext-IdP-entityDescriptor.twig';
+	$entityDescritorTemplate = 'entityDescriptor.twig';
 	$counter = 0;
 	// Output the result into an entityDescriptor XML file
 	foreach ( $IdPsArray as $key => $value ) {
@@ -218,7 +218,7 @@ function outputEntitiesDescriptor($IdPsArray) {
 	$twig->addExtension(new Twig_Extension_Debug());
 
 	// Build an Entities descriptor XML file
-	$entitiesDescritorTemplate = 'surfconext-IdPs-entitiesDescriptor.twig';
+	$entitiesDescritorTemplate = 'entitiesDescriptor.twig';
 	$IdPsOutputFile = "suuas-transparent-metadata.xml";
 	$template = $twig->loadTemplate ( $entitiesDescritorTemplate );
 	// Populate the template
