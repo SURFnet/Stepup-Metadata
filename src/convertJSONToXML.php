@@ -224,8 +224,6 @@ function outputEntitiesDescriptor($IdPsArray) {
 	// Populate the template
 	$output = $template->render ( $IdPsArray );
 	file_put_contents ( $testPath.'output/' . $IdPsOutputFile, $output );
-	print_r($IdPsArray);
-
 } // outputEntitiesDescriptor
 
 /**
