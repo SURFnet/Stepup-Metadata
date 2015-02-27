@@ -46,7 +46,11 @@
 	<md:Organization>
 		<md:OrganizationName xml:lang="en">{{ metadata.name.en }}</md:OrganizationName>
 		<md:OrganizationDisplayName xml:lang="en">{{ metadata.displayName.en }}</md:OrganizationDisplayName>
+		{% if metadata.OrganizationURL.en != null %}
 		<md:OrganizationURL xml:lang="en">{{ metadata.OrganizationURL.en }}</md:OrganizationURL>
+		{% endif %}{% if metadata.OrganizationURL.nl != null %}
+		<md:OrganizationURL xml:lang="nl">{{ metadata.OrganizationURL.nl }}</md:OrganizationURL>
+		{% endif %}
 	</md:Organization>
 		{% for contact in metadata.contacts %}		
 		{% if contact.contactType == "administrative" and contact.emailAddress != null %}
