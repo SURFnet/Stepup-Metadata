@@ -15,8 +15,11 @@
 			{% for item in info.metadata.shibmd.scope %}<shibmd:Scope
 					regexp="false">{{ item.allowed }}</shibmd:Scope>{% endfor %}
 				<mdui:UIInfo>
+				{% if info.metadata.displayName.en != null %}
 					<mdui:DisplayName xml:lang="en">{{ info.metadata.displayName.en }}</mdui:DisplayName>
+				{% endif %}{% if info.metadata.displayName.nl != null %}
 					<mdui:DisplayName xml:lang="nl">{{ info.metadata.displayName.nl }}</mdui:DisplayName>
+				{% endif %}
 					<mdui:Description xml:lang="nl">{{ info.metadata.description.nl }}</mdui:Description>
 					<mdui:Description xml:lang="en">{{ info.metadata.description.en }}</mdui:Description>
 					{% for logoItem in info.metadata.logo %}
