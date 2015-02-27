@@ -237,7 +237,7 @@ $IdPArray = extractIdPFromJSON ( $JSONFile );
 $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
 outputEntitiesDescriptor ( $JSONSuuasIdPMD );
-print_r($JSONSuuasIdPMD);
+//print_r($JSONSuuasIdPMD);
 //outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $logger->info ( "**************END*****************" );

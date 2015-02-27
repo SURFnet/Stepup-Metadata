@@ -57,11 +57,13 @@
 			<md:OrganizationName xml:lang="en">{{ info.metadata.name.en }}</md:OrganizationName>
 			{% endif %}{% if info.metadata.name.nl != null %}
 			<md:OrganizationName xml:lang="nl">{{ info.metadata.name.nl }}</md:OrganizationName>
-			{% endif %}{% if info.metadata.displayName.en != null %}
-			<md:OrganizationDisplayName xml:lang="en">{{ info.metadata.displayName.en }}</md:OrganizationDisplayName>
-			{% endif %}{% if info.metadata.displayName.nl != null %}
-			<md:OrganizationDisplayName xml:lang="nl">{{ info.metadata.displayName.nl }}</md:OrganizationDisplayName>
-			{% endif %}{% if info.metadata.OrganizationURL.en != null %}
+			{% endif %}{% if info.metadata.OrganizationDisplayName.en != null %}
+			<md:OrganizationDisplayName xml:lang="en">{{ info.metadata.OrganizationDisplayName.en }}</md:OrganizationDisplayName>
+			{% else %}<md:OrganizationDisplayName xml:lang="en">{{ info.metadata.name.en }}</md:OrganizationDisplayName>
+			{% endif %}{% if info.metadata.OrganizationDisplayName.nl != null %}
+			<md:OrganizationDisplayName xml:lang="nl">{{ info.metadata.OrganizationDisplayName.nl }}</md:OrganizationDisplayName>
+			{% endif %}
+			{% if info.metadata.OrganizationURL.en != null %}
 			<md:OrganizationURL xml:lang="en">{{ info.metadata.OrganizationURL.en }}</md:OrganizationURL>
 			{% endif %}{% if info.metadata.OrganizationURL.nl != null %}
 			<md:OrganizationURL xml:lang="nl">{{ info.metadata.OrganizationURL.nl }}</md:OrganizationURL>
