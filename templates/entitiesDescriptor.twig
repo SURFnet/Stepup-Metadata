@@ -15,11 +15,11 @@
 			{% for item in info.metadata.shibmd.scope %}<shibmd:Scope
 					regexp="false">{{ item.allowed }}</shibmd:Scope>{% endfor %}
 				<mdui:UIInfo>
-				{% if info.metadata.displayName.en != null %}
+					{% if info.metadata.displayName.en != null %}
 					<mdui:DisplayName xml:lang="en">{{ info.metadata.displayName.en }}</mdui:DisplayName>
-				{% endif %}{% if info.metadata.displayName.nl != null %}
+					{% endif %}{% if info.metadata.displayName.nl != null %}
 					<mdui:DisplayName xml:lang="nl">{{ info.metadata.displayName.nl }}</mdui:DisplayName>
-				{% endif %}
+					{% endif %}
 					<mdui:Description xml:lang="nl">{{ info.metadata.description.nl }}</mdui:Description>
 					<mdui:Description xml:lang="en">{{ info.metadata.description.en }}</mdui:Description>
 					{% for logoItem in info.metadata.logo %}
@@ -46,21 +46,26 @@
 			</md:NameIDFormat>
 			<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
 			</md:NameIDFormat>
+			{% for SSO in info.metadata.SingleSignOnService %}
 			<md:SingleSignOnService
 				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-				Location="{{ info.metadata.SingleSignOnService.Location }}" />
+				Location="{{ SSO.Location }}" />
+			{% endfor %}
 		</md:IDPSSODescriptor>
 		<md:Organization>
 			{% if info.metadata.name.en != null %}
 			<md:OrganizationName xml:lang="en">{{ info.metadata.name.en }}</md:OrganizationName>
+			{% endif %}{% if info.metadata.name.nl != null %}
+			<md:OrganizationName xml:lang="nl">{{ info.metadata.name.nl }}</md:OrganizationName>
 			{% endif %}{% if info.metadata.displayName.en != null %}
 			<md:OrganizationDisplayName xml:lang="en">{{ info.metadata.displayName.en }}</md:OrganizationDisplayName>
+			{% endif %}{% if info.metadata.displayName.nl != null %}
+			<md:OrganizationDisplayName xml:lang="nl">{{ info.metadata.displayName.nl }}</md:OrganizationDisplayName>
 			{% endif %}{% if info.metadata.OrganizationURL.en != null %}
 			<md:OrganizationURL xml:lang="en">{{ info.metadata.OrganizationURL.en }}</md:OrganizationURL>
 			{% endif %}{% if info.metadata.OrganizationURL.nl != null %}
 			<md:OrganizationURL xml:lang="nl">{{ info.metadata.OrganizationURL.nl }}</md:OrganizationURL>
-			{% endif %}
-			{% if info.metadata.OrganizationURL.en == null and info.metadata.OrganizationURL.nl == null %}
+			{% endif %}{% if info.metadata.OrganizationURL.en == null and info.metadata.OrganizationURL.nl == null %}
 			<md:OrganizationURL xml:lang="en">http://unknown.site.com</md:OrganizationURL>
 			{% endif %}
 		</md:Organization>

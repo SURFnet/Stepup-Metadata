@@ -137,7 +137,8 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 			} else {
 				// replace the HTTP redirect binding by Step up IdP SSO endpoint
 				$value2 ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
-				$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
+				$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [$key2] ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
+				
 			} // else
 		} // foreach
 	} // foreach
@@ -236,6 +237,7 @@ $IdPArray = extractIdPFromJSON ( $JSONFile );
 $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
 outputEntitiesDescriptor ( $JSONSuuasIdPMD );
+print_r($JSONSuuasIdPMD);
 //outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $logger->info ( "**************END*****************" );
