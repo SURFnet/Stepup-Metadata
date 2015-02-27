@@ -55,6 +55,9 @@
 			{% endif %}{% if info.metadata.OrganizationURL.nl != null %}
 			<md:OrganizationURL xml:lang="nl">{{ info.metadata.OrganizationURL.nl }}</md:OrganizationURL>
 			{% endif %}
+			{% if info.metadata.OrganizationURL.en == null and info.metadata.OrganizationURL.nl == null %}
+			<md:OrganizationURL xml:lang="en">http://unknown.site.com</md:OrganizationURL>
+			{% endif %}
 		</md:Organization>
 		{% for contact in info.metadata.contacts %}		
 		{% if contact.contactType == "administrative" and contact.emailAddress != null %}
