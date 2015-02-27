@@ -9,7 +9,7 @@ Twig_Autoloader::register ();
 
 // Path for tests into the IDE. Empty string in production
 global $testPath;
-$testPath = "";
+$testPath = "../";
 
 // create a log channel
 $dateFormat = "Y-m-d H:i:s";

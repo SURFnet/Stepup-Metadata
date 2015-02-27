@@ -7,6 +7,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata sstc-saml-schema-metadata-2.0.xsd urn:mace:shibboleth:metadata:1.0 shibboleth-metadata-1.0.xsd http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd">	
 	{% for info in _context %}
+	{%  if info.name != null  %}
 	<md:EntityDescriptor entityID="{{info.name}}">
 		<md:IDPSSODescriptor
 			protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
@@ -73,5 +74,5 @@
 			<md:GivenName>{{ contact.givenName }} {{ contact.surName }}</md:GivenName>
 			<md:EmailAddress>{{ contact.emailAddress }}</md:EmailAddress>
 		</md:ContactPerson>{% endif %}{% endfor %}
-	</md:EntityDescriptor>{% endfor %}
+	</md:EntityDescriptor>{% endif %}{% endfor %}
 </md:EntitiesDescriptor>
