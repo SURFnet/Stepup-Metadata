@@ -51,9 +51,11 @@
 				Location="{{ info.metadata.SingleSignOnService.Location }}" />
 		</md:IDPSSODescriptor>
 		<md:Organization>
+			{% if info.metadata.name.en != null %}
 			<md:OrganizationName xml:lang="en">{{ info.metadata.name.en }}</md:OrganizationName>
+			{% endif %}{% if info.metadata.displayName.en != null %}
 			<md:OrganizationDisplayName xml:lang="en">{{ info.metadata.displayName.en }}</md:OrganizationDisplayName>
-			{% if info.metadata.OrganizationURL.en != null %}
+			{% endif %}{% if info.metadata.OrganizationURL.en != null %}
 			<md:OrganizationURL xml:lang="en">{{ info.metadata.OrganizationURL.en }}</md:OrganizationURL>
 			{% endif %}{% if info.metadata.OrganizationURL.nl != null %}
 			<md:OrganizationURL xml:lang="nl">{{ info.metadata.OrganizationURL.nl }}</md:OrganizationURL>
