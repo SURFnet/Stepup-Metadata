@@ -206,11 +206,11 @@ else
 } // outputEntityDescriptors
 
 /**
- * INPUT an array containing SAML IdP informations
+ * INPUT an array containing SAML IdP informations and the name of the output file
  * OUTPUT a unique EntitiesDescriptor XML file
  * Uses TWIG templates engine with SURFconext IdP EntitiesDescriptor template
  */
-function outputEntitiesDescriptor($IdPsArray) {
+function outputEntitiesDescriptor($IdPsArray, $outputFileName) {
 	global $logger;
 	global $testPath;
 	$logger->info ( "Preparing an entities descriptor file" );
@@ -226,11 +226,17 @@ function outputEntitiesDescriptor($IdPsArray) {
 	
 	// Build an Entities descriptor XML file
 	$entitiesDescritorTemplate = 'entitiesDescriptor.twig';
-	$IdPsOutputFile = "suuas-transparent-metadata.xml";
 	$template = $twig->loadTemplate ( $entitiesDescritorTemplate );
 	// Populate the template
 	$output = $template->render ( $IdPsArray );
-	file_put_contents ( $testPath . 'output/' . $IdPsOutputFile, $output );
+	
+	//Pretty format the outpout
+	$doc = new DOMDocument('1.0','utf-8');
+	$doc->preserveWhiteSpace = false;
+	$doc->formatOutput = true;
+	$doc->loadXML($output);
+	file_put_contents ( $testPath . 'output/' . $outputFileName, $doc->saveXML());
+	
 } // outputEntitiesDescriptor
 
 /**
@@ -242,7 +248,9 @@ $logger->info ( "*************START****************" );
 $IdPArray = extractIdPFromJSON ( $JSONFile );
 $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
-outputEntitiesDescriptor ( $JSONSuuasIdPMD );
+
+$outputFileName = $ini_array['EntitiesDescriptorOutputFile'];
+outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
 //print_r($JSONSuuasIdPMD);
 //outputEntityDescriptors ( $JSONSuuasIdPMD );
 
