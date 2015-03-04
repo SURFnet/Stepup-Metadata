@@ -7,9 +7,27 @@ use Monolog\Formatter\LineFormatter;
 
 Twig_Autoloader::register ();
 
+
+/**
+ * PARAMS to configure *
+ */
+//Load properties from config.ini
+$ini_array = parse_ini_file("config.ini");
+
 // Path for tests into the IDE. Empty string in production
 global $testPath;
-$testPath = "";
+$testPath = $ini_array['TestPath'];
+
+// The JSON source file to parse
+$JSONFile = $testPath.$ini_array['JSONFile'];
+
+// The SUUAS SSO URL
+$StepUpIdPSSOEndpoint = $ini_array['StepUpIdPSSOEndpoint'];
+
+
+/**
+ * LOGGING properties
+ */
 
 // create a log channel
 $dateFormat = "Y-m-d H:i:s";
@@ -27,16 +45,6 @@ $logger = new Logger ( 'defaultLogger' );
 $logger->pushHandler ( $streamHandler );
 
 global $processedIdPs;
-
-/**
- * PARAMS to configure *
- */
-
-// The JSON source file to parse
-$JSONFile = $testPath . "input/entities.json";
-
-// The SUUAS SSO URL
-$StepUpIdPSSOEndpoint = "https://stepup.surfconext.nl/authentication/idp/single-sign-on/";
 
 /**
  * FUNCTIONS *
@@ -128,19 +136,18 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 		// We keep only HTTP-Redirect binding
 		$SSOBindings = $value ['metadata'] ['SingleSignOnService'];
 		
+		// Remove and replace all SSO binding by the unique Suaas SSO endpoint
 		foreach ( $SSOBindings as $key2 => $value2 ) {
 			
-			if ($value2 ['Binding'] != "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect") {
-				
-				// remove useless bindings
-				unset ( $IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [$key2] );
-			} else {
-				// replace the HTTP redirect binding by Step up IdP SSO endpoint
-				$value2 ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
-				$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [$key2] ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
-				
-			} // else
+			unset ( $IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [$key2] );
+			// replace the HTTP redirect binding by Step up IdP SSO endpoint
+			$value2 ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
+			
 		} // foreach
+		
+		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Binding'] = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect";
+		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
+
 	} // foreach
 	
 	$logger->info ( count ( $IdPsArray ) . " IdPs SSO endpoints were replaced." );
@@ -158,37 +165,37 @@ function outputEntityDescriptors($IdPsArray) {
 	global $testPath;
 	
 	$logger->info ( "Preparing " . $processedIdPs . " entity descriptors files" );
-		
+	
 	// Init Twig
-	$loader = new Twig_Loader_Filesystem ( $testPath.'templates/' );
+	$loader = new Twig_Loader_Filesystem ( $testPath . 'templates/' );
 	$twig = new Twig_Environment ( $loader, array (
 			'cache' => '/tmp/',
 			'debug' => true,
 			'auto_reload' => true 
 	) );
-	$twig->addExtension(new Twig_Extension_Debug());
+	$twig->addExtension ( new Twig_Extension_Debug () );
 	
 	// Buid a single entity descriptor XML file per IdP
 	$entityDescritorTemplate = 'entityDescriptor.twig';
 	$counter = 0;
 	// Output the result into an entityDescriptor XML file
 	foreach ( $IdPsArray as $key => $value ) {
-	
-	// Prepare the output file name
-	$newfile = "entity-" . md5 ( $value ['name'] ) . ".xml";
-	$logger->debug ( $newfile );
-	
-	// Use that new file as a template
-	$template = $twig->loadTemplate ( $entityDescritorTemplate );
-	// Populate the template
-	$output = $template->render ( $value );
-	$logger->info ( "Outputting " . $value ['name'] );
-	
-	// Move the outputs to the output folder
-	file_put_contents ( $testPath.'output/' . $newfile, $output );
-	$counter ++;
+		
+		// Prepare the output file name
+		$newfile = "entity-" . md5 ( $value ['name'] ) . ".xml";
+		$logger->debug ( $newfile );
+		
+		// Use that new file as a template
+		$template = $twig->loadTemplate ( $entityDescritorTemplate );
+		// Populate the template
+		$output = $template->render ( $value );
+		$logger->info ( "Outputting " . $value ['name'] );
+		
+		// Move the outputs to the output folder
+		file_put_contents ( $testPath . 'output/' . $newfile, $output );
+		$counter ++;
 	} // foreach
-	
+	  
 	// Sanity Check
 	if ($counter != $processedIdPs) {
 		$logger->error ( "The program did not outputted the right amount of IdPs, only " . $counter . " have been processed instead of " . $processedIdP );
@@ -197,7 +204,6 @@ function outputEntityDescriptors($IdPsArray) {
 else
 		$logger->info ( $counter . " IdPs metadata XML files were created for a total of " . $processedIdPs . " IdPs." );
 } // outputEntityDescriptors
-
 
 /**
  * INPUT an array containing SAML IdP informations
@@ -210,21 +216,21 @@ function outputEntitiesDescriptor($IdPsArray) {
 	$logger->info ( "Preparing an entities descriptor file" );
 	
 	// Init Twig
-	$loader = new Twig_Loader_Filesystem ( $testPath.'templates/' );
+	$loader = new Twig_Loader_Filesystem ( $testPath . 'templates/' );
 	$twig = new Twig_Environment ( $loader, array (
 			'cache' => '/tmp/',
 			'debug' => true,
-			'auto_reload' => true
+			'auto_reload' => true 
 	) );
-	$twig->addExtension(new Twig_Extension_Debug());
-
+	$twig->addExtension ( new Twig_Extension_Debug () );
+	
 	// Build an Entities descriptor XML file
 	$entitiesDescritorTemplate = 'entitiesDescriptor.twig';
 	$IdPsOutputFile = "suuas-transparent-metadata.xml";
 	$template = $twig->loadTemplate ( $entitiesDescritorTemplate );
 	// Populate the template
 	$output = $template->render ( $IdPsArray );
-	file_put_contents ( $testPath.'output/' . $IdPsOutputFile, $output );
+	file_put_contents ( $testPath . 'output/' . $IdPsOutputFile, $output );
 } // outputEntitiesDescriptor
 
 /**
