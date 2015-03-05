@@ -20,14 +20,20 @@
 					{% endif %}{% if info.metadata.displayName.nl != null %}
 					<mdui:DisplayName xml:lang="nl">{{ info.metadata.displayName.nl }}</mdui:DisplayName>
 					{% endif %}
+					{% if info.metadata.description.nl != null %}
 					<mdui:Description xml:lang="nl">{{ info.metadata.description.nl }}</mdui:Description>
+					{% endif %}{% if info.metadata.description.en != null %}
 					<mdui:Description xml:lang="en">{{ info.metadata.description.en }}</mdui:Description>
+					{% endif %}
 					{% for logoItem in info.metadata.logo %}
 					<mdui:Logo height="{{ logoItem.height }}"
 						width="{{ logoItem.width }}">{{ logoItem.url }}</mdui:Logo>
 					{% endfor %}
+					{% if info.metadata.keywords.nl != null %}
 					<mdui:Keywords xml:lang="nl">{{ info.metadata.keywords.nl }}</mdui:Keywords>
+					{% endif %}{% if info.metadata.keywords.en != null %}
 					<mdui:Keywords xml:lang="en">{{ info.metadata.keywords.en }}</mdui:Keywords>
+					{% endif %}
 				</mdui:UIInfo>
 			</md:Extensions>
 			<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"

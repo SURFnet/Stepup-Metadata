@@ -1,14 +1,16 @@
 # Stepup-Metadata
 
-PHP application that consume a local JSON file (previously extracted from JANUS REST API). The application:
+It is composed of two PHP applications that:
 
+	Download SAML entities from SURFconext resources registry API and save production IdPs metadata into a unique  JSON file;
     Reads the SAML entities JSON file, extracts only "on production/active" SURFconext IdPs and their relevant informations for metadata generation;
     Replaces all IdPs SSO endpoints with the Step Up IdP endpoint adding the hash value of the each IdP as a trailing string to that endpoint;
         e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
-    Outputs a SAML EntityDescriptor file for each IdP.
+    Outputs a unique unsigned SAML EntitiesDescriptor file.
 
 The code uses/needs:
 
+	CURL
     PHP 5;
     Composer for packages management;
     TWIG template engine (needs version 5.2.4 or greater);
@@ -16,6 +18,7 @@ The code uses/needs:
 
 # Installation
 
+	Install CURL
     Install PHP5
     Install Composer
         curl -sS https://getcomposer.org/installer | php

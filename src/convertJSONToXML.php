@@ -7,41 +7,38 @@ use Monolog\Formatter\LineFormatter;
 
 Twig_Autoloader::register ();
 
-
-/**
- * PARAMS to configure *
- */
-//Load properties from config.ini
-$ini_array = parse_ini_file("config.ini");
+// Load properties from config.ini
+$ini_array = parse_ini_file ( "config.ini" );
 
 // Path for tests into the IDE. Empty string in production
 global $testPath;
-$testPath = $ini_array['TestPath'];
+$testPath = $ini_array ['TestPath'];
 
 // The JSON source file to parse
-$JSONFile = $testPath.$ini_array['JSONFile'];
+global $JSONFile;
+$JSONFile = $testPath . $ini_array ['JSONFile'];
 
 // The SUUAS SSO URL
-$StepUpIdPSSOEndpoint = $ini_array['StepUpIdPSSOEndpoint'];
+$StepUpIdPSSOEndpoint = $ini_array ['StepUpIdPSSOEndpoint'];
 
+// Output File Name
+$outputFileName = $ini_array ['EntitiesDescriptorOutputFile'];
 
 /**
  * LOGGING properties
  */
+date_default_timezone_set ( 'Europe/Amsterdam' );
 
-// create a log channel
-$dateFormat = "Y-m-d H:i:s";
-$output = "[%datetime%] [%channel%] [%level_name%] %message% \n";
-$formatter = new LineFormatter ( $output, $dateFormat );
-if (! file_exists ( $testPath . 'log/convertJSONToXML.log' )) {
-	$fh = fopen ( $testPath . 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create log file. Check Write rights for the unix user running the program. \n" );
-} // if
+$dateFormat = $ini_array ['dateFormat'];
+$outputLayout = $ini_array ['outputLayout'] . "\n";
+$formatter = new LineFormatter ( $outputLayout, $dateFormat );
+$fh = fopen ( $testPath . 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create/write log file. Aborting... \n" );
 
 $streamHandler = new StreamHandler ( $testPath . 'log/convertJSONToXML.log', Logger::INFO );
 $streamHandler->setFormatter ( $formatter );
 
 global $logger;
-$logger = new Logger ( 'defaultLogger' );
+$logger = new Logger ( 'ConvertToXML' );
 $logger->pushHandler ( $streamHandler );
 
 global $processedIdPs;
@@ -54,31 +51,26 @@ global $processedIdPs;
  * Reads a JSON File and extract all the SURFconext IdP in production
  * return an array of these IdP
  */
-function extractIdPFromJSON($JSONfileName) {
+function extractIdPFromJSON() {
 	global $logger;
 	global $processedIdPs;
+	global $JSONFile;
+	
 	$logger->info ( "Extracting IdPs information from JSON source file..." );
 	
-	$JSONentities = file_get_contents ( $JSONfileName );
+	$JSONentities = file_get_contents ( $JSONFile );
+	
+	if ($JSONentities == false) {
+		$logger->critical ( "File " . $JSONFile . " cannot be read... Aborting operations" );
+		die ();
+	} // if
+	
 	$connections = json_decode ( $JSONentities, true );
-	$connectionSize = count ( $connections ['connections'] );
-	$logger->info ( "The JSON file contains " . $connectionSize . " entries" );
 	
-	$entitiesArray = $connections ['connections'];
+	$processedIdPs = count ( $connections );
+	$logger->info ( "The JSON file contains " . $processedIdPs . " entries" );
 	
-	foreach ( $entitiesArray as $key => $value ) {
-		
-		// Remove all SPs and non production IdP
-		if (($value ['type'] == "saml20-sp") || ! $value ['isActive'] || ($value ['state'] !== "prodaccepted")) {
-			unset ( $entitiesArray [$key] );
-			$logger->debug ( "The entity " . $value ['name'] . " is removed from the result." );
-		} // if
-	} // foreach
-	  
-	// RESULT
-	$processedIdPs = count ( $entitiesArray );
-	$logger->info ( "Number of entities left: " . $processedIdPs );
-	return $entitiesArray;
+	return $connections;
 } // extractIdPFromJSON
 
 /**
@@ -91,7 +83,7 @@ function extractIdPFromJSON($JSONfileName) {
 function cleanIdPInfos($IdPsArray) {
 	global $logger;
 	
-	$logger->info ( "Getting rid of useless IdPs informations" );
+	$logger->info ( "Getting rid of useless IdPs informations..." );
 	
 	foreach ( $IdPsArray as $key => $value ) {
 		$logger->debug ( "The entity " . $value ['name'] . " is processed." );
@@ -125,7 +117,7 @@ function cleanIdPInfos($IdPsArray) {
 function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 	global $logger;
 	
-	$logger->info ( "Preparing the IdPs SSO URL for transparent metadata..." );
+	$logger->info ( "Replacing SSO endpoints with the stepup gateway one..." );
 	
 	foreach ( $IdPsArray as $key => $value ) {
 		
@@ -142,15 +134,14 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 			unset ( $IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [$key2] );
 			// replace the HTTP redirect binding by Step up IdP SSO endpoint
 			$value2 ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
-			
 		} // foreach
 		
 		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Binding'] = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect";
 		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
-
 	} // foreach
 	
-	$logger->info ( count ( $IdPsArray ) . " IdPs SSO endpoints were replaced." );
+	$logger->info ( "Done. ". count ( $IdPsArray ) . " IdPs SSO endpoints were replaced." );
+	
 	return $IdPsArray;
 } // replaceIdPsSSOendpoints
 
@@ -230,30 +221,37 @@ function outputEntitiesDescriptor($IdPsArray, $outputFileName) {
 	// Populate the template
 	$output = $template->render ( $IdPsArray );
 	
-	//Pretty format the outpout
-	$doc = new DOMDocument('1.0','utf-8');
+	// Pretty format the outpout
+	$doc = new DOMDocument ( '1.0', 'utf-8' );
 	$doc->preserveWhiteSpace = false;
 	$doc->formatOutput = true;
-	$doc->loadXML($output);
-	file_put_contents ( $testPath . 'output/' . $outputFileName, $doc->saveXML());
-	
+	$doc->loadXML ( $output );
+	$resultCode = file_put_contents ( $testPath . $outputFileName, $doc->saveXML () );
+	if ($resultCode== false) {
+		$logger->critical ( "Cannot save output file: ". $testPath . $outputFileName. " Check writing rights. Aborting..." );
+		die ( "Cannot create/write file. Aborting... \n" );
+	}//if
 } // outputEntitiesDescriptor
 
 /**
  * ********************** MAIN **********************
  */
+$processingTime = time();
+$logger->info ( "*************START CONVERSION****************" );
 
-$logger->info ( "*************START****************" );
 
 $IdPArray = extractIdPFromJSON ( $JSONFile );
+
 $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
 
-$outputFileName = $ini_array['EntitiesDescriptorOutputFile'];
 outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
-//print_r($JSONSuuasIdPMD);
-//outputEntityDescriptors ( $JSONSuuasIdPMD );
 
-$logger->info ( "**************END*****************" );
+/** (OPTIONAL) Generate a single EntityDescriptor per IdP */
+// outputEntityDescriptors ( $JSONSuuasIdPMD );
+
+$processingTime = time() - $processingTime;
+$logger->info ( "\nRunning time: ". $processingTime. " seconds");
+$logger->info ( "**************END CONVERSION*****************" );
 
 ?>
