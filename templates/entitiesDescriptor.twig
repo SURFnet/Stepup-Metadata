@@ -4,8 +4,7 @@
 	xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
 	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
 	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata sstc-saml-schema-metadata-2.0.xsd urn:mace:shibboleth:metadata:1.0 shibboleth-metadata-1.0.xsd http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd">	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
 	{% for info in _context %}
 	{%  if info.name != null  %}
 	<md:EntityDescriptor entityID="{{info.name}}">
@@ -36,6 +35,7 @@
 					{% endif %}
 				</mdui:UIInfo>
 			</md:Extensions>
+			{% if info.metadata.certData != null %}
 			<md:KeyDescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
 				use="signing">
 				<ds:KeyInfo>
@@ -44,6 +44,7 @@
 					</ds:X509Data>
 				</ds:KeyInfo>
 			</md:KeyDescriptor>
+			{% endif %}
 			<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
 			</md:NameIDFormat>
 			<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient
