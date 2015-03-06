@@ -35,5 +35,4 @@ The code uses/needs:
 
 ./run.sh
 
-    The output files will be in the output directory
     The log file is on the log directory (check if problem)
