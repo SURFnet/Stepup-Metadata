@@ -211,7 +211,7 @@ else
 function outputEntitiesDescriptor($IdPsArray, $outputFileName) {
 	global $logger;
 	global $testPath;
-	$logger->info ( "Preparing an entities descriptor file" );
+	$logger->info ( "Preparing 1 SAML EntitiesDescriptor file" );
 	
 	// Init Twig
 	$loader = new Twig_Loader_Filesystem ( $testPath . 'templates/' );
@@ -255,7 +255,7 @@ $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoin
 outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
 
 /** (OPTIONAL) Generate a single EntityDescriptor per IdP */
-if (!$outputEntityDesciptorsFiles) outputEntityDescriptors ( $JSONSuuasIdPMD );
+if ($outputEntityDesciptorsFiles) outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $processingTime = time() - $processingTime;
 $logger->info ( "\nRunning time: ". $processingTime. " seconds");
