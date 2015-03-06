@@ -226,7 +226,7 @@ function outputEntitiesDescriptor($IdPsArray, $outputFileName) {
 	$doc->preserveWhiteSpace = false;
 	$doc->formatOutput = true;
 	$doc->loadXML ( $output );
-	$resultCode = file_put_contents ( $testPath . $outputFileName, $doc->saveXML () );
+	$resultCode = file_put_contents ( $testPath . 'output/' . $outputFileName, $doc->saveXML () );
 	if ($resultCode== false) {
 		$logger->critical ( "Cannot save output file: ". $testPath . $outputFileName. " Check writing rights. Aborting..." );
 		die ( "Cannot create/write file. Aborting... \n" );
@@ -248,7 +248,7 @@ $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoin
 outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
 
 /** (OPTIONAL) Generate a single EntityDescriptor per IdP */
-// outputEntityDescriptors ( $JSONSuuasIdPMD );
+outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $processingTime = time() - $processingTime;
 $logger->info ( "\nRunning time: ". $processingTime. " seconds");

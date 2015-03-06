@@ -26,21 +26,27 @@ The code uses/needs:
 
 # Installation
 
-	Install CURL
-    Install PHP5
-    Install Composer
-        curl -sS https://getcomposer.org/installer | php
-        mv composer.phar /usr/bin/composer
-    Install the "JSON to XML SAML Metadata Converter" application
-        git clone https://github.com/SURFnet/Stepup-Metadata.git
-        to /opt/Stepup-Metadata/src (change path/name if needed)
-    Install TWIG and Monolog
-        cd /opt/Stepup-Metadata/src (where there's the "composer.json")
-        sudo composer install
-    Check the repository Unix rights (for write log)
+Install CURL
+Install PHP5
+Install Composer
+
+	curl -sS https://getcomposer.org/installer | php
+	mv composer.phar /usr/bin/composer
+   
+Install the "JSON to XML SAML Metadata Converter" application
+
+	cd /opt/ (change as will)
+	git clone https://github.com/SURFnet/Stepup-Metadata.git
+
+Install TWIG and Monolog
+
+	cd /opt/Stepup-Metadata/src (where there's the "composer.json")
+	sudo composer install
+    
+Check the repository Unix rights (for write log)
 
 # Run the programs
 
-./run.sh (runs ths two programs)
+	./run.sh (runs both programs -- Pay attention to write privileges)
 
-    The log file is on the log directory (check if problem)
+The log file is on the log directory (check if problem)

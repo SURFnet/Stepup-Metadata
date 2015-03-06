@@ -143,7 +143,7 @@ function getIdPsMetadataArray($idpsArray) {
 	curl_close ( $ch );
 	
 	// Print into a JSON file
-	$fp = fopen ( $testPath . $JSONFile, 'w' );
+	$fp = fopen ( $testPath . 'output/' .  $JSONFile, 'w' );
 	if ($fp == false) {
 		$logger->critical ( "Cannot create output file: ". $testPath . $JSONFile. ". Check writing rights. Aborting..." );
 		die ("Cannot create output file. Check writing rights. Aborting... \n");
