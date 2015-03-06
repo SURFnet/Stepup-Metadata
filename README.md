@@ -1,9 +1,10 @@
 # Stepup-Metadata
 
-It is composed of two PHP applications
-	getJSONConnections
-	convertJSONToXML
-These two application could be run separately.
+Two PHP applications:
+1. getJSONConnections
+2. convertJSONToXML
+
+They can be run separately as long as the input JSON file is available for the conversion program.
 
 ## Functionning:
 
@@ -19,7 +20,7 @@ These two application could be run separately.
 
 **Remark** *The programs outputs unsigned medatada file in compliance with SAML2 Metadata schema (http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd) but that does not guarantee proper work of SAML2 softwares. Thus, the program relies on the presence of mandatory informations provided by the resource registry API.*
 
-The code uses/needs:
+The programs use/need:
 
 	CURL
     PHP 5;
