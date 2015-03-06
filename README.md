@@ -1,12 +1,20 @@
 # Stepup-Metadata
 
-It is composed of two PHP applications that:
+It is composed of two PHP applications
+	getJSONConnections
+	convertJSONToXML
+These two application could be run separately.
 
-	getJSONConnections: Download SAML entities from SURFconext resources registry API and save production IdPs metadata into a unique pretty-printed JSON file;
-    convertJSONToXML: Reads the SAML entities JSON file,extracts relevant informations for metadata generation;
-    convertJSONToXML: Replaces all IdPs SSO endpoints with the Step Up IdP endpoint adding the hash value of the each IdP as a trailing string to that endpoint;
-        e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
-    convertJSONToXML: Outputs a unique unsigned SAML EntitiesDescriptor file.
+## Functionning:
+
+### getJSONConnections
+* Download SAML entities from SURFconext resources registry API and save production IdPs metadata into a unique pretty-printed JSON file;
+
+### convertJSONToXML
+* Reads the SAML entities JSON file,extracts relevant informations for metadata generation;
+* Replaces all IdPs SSO endpoints with the Step Up IdP endpoint adding the hash value of the each IdP as a trailing string to that endpoint;
+   e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
+* Outputs a unique unsigned SAML EntitiesDescriptor file.
 
 The code uses/needs:
 
@@ -31,9 +39,8 @@ The code uses/needs:
         sudo composer install
     Check the repository Unix rights (for write log)
 
-# Run the program
+# Run the programs
 
-./run.sh
+./run.sh (runs ths two programs)
 
-    The output files will be in the output directory
     The log file is on the log directory (check if problem)
