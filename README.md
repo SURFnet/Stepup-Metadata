@@ -14,8 +14,10 @@ These two application could be run separately.
 ### convertJSONToXML
 * Reads the SAML entities JSON file,extracts relevant informations for metadata generation;
 * Replaces all IdPs SSO endpoints with the Step Up IdP endpoint adding the hash value of the each IdP as a trailing string to that endpoint;  
-	* e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
+  * e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
 * Outputs a unique unsigned pretty-printed SAML EntitiesDescriptor file.
+
+**Remark** *The programs outputs unsigned medatada file in compliance with SAML2 Metadata schema (http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd) but that does not guarantee proper work of SAML2 softwares. Thus, the program relies on the presence of mandatory informations provided by the resource registry API.*
 
 The code uses/needs:
 
