@@ -30,16 +30,16 @@ $JSONFile = $testPath . $ini_array ['JSONFile'];
 date_default_timezone_set ( 'Europe/Amsterdam' );
 
 // create a log channel
+$logFileName = $ini_array ['logFileName'];
 $dateFormat = $ini_array ['dateFormat'];
 $outputLayout = $ini_array ['outputLayout'] . "\n";
 $formatter = new LineFormatter ( $outputLayout, $dateFormat );
-$fh = fopen ( $testPath . 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create/write log file. Aborting... \n" );
 
-$streamHandler = new StreamHandler ( $testPath . 'log/convertJSONToXML.log', Logger::INFO );
+$streamHandler = new StreamHandler ( $testPath . $logFileName, Logger::INFO );
 $streamHandler->setFormatter ( $formatter );
 
 global $logger;
-$logger = new Logger ( 'getConnections' );
+$logger = new Logger ( 'GetConnections' );
 $logger->pushHandler ( $streamHandler );
 
 /**
@@ -65,11 +65,11 @@ function getConnections() {
 	$output = curl_exec ( $ch );
 	$info = curl_getinfo ( $ch );
 	if ($info ['http_code'] == 0) {
-		$logger->error ( "Download of the Connections has failed. Something's wrong with the network..." );
+		$logger->critical ( "Download of the Connections has failed. Something's wrong with the network..." );
 		curl_close ( $ch );
 		return false;
 	} elseif ($output == false || $info ['http_code'] != '200') {
-		$logger->error ( "Download of the Connections has failed on HTTP Code: " . $info ['http_code'] );
+		$logger->critical ( "Download of the Connections has failed on HTTP Code: " . $info ['http_code'] );
 		curl_close ( $ch );
 		return false;
 	} else {
@@ -143,9 +143,9 @@ function getIdPsMetadataArray($idpsArray) {
 	curl_close ( $ch );
 	
 	// Print into a JSON file
-	$fp = fopen ( $testPath . 'output/' .  $JSONFile, 'w' );
+	$fp = fopen ( $testPath ."output/".$JSONFile, 'w' );
 	if ($fp == false) {
-		$logger->critical ( "Cannot create output file: ". $testPath . $JSONFile. ". Check writing rights. Aborting..." );
+		$logger->critical ( "Cannot create output file: ". $testPath . "output/".$JSONFile. ". Check writing rights. Aborting..." );
 		die ("Cannot create output file. Check writing rights. Aborting... \n");
 	} // if
 	

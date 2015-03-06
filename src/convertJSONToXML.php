@@ -16,25 +16,26 @@ $testPath = $ini_array ['TestPath'];
 
 // The JSON source file to parse
 global $JSONFile;
-$JSONFile = $testPath . $ini_array ['JSONFile'];
+$JSONFile = $testPath . "output/".$ini_array ['JSONFile'];
 
 // The SUUAS SSO URL
 $StepUpIdPSSOEndpoint = $ini_array ['StepUpIdPSSOEndpoint'];
 
-// Output File Name
+// Output Files
 $outputFileName = $ini_array ['EntitiesDescriptorOutputFile'];
+$outputEntityDesciptorsFiles = $ini_array ['outputEntityDescriptorFiles'];
 
 /**
  * LOGGING properties
  */
 date_default_timezone_set ( 'Europe/Amsterdam' );
 
+$logFileName = $ini_array ['logFileName'];
 $dateFormat = $ini_array ['dateFormat'];
 $outputLayout = $ini_array ['outputLayout'] . "\n";
 $formatter = new LineFormatter ( $outputLayout, $dateFormat );
-$fh = fopen ( $testPath . 'log/convertJSONToXML.log', 'w' ) or die ( "Cannot create/write log file. Aborting... \n" );
 
-$streamHandler = new StreamHandler ( $testPath . 'log/convertJSONToXML.log', Logger::INFO );
+$streamHandler = new StreamHandler ( $testPath . $logFileName, Logger::INFO );
 $streamHandler->setFormatter ( $formatter );
 
 global $logger;
@@ -174,15 +175,21 @@ function outputEntityDescriptors($IdPsArray) {
 		
 		// Prepare the output file name
 		$newfile = "entity-" . md5 ( $value ['name'] ) . ".xml";
-		$logger->debug ( $newfile );
+
+		$logger->debug ( "Outputting " . $value ['name'] );
 		
 		// Use that new file as a template
 		$template = $twig->loadTemplate ( $entityDescritorTemplate );
 		// Populate the template
 		$output = $template->render ( $value );
-		$logger->info ( "Outputting " . $value ['name'] );
+
 		
 		// Move the outputs to the output folder
+		// Pretty format the outpout
+		$doc = new DOMDocument ( '1.0', 'utf-8' );
+		$doc->preserveWhiteSpace = false;
+		$doc->formatOutput = true;
+		$doc->loadXML ( $output );
 		file_put_contents ( $testPath . 'output/' . $newfile, $output );
 		$counter ++;
 	} // foreach
@@ -240,7 +247,7 @@ $processingTime = time();
 $logger->info ( "*************START CONVERSION****************" );
 
 
-$IdPArray = extractIdPFromJSON ( $JSONFile );
+$IdPArray = extractIdPFromJSON ();
 
 $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
@@ -248,7 +255,7 @@ $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoin
 outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
 
 /** (OPTIONAL) Generate a single EntityDescriptor per IdP */
-outputEntityDescriptors ( $JSONSuuasIdPMD );
+if (!$outputEntityDesciptorsFiles) outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $processingTime = time() - $processingTime;
 $logger->info ( "\nRunning time: ". $processingTime. " seconds");
