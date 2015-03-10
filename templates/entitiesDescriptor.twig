@@ -1,10 +1,12 @@
 <!--https://wiki.surfnetlabs.nl/display/conextsupport/Terms+of+Service+%28EN%29 -->
-<md:EntitiesDescriptor Name="CHANGEIT"  ID="ID_{{"now"|date("YmdHis", "Europe/Amsterdam")}}_{{random(1000000)}}" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+<md:EntitiesDescriptor Name="CHANGEIT"  ID="ID_{{"now"|date("YmdHis", "Europe/Amsterdam")}}_{{random(1000000)}}" 
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
 	xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
 	xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
 	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
 	xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	cacheDuration="P1D" validUntil="{{"+1 week"|date("Y-m-d\\TH:i:s\\Z")}}">
 	{% for info in _context %}
 	{%  if info.name != null  %}
 	<md:EntityDescriptor entityID="{{info.name}}">
