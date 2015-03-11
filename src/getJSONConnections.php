@@ -157,16 +157,19 @@ function getIdPsMetadataArray($idpsArray) {
  * ********************** MAIN **********************
  */
 $processingTime = time();
-$logger->info ( "*************START CURL Connections****************" );
+$logger->info ( "************* START - Download SAML entities ****************" );
 $idpsArray [] = false;
 $connections = getConnections ( $janusApiURL, $janusApiCred );
 if ($connections != false) {
 	$idpsArray = getProductionIdPIDs ( $connections );
 	getIdPsMetadataArray ( $idpsArray );
 } // if
+else {
+	$logger->critical ("Exiting program!");
+	die ("CRITICAL -- Download of the Connections has failed. Something's wrong with the network...");
+}//else
 
 $processingTime = time() - $processingTime;
-$logger->info ( "\nRunning time: ". $processingTime. " seconds");
-$logger->info ( "*************END CURL Connections****************" );
+$logger->info ( "Download complete! Running time: ". $processingTime. " seconds" );
 
 

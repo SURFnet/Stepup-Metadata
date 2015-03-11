@@ -187,8 +187,7 @@ function outputEntitiesDescriptor($IdPsArray, $outputFileName) {
  * ********************** MAIN **********************
  */
 $processingTime = time();
-$logger->info ( "*************START CONVERSION****************" );
-
+$logger->info ( "Generating Metadata file..." );
 
 $IdPArray = extractIdPFromJSON ();
 
@@ -199,6 +198,6 @@ outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
 
 $processingTime = time() - $processingTime;
 $logger->info ( "\nRunning time: ". $processingTime. " seconds");
-$logger->info ( "**************END CONVERSION*****************" );
+$logger->info ( "************** END - Metadata generated *****************" );
 
 ?>

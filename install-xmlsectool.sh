@@ -14,9 +14,10 @@ if [ ! -d $XMLSecToolVersion ]; then
 	#You probably want to check the signature
 	#curl -O http://shibboleth.net/downloads/tools/xmlsectool/latest/$XMLSecToolVersion-bin.zip.asc
 	#gpg --verify $XMLSecToolVersion-bin.zip.asc
-	#Will display the KeyID
-	#try gpg --keyserver pgpkeys.mit.edu --recv-ke KeyID
-	#Rerun gpg --verify $XMLSecToolVersion-bin.zip.asc
+	#Will display the signing KeyID
+	#gpg --keyserver pgpkeys.mit.edu --recv-ke KeyID
+	#Run again
+	#gpg --verify $XMLSecToolVersion-bin.zip.asc
 
 	unzip $XMLSecToolVersion-bin.zip
 	rm -f $XMLSecToolVersion-bin.zip

@@ -38,7 +38,7 @@ The programs use/need:
 	curl -sS https://getcomposer.org/installer | php
 	mv composer.phar /usr/bin/composer
    
-Install the "JSON to XML SAML Metadata Converter" application
+Install the "Step-up Metadata generator" application
 
 	cd /opt/ (change as will)
 	git clone https://github.com/SURFnet/Stepup-Metadata.git
