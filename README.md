@@ -31,9 +31,9 @@ The programs use/need:
 
 # Installation
 
-Install CURL
-Install PHP5
-Install Composer
+* Install CURL
+* Install PHP5
+* Install Composer
 
 	curl -sS https://getcomposer.org/installer | php
 	mv composer.phar /usr/bin/composer
