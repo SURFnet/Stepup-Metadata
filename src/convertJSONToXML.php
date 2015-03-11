@@ -147,63 +147,6 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 } // replaceIdPsSSOendpoints
 
 /**
- * INPUT an array containing SAML IdP informations
- * OUTPUT an EntityDescriptor XML file for each IdP processed
- * Uses TWIG templates engine with SURFconext IdP EntityDescriptor template
- */
-function outputEntityDescriptors($IdPsArray) {
-	global $logger;
-	global $processedIdPs;
-	global $testPath;
-	
-	$logger->info ( "Preparing " . $processedIdPs . " entity descriptors files" );
-	
-	// Init Twig
-	$loader = new Twig_Loader_Filesystem ( $testPath . 'templates/' );
-	$twig = new Twig_Environment ( $loader, array (
-			'cache' => '/tmp/',
-			'debug' => true,
-			'auto_reload' => true 
-	) );
-	$twig->addExtension ( new Twig_Extension_Debug () );
-	
-	// Buid a single entity descriptor XML file per IdP
-	$entityDescritorTemplate = 'entityDescriptor.twig';
-	$counter = 0;
-	// Output the result into an entityDescriptor XML file
-	foreach ( $IdPsArray as $key => $value ) {
-		
-		// Prepare the output file name
-		$newfile = "entity-" . md5 ( $value ['name'] ) . ".xml";
-
-		$logger->debug ( "Outputting " . $value ['name'] );
-		
-		// Use that new file as a template
-		$template = $twig->loadTemplate ( $entityDescritorTemplate );
-		// Populate the template
-		$output = $template->render ( $value );
-
-		
-		// Move the outputs to the output folder
-		// Pretty format the outpout
-		$doc = new DOMDocument ( '1.0', 'utf-8' );
-		$doc->preserveWhiteSpace = false;
-		$doc->formatOutput = true;
-		$doc->loadXML ( $output );
-		file_put_contents ( $testPath . 'output/' . $newfile, $output );
-		$counter ++;
-	} // foreach
-	  
-	// Sanity Check
-	if ($counter != $processedIdPs) {
-		$logger->error ( "The program did not outputted the right amount of IdPs, only " . $counter . " have been processed instead of " . $processedIdP );
-		die ( "The program did not outputted the right amount of IdPs, only " . $counter . " have been processed instead of " . $processedIdPs );
-	}  // if
-else
-		$logger->info ( $counter . " IdPs metadata XML files were created for a total of " . $processedIdPs . " IdPs." );
-} // outputEntityDescriptors
-
-/**
  * INPUT an array containing SAML IdP informations and the name of the output file
  * OUTPUT a unique EntitiesDescriptor XML file
  * Uses TWIG templates engine with SURFconext IdP EntitiesDescriptor template
@@ -253,9 +196,6 @@ $CleanIdPArray = cleanIdPInfos ( $IdPArray );
 $JSONSuuasIdPMD = replaceIdPsSSOendpoints ( $CleanIdPArray, $StepUpIdPSSOEndpoint );
 
 outputEntitiesDescriptor ( $JSONSuuasIdPMD, $outputFileName );
-
-/** (OPTIONAL) Generate a single EntityDescriptor per IdP */
-if ($outputEntityDesciptorsFiles) outputEntityDescriptors ( $JSONSuuasIdPMD );
 
 $processingTime = time() - $processingTime;
 $logger->info ( "\nRunning time: ". $processingTime. " seconds");
