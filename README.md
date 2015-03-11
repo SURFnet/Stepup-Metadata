@@ -19,7 +19,11 @@ They can be run separately as long as the input JSON file is available for the c
   * e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
 * Outputs an unsigned pretty-printed SAML EntitiesDescriptor file.
 
-**Remark** *The programs outputs unsigned medatada file in compliance with SAML2 Metadata schema (http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd) but that does not guarantee proper work of SAML2 softwares. Thus, the program relies on the presence of mandatory informations provided by the resource registry API.*
+**Remark** 
+* *The programs outputs unsigned medatada file in compliance with SAML2 Metadata schema (http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd) but that does not guarantee proper work of SAML2 softwares. Thus, the program relies on the presence of mandatory informations provided by the resource registry API.*
+
+* The program is delivered with XMLSecTool install and launch scripts (install-xmlsectool.sh and sign-metadata.sh)
+  * XMLSecTool can be installed and used embedded in theStep-up Metadata Generator program
 
 The programs use/need:
 
