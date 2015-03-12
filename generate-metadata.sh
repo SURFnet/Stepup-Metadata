@@ -7,4 +7,5 @@ if [ "${exitStatus:-0}" == 0 ]; then
 	php src/convertJSONToXML.php
 else 
 	echo $exitStatus
+	exit 1
 fi
