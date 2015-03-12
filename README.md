@@ -23,7 +23,7 @@ They can be run separately as long as the input JSON file is available for the c
 * *The programs outputs unsigned medatada file in compliance with SAML2 Metadata schema (http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd) but that does not guarantee proper work of SAML2 softwares. Thus, the program relies on the presence of mandatory informations provided by the resource registry API.*
 
 * The program is delivered with XMLSecTool install and launch scripts (install-xmlsectool.sh and sign-metadata.sh)
-  * XMLSecTool can be installed and used embedded in theStep-up Metadata Generator program
+  * XMLSecTool can be installed and used embedded in the Step-up Metadata Generator program
 
 The programs use/need:
 
@@ -37,14 +37,14 @@ The programs use/need:
 
 * Install CURL
 * Install PHP5
-* Install Composer
+* Install Composer  
 
 	curl -sS https://getcomposer.org/installer | php
 	mv composer.phar /usr/bin/composer
    
 Install the "Step-up Metadata generator" application
 
-	cd /opt/ (change as will)
+	cd /opt/ (change at will)
 	git clone https://github.com/SURFnet/Stepup-Metadata.git
 
 Install TWIG and Monolog
