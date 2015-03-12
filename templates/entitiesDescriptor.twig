@@ -53,12 +53,7 @@
 			</md:NameIDFormat>
 			<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
 			</md:NameIDFormat>
-			<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified
-			</md:NameIDFormat>
 			{% for SSO in info.metadata.SingleSignOnService %}
-			{% if SSO.Location == null %}
-			PROBLEM
-			{% endif %}
 			<md:SingleSignOnService
 				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
 				Location="{{ SSO.Location }}" />

@@ -138,7 +138,7 @@ function replaceIdPsSSOendpoints($IdPsArray, $StepUpIdPSSOEndpoint) {
 		} // foreach
 		
 		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Binding'] = "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect";
-		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Location'] = $StepUpIdPSSOEndpoint . "key:default/" . $IdPEntityIDHash;
+		$IdPsArray [$key] ['metadata'] ['SingleSignOnService'] [0] ['Location'] = $StepUpIdPSSOEndpoint . $IdPEntityIDHash;
 	} // foreach
 	
 	$logger->info ( "Done. ". count ( $IdPsArray ) . " IdPs SSO endpoints were replaced." );

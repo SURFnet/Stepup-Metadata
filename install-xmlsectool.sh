@@ -26,13 +26,3 @@ fi
 if [ ! -h xmlsectool ]; then
 	ln -s $XMLSecToolVersion xmlsectool
 fi
-
-
-if [ ! -d "schema" ]; then
-	echo "Creating schema directory"
-	mkdir "schema"
-	cd schema
-	echo "Downloading the necessary schema files..."
-	curl -O http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd -O http://www.w3.org/TR/xmlenc-core/xenc-schema.xsd -O https://svn.shibboleth.net/cpp-sp/branches/Rel_1_3/schemas/shibboleth-metadata-1.0.xsd -O http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd -O http://docs.oasis-open.org/security/saml/v2.0/saml-schema-assertion-2.0.xsd
-	cd ..
-fi
