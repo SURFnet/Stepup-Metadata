@@ -18,7 +18,6 @@ if [ ! -d $XMLSecToolVersion ]; then
 	#gpg --keyserver pgpkeys.mit.edu --recv-ke KeyID
 	#Run again
 	#gpg --verify $XMLSecToolVersion-bin.zip.asc
-
 	unzip $XMLSecToolVersion-bin.zip
 	rm -f $XMLSecToolVersion-bin.zip
 fi
