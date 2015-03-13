@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 #EDIT below 
 certificate="signing.crt"
@@ -20,16 +21,6 @@ export JAVA_HOME=/usr
 echo "Signing the SAML metadata file " $fileToSign
 ./xmlsectool/xmlsectool.sh --sign --referenceIdAttributeName ID --inFile $fileToSign --outFile $signedFile --digest SHA-256 --signatureAlgorithm $signatureAlgorithm --key $key --certificate $certificate
 
-if [ $? -ne 0 ]; then
-	#DO SOMETHING
-	exit $?
-fi
-
 # XMLSECTOOL: The signing and signature verification actions are mutually exclusive
 echo "Checking signature and validating the schema compliance";
 ./xmlsectool/xmlsectool.sh --inFile $signedFile  --validateSchema --schemaDirectory schema --xsd --verifySignature --certificate $certificate
-
-if [ $? -ne 0 ]; then
-	#DO SOMETHING
-	exit $?
-fi

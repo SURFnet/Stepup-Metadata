@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 #EDIT the XMLSecTool version
 XMLSecToolVersion="xmlsectool-1.2.0"

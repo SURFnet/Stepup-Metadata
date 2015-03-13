@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # Run Metadata generator - Run the SAML only if the download is successful
 exitStatus=$(php src/getJSONconnections.php)
