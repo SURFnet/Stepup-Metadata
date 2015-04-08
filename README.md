@@ -5,7 +5,7 @@ Two independant PHP applications:
 1. getJSONConnections
 2. convertJSONToXML
 
-They can be run separately as long as the input JSON file is available for the conversion program.
+They can be run separately as long as the input JSON file OR the resource registry API are available for each program.
 
 ## Functionning:
 
@@ -15,8 +15,8 @@ They can be run separately as long as the input JSON file is available for the c
 
 ### convertJSONToXML
 * Reads the SAML entities JSON file,extracts relevant informations for metadata generation;
-* Replaces all IdPs SSO endpoints with the Step Up IdP endpoint adding the hash value of the each IdP as a trailing string to that endpoint;  
-  * e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/key:default/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
+* Replaces all IdPs SSO endpoints with the Step Up IdP endpoint adding the hash value of each IdP as a trailing string to that endpoint;  
+  * e.g.  "Location="https://suuas.surfconext.nl/authentication/idp/single-sign-on/80e917885da2dd2624b1408b6b69fa2a (final step-up IdP base URL not fixed);
 * Outputs an unsigned pretty-printed SAML EntitiesDescriptor file.
 
 **Remark** 
@@ -52,7 +52,7 @@ Install TWIG and Monolog
 	cd /opt/Stepup-Metadata/src (where there's the "composer.json")
 	sudo composer install
     
-Check the repository Unix rights (for write log)
+Check the repository Unix rights (log writing)
 
 # Run the programs
 
